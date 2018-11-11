@@ -1,0 +1,411 @@
+/*eBoy SHOP-TYPOGRAPHY CSS*/
+.alert {
+  background: yellow;
+  color: black
+}
+
+@font-face {
+  font-family: oOzZi;
+  src: url(oozzieboylogo.ttf);
+}
+
+@font-face {
+  font-family: Moxie;
+  src: url(Moxie-Bold.otf);
+}
+
+/* Global */
+body {
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.4rem;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header Styles */
+#header {
+  font-size: 48px;
+  line-height: 64px;
+}
+
+#header,
+#header a,
+#header a:visited,
+#header a:hover {
+  text-decoration: none;
+}
+
+#header .tab-on a,
+#header .tab-on a:visited,
+#header .tab-off a,
+#header .tab-off a:visited {
+  text-decoration: none;
+  margin-left: 0px;
+}
+
+#header .tab-on a:hover,
+#header .tab-off a:hover {
+  text-decoration: none;
+}
+
+.logotype {
+  /* font-size: 96px; */
+  font-size: 4rem;
+  font-weight: normal;
+  /* font-family: oozzi; */
+  font-family: Moxie;
+  text-transform: uppercase;
+  line-height: 1.2em;
+}
+
+/*Submenublock*/
+#sddm {
+  font-size: 56px;
+  font-weight: normal;
+}
+
+#sddm .dropdown {
+  font-size: 36px;
+}
+
+#sddm .dropdown a {
+  white-space: nowrap;
+  text-decoration: none;
+  font-weight: normal;
+  letter-spacing: 0px;
+  font-size: 24px;
+  line-height: 1em;
+}
+
+#header .status-shop-country {
+  font-weight: normal;
+}
+
+/* Top Info Strips */
+h1 {
+  line-height: 1.2em;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+#wholesale {
+  font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
+  font-size: 14px;
+}
+
+#carthead #cartcount {
+  font-size: 24px;
+}
+
+#frontarticles a:hover {
+  text-decoration: none;
+}
+
+#newshead h2 {
+  font-size: 24px;
+}
+
+/* Left Menu Area */
+#leftsiders h3 {
+  /* line-height: 2em; */
+  /* font-weight: light; */
+}
+
+ul.leftlinks {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  text-transform: lowercase;
+}
+
+ul.leftlinks li {
+  /* line-height: 1.2em; */
+  padding: 0.5rem;
+}
+
+ul.leftlinks li a {
+  text-decoration: none;
+  /* font-size: inherit; */
+}
+
+ul.leftcolorbox {
+  font-size: 24px;
+}
+
+ul.leftcolorbox li {
+  line-height: 1.2em;
+}
+
+/* Products on the front page */
+#frontpage h3 {
+  font-size: 100%;
+  line-height: 1.5em;
+}
+
+/* Product Pages */
+#breadcrumb {
+  color: grey;
+  font-size: 14px;
+  font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
+}
+
+#breadcrumb b {
+  font-weight: normal;
+  text-decoration: none;
+  color: dodgerblue;
+}
+
+#breadcrumb a {
+  text-decoration: none;
+  color: grey;
+}
+
+#breadcrumb a:hover {
+  text-decoration: none;
+  color: dodgerblue;
+}
+
+.productleft h2,
+.productleftsold h2 {
+  font-size: 24px;
+}
+
+.productleft #variants {
+  font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
+}
+
+.productleft #variants .convert a {
+  text-decoration: none;
+  font-size: 0.75em;
+}
+
+.productleft #variants .convert a:hover {
+  text-decoration: underline;
+}
+
+.BUYbuttonAsLink {
+  font-size: 48px;
+  line-height: 1em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.BUYbuttonAsLink:hover {
+  text-decoration: none;
+}
+
+ul#variants li {
+  line-height: 1.3em;
+  font-size: 1.3em;
+}
+
+.price {
+  font-size: 36px;
+  font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
+}
+
+.limited {
+  font-size: 18px;
+  line-height: 1.2em;
+  font-weight: bold;
+}
+
+#description {
+  line-height: 1.4em;
+  font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
+}
+
+#description ul {
+  margin-bottom: .5em;
+}
+
+#description ul li {
+  margin-left: 1em;
+  list-style-type: circle;
+}
+
+#description #details a:hover {
+  text-decoration: underline;
+}
+
+#related h2 {
+  font-size: 24px;
+}
+
+#footer {
+  font-size: 24px;
+  line-height: 1.4em;
+}
+
+#footer a {
+  text-decoration: none;
+}
+
+#footertxt {
+  font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
+  font-size: 12px;
+  line-height: 1.4em;
+}
+
+#footertxt a:hover {
+  text-decoration: underline;
+}
+
+/* Collection Pages */
+.gallery {
+  font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
+}
+
+.gallery h3 {
+  font-size: 14px;
+}
+
+.gallery .product .money {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+#pagination {
+  font-size: 24px;
+  font-weight: regular;
+}
+
+/* Cart Page */
+#cart {
+  font-family: Monaco;
+  font-size: 14px;
+}
+
+.money,
+.moneysoldout {
+  font-weight: bold;
+}
+
+#cart ul li#total {
+  font-size: 24px;
+  line-height: 1.2em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#cart label {
+  font-size: 14px;
+}
+
+#line-items li {
+  font-size: 14px;
+}
+
+#line-items li .producttitle a {
+  text-decoration: none;
+}
+
+#line-items li .producttitle a:hover {
+  text-decoration: underline;
+}
+
+.cartqty {
+  color: #999;
+  margin-left: 2em;
+}
+
+.buttonAsLink {
+  font-size: 24px;
+  line-height: 1.2em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h3.saverow {
+  font-size: 14px;
+  font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
+  font-style: italic;
+}
+
+#cart ul li h3 a {
+  text-decoration: none;
+}
+
+.itemcost {
+  font-size: 14px;
+}
+
+.deleterow .remove {
+  font-size: 9px;
+  text-decoration: none;
+}
+
+.checkoutrow a {
+  text-decoration: none;
+  font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
+}
+
+a.shipinfo {
+  text-decoration: none;
+}
+
+a:hover.shipinfo {
+  text-decoration: none;
+  text-decoration: underline;
+}
+
+/* Page */
+#page .textile {
+  line-height: 1.4em;
+  font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
+  font-size: 14px;
+  margin-left: 6px;
+}
+
+#page .textile p,
+#page .textile ul {
+  margin: 0 0 1em 0;
+}
+
+#page .textile br {
+  margin: 0;
+}
+
+#page .textile h3 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  margin: 0;
+}
+
+#page ul li {
+  margin-left: 1em;
+  list-style-type: square;
+}
+
+#page ul li ul li {
+  margin-left: 1em;
+  list-style-type: circle;
+}
+
+#page em {
+  background-color: beige;
+  color: brown;
+  padding: 12px;
+  display: block;
+}
+
+/* Footer */
+#footer {
+  line-height: 24px;
+  font-size: 24px;
+}
+
+#footer #searchform {
+  font-size: 24px;
+}
+
+#footer #searchform #s {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+}

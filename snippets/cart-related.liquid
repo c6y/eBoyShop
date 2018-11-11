@@ -1,0 +1,15 @@
+{% assign recommendation = 'checkout-other' %}
+{% for item in cart.items %}            
+    {% if item.product.type == "Poster" %} 
+		{% assign recommendation = 'checkout-poster' %}
+    {% endif %}
+{% endfor %}
+
+<div id="related">
+	<h2>Add This to Your Order</h2>
+	<div class="gallery">
+		{% for product in collections.[recommendation].products %}
+			{% include 'galleryproduct' %}
+		{% endfor %}
+	</div>  <!-- /.gallery -->
+</div> <!-- /#related -->

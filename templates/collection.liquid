@@ -1,0 +1,30 @@
+<div id="collectionpage">
+
+	<!-- <h1>{{collection.title}}</h1> -->
+
+	{% paginate collection.products by 33 %}
+	<div class="gallery">
+	{% for product in collection.products %}
+		{% include 'galleryproduct' %}
+	{% endfor %}
+	</div><!-- /#gallery -->
+
+	{% if paginate.pages > 1 %}
+		<div id="pagination">
+		{% if paginate.previous %}
+			{{ "Previous" | link_to: paginate.previous.url }}
+		{% endif %}
+		{% for part in paginate.parts %}
+			{% if part.is_link %}
+				{{ part.title | link_to: part.url }}
+			{% else %}
+				<span class="current">{{ part.title }}</span>
+			{% endif %}
+		{% endfor %}
+		{% if paginate.next %}
+			{{ "Next" | link_to: paginate.next.url }}
+		{% endif %}
+		</div>
+	{% endif %}
+{% endpaginate %}
+</div><!-- /#collectionpage -->

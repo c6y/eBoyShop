@@ -1,0 +1,371 @@
+/*eBoy EUROPE SHOP-COLORS CSS*/
+/* ACHTUNG! find border color definitions at css-shop-layout.css */
+/* Global */
+a,
+a:visited,
+a:hover {
+  color: dodgerblue;
+}
+
+#contentbox {
+  background-color: white;
+}
+
+/* Header */
+body #header {
+  background-color: none;
+  /*#beb69f*/
+}
+
+body #header .tab-on a,
+body #header .tab-on a:visited {
+  background-color: #f2eed9;
+  color: #00ffff;
+}
+
+body #header .tab-off a,
+body #header .tab-off a:visited {
+  background-color: #383521;
+  color: yellow;
+}
+
+body #header #sddm .tab-on a:hover,
+body #header #sddm .tab-off a:hover {
+  background-color: yellow;
+  color: #383521;
+}
+
+/*Colors Submenu*/
+body #header #sddm li .dropdown {
+  background: white;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, .1);
+}
+
+body #header #sddm li .dropdown a,
+body #header #sddm li .dropdown a:visited {
+  background-color: white;
+  color: #444;
+}
+
+body #header #sddm li .dropdown a:hover {
+  background-color: yellow;
+}
+
+#header .status-shop-country {
+  color: #004069;
+  /*#98917F;*/
+}
+
+/* Top Info Strips */
+#wholesale {
+  background-color: #0E5E95;
+  color: cyan;
+  border-top-color: #0E5E95;
+}
+
+#wholesale a,
+#wholesale a:hover,
+#wholesale a:visited {
+  color: SeaShell;
+}
+
+#carthead {
+  background-color: #f2eed9;
+  border-top-color: #f2eed9;
+  border-bottom-color: #eae7d0;
+}
+
+#carthead #status-country {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#status-country a,
+#cartcount,
+#cartcount a {
+  color: rgba(0, 230, 230, 0.6);
+}
+
+#status-country a:hover,
+#cartcount a:hover {
+  color: white;
+  background-color: dodgerblue;
+}
+
+#status-switch,
+#status-switch a {
+  color: #8bd1ff;
+}
+
+#status-switch a:hover {
+  color: white;
+  background-color: dodgerblue;
+}
+
+#newshead {
+  background-color: #002035;
+  color: yellow;
+}
+
+/* Left Navigation */
+#leftsiders h3 {
+  color: #333;
+}
+
+ul.leftlinks {
+  /* background-color: white; */
+  /* border-color: #e5e5e5; */
+}
+
+ul.leftlinks li a {
+  /* color:#3f3800; */
+  color: #00baf2;
+}
+
+ul.leftlinks li a:hover {
+  color: white;
+  background-color: #00baf2;
+}
+
+/* Cart Page */
+#cart {
+  background-color: #EDECE6;
+}
+
+h3.saverow {
+  color: brown;
+  background: beige;
+}
+
+.deleterow .remove {
+  background-color: #ddd;
+  color: #888;
+}
+
+.deleterow .remove:hover {
+  color: #ddd;
+  background-color: #888;
+}
+
+.moneysoldout {
+  color: #777;
+}
+
+#cart label {
+  color: #444;
+}
+
+#cart ul li h3 a {
+  color: #333;
+  ;
+}
+
+.itemcost {
+  color: #777;
+}
+
+#line-items li .txtcartrow .producttitle,
+#line-items li .txtcartrow .producttitle a {
+  color: #444;
+}
+
+#line-items li#total {
+  color: #666;
+}
+
+#line-items li#total .money {
+  color: #3f3800;
+}
+
+#line-items li#total .buttonAsLink {
+  color: #AAA;
+  background-color: #ddd;
+}
+
+#line-items li#total .buttonAsLink:hover {
+  background-color: #AAA;
+  color: #ddd;
+}
+
+.checkoutrow {
+  background-color: white;
+}
+
+.checkoutrow .buttonAsLink {
+  color: white;
+  background-color: dodgerblue;
+}
+
+.checkoutrow .buttonAsLink:hover {
+  color: white;
+  background-color: green;
+}
+
+.shipinfo {
+  color: dodgerblue;
+}
+
+/* Page */
+#page h1 {
+  background-color: dodgerblue;
+}
+
+/* PRODUCTS */
+/* Products on the front page */
+#frontarticles h1 {
+  background-color: black;
+  color: white;
+}
+
+#frontarticles h1 a {
+  color: white;
+}
+
+#frontpage p.money {
+  color: #444;
+}
+
+/* Collection Pages */
+#collectionpage h1 {
+  color: #4B4944;
+  background-color: white;
+}
+
+.gallery .product {
+  background-color: MintCream;
+}
+
+#collectionpage h2 {
+  color: #333;
+}
+
+#pagination a {
+  color: lightgrey;
+  background: #FAFAFA;
+}
+
+#pagination a:hover,
+#pagination a:active {
+  background: #3f3800;
+  color: yellow;
+}
+
+#pagination .current {
+  color: #3f3800;
+  background: white;
+}
+
+.gallery .product .money {
+  color: #3f3800;
+}
+
+/* Search Pages (mostly identical to the Collection Page)*/
+#searchpage h1 {
+  color: white;
+  background-color: #3DB741;
+}
+
+/* Product Pages */
+.BUYbuttonAsLink {
+  color: dodgerblue;
+  background-color: white;
+}
+
+.BUYbuttonAsLink:hover {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.soonpro .BUYbuttonAsLink {
+  color: green;
+  background-color: white;
+  border-color: green;
+  /* overwrites default at css-shop-layout.css*/
+}
+
+.soonpro .BUYbuttonAsLink:hover {
+  background-color: green;
+  color: white;
+  border-color: green;
+  /* overwrites default at css-shop-layout.css*/
+}
+
+.soldoutpro .BUYbuttonAsLink {
+  color: red;
+  background-color: white;
+  border-color: red;
+  /* overwrites default at css-shop-layout.css*/
+}
+
+.soldoutpro .BUYbuttonAsLink:hover {
+  background-color: red;
+  color: white;
+  border-color: red;
+  /* overwrites default at css-shop-layout.css*/
+}
+
+.productleft h2,
+.productleftsold h2 {
+  color: #3f3800;
+}
+
+#related h2 {
+  color: #3f3800;
+}
+
+#pimage-select a img {
+  background-color: #eee;
+}
+
+.price {
+  color: dodgerblue;
+}
+
+ul#variants label {
+  color: grey;
+}
+
+#productpage #description a {
+  color: dodgerblue;
+}
+
+#productpage #description #details {
+  background-color: #EDECE6;
+  color: grey;
+}
+
+.limited {
+  background-color: yellow;
+}
+
+.convert a {
+  color: #8ec7ff;
+}
+
+/* Footer */
+#footer {
+  color: #999;
+  background-color: #E6E3DE;
+  border-top-color: #dfdcd7;
+}
+
+#footer #searchform #s {
+  border: #f6f6f6;
+}
+
+#footer a {
+  color: #6c6757;
+}
+
+#footer #searchform #s {
+  color: #6c6757;
+  background-color: #f6f6f6;
+}
+
+#footer #footertxt {
+  color: #6c6757;
+}
+
+#footer .spacedot {
+  color: blue;
+  background-color: orange;
+}

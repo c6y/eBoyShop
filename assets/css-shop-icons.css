@@ -1,0 +1,68 @@
+/* Reference: https://cdn.materialdesignicons.com/3.0.39/@charset "UTF-8"; */
+@font-face {
+  font-family: "mdi";
+  src: url("materialdesignicons-webfont.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* TEST */
+.mdi-shop::before,
+.mdi-database::before,
+.mdi-twitter::before,
+.mdi-instagram::before {
+  font-family: "mdi";
+  line-height: inherit;
+  font-size: inherit;
+  padding-right: 0.3rem;
+}
+
+.mdi-shop::before {
+  content: "\f49a";
+}
+
+.mdi-database::before {
+  content: "\f1b8";
+}
+
+.mdi-twitter::before {
+  content: "\f544";
+}
+
+.mdi-instagram::before {
+  content: "\f2fe";
+}
+
+.mdi-info::before {
+  font-family: "mdi";
+  content: "\f2fc";
+  line-height: inherit;
+  font-size: inherit;
+}
+
+.mdi-settings::before {
+  font-family: "mdi";
+  content: "\f493";
+  line-height: inherit;
+  font-size: inherit;
+}
+
+.mdi-edit::before {
+  font-family: "mdi";
+  content: "\f3eb";
+  line-height: inherit;
+  font-size: inherit;
+}
+
+.mdi-cart::before {
+  font-family: "mdi";
+  content: "\f110";
+  line-height: inherit;
+  font-size: inherit;
+  padding-right: 0.2rem;
+}
+
+.navicons li {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}

@@ -1,0 +1,22 @@
+{
+  "current": {
+    "checkout_use_header_image": false,
+    "checkout_logo": "",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_use_body_background_image": false,
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_use_sidebar_background_image": false,
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "Oswald",
+    "checkout_body_font": "Helvetica Neue",
+    "checkout_accent_color": "#2a9dcc",
+    "checkout_button_color": "#2a9dcc",
+    "checkout_error_color": "#ff6d6d",
+    "customer_layout": "customer_area",
+    "checkout_banner_background_color": "#e5e5e5",
+    "checkout_headline": "",
+    "checkout_call_to_action_color": "#8fc243"
+  }
+}

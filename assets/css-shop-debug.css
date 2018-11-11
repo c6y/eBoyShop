@@ -1,0 +1,38 @@
+/* DEBUG */
+
+#productcontrols{ 
+	background-color:red;
+}
+#product-images{
+	background:green;
+}
+.productinfo{
+	background-color:magenta;
+}
+.productleft{
+	background-color:lightgreen;
+}
+.productleftsold{
+	background-color:lightgreen;
+}
+.addtocart{
+	background-color:green;
+}
+#description{
+	background-color:yellow;
+}
+
+/* Cart Page */
+
+#line-items li{
+	background:lightyellow;
+}
+#cart ul li h3{
+	background:yellow;
+}
+#cart ul li .thumb{
+	background:red;
+}
+#line-items li#total .subtotal{
+	background-color:yellow;
+}
