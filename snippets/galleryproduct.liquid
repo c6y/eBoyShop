@@ -1,0 +1,146 @@
+<div class="product">
+	
+	{% if product.available %}
+		{% for mytag in product.tags %}
+			{% if mytag == 'Limited' %}
+				<a href="{{product.url}}">
+					<img class="limitedstar" src="{{ 'starlimited-10k-small-2x.png' | asset_url }}" alt="limitedstar" width="70" height="73" />
+				</a>
+			{% endif %}
+		{% endfor %}
+	{% else %}
+
+		{% assign soon = 'false' %}
+		{% for collection in product.collections %}
+			{% if collection.handle == 'soon' %}
+				{% assign soon = 'true' %}
+			{% endif %}
+		{% endfor %}
+		
+		{% if soon =='true' %}
+
+			{% for mytag in product.tags %}
+				{% if mytag == 'Limited' %}
+					<a href="{{product.url}}">
+						<img class="limitedstar" src="{{ 'starlimited-10k-small-2x.png' | asset_url }}" alt="limitedstar" width="70" height="73" />
+					</a>
+				{% endif %}
+			{% endfor %}
+
+		{% else %}
+			<a href="{{product.url}}">
+				<img class="limitedstar" src="{{ 'starsoldout-10k-small-2x.png' | asset_url }}" alt="soldoutstar" width="70" height="73" />
+			</a>
+		{% endif %}
+	{% endif %}
+	
+	{% for mytag in product.tags %}
+		{% if mytag == 'signed' %}
+			<a href="{{product.url}}">
+				<img class="signed" src="{{ 'signed_02k.png' | asset_url }}" alt="signed" />
+			</a>
+		{% endif %}
+	{% endfor %}
+  
+  	{% for mytag in product.tags %}
+		{% if mytag == 'Sale' %}
+			<a href="{{product.url}}">
+				<img class="sale" src="{{ 'SALE-03k-2x.png' | asset_url }}" alt="sale" width="62" height="47" />
+			</a>
+		{% endif %}
+	{% endfor %}
+  
+	
+	{% for collection in product.collections %}
+		{% case collection.handle %}
+			{% when 'new' %}
+				<a href="{{product.url}}">
+					<img class="new" src="{{ 'new04s.png' | asset_url }}" alt="new" height="107" width="107"/>
+				</a>
+			{% when 'soon' %}
+				<a href="{{product.url}}">
+					<img class="new" src="{{ 'soon01k.png' | asset_url }}" alt="soon" />
+				</a>
+            {% when 'pre-order' %}
+    			<a href="{{product.url}}">
+					<img class="new" src="{{ 'PREORDERBANNER-02k.png' | asset_url }}" alt="pre-order" />
+				</a>
+			{% else %}
+		{% endcase %}
+	{% endfor %}
+
+	{% if product.featured_image %}
+		<div class="gallery-image">
+			<a href="{{product.url}}" title="{{ item.title }}">
+				{{ product.featured_image | product_img_url: 'medium' | img_tag }}
+			</a>
+		</div>
+	{% endif %}
+
+	<div class="productbasic">
+		<h3><a href="{{product.url}}">{{product.title}}</a></h3>
+
+		{% if product.available %}
+    		{% case product.type %} 
+				{% when 'App Store' %}
+					<div class="money">
+						App Store
+					</div>
+				{% when 'Kickstarter' %}
+					<div class="money">
+						on Kickstarter
+					</div>
+				{% when 'Nuvango' %}
+					<div class="money">
+						on Nuvango
+                     </div>
+      			{% when 'Store' %}
+					<div class="money">
+						visit
+                     </div>
+                {% when 'Louis Vuitton Malletier' %}
+					<div class="money">
+						on Louis Vuitton
+					</div>
+      			{% when 'Gela Skins' %}
+					<div class="money">
+						on Gela Skins
+					</div>
+      			{% when 'Milton and King' %}
+					<div class="money">
+						on Milton/King
+					</div>
+      			{% when 'Threadless' %}
+					<div class="money">
+						on Threadless
+					</div>
+				{% else %}
+					<div class="money">
+						{{product.selected_or_first_available_variant.price | money | remove: '.00' }}
+						{% for collection in product.collections %}
+						    {% if collection.handle == 'lowstock' %}
+						        <span style="color: white; background-color: orangered; padding:0px 3px;">Low Stock</span>
+						    {% endif %}
+						{% endfor %}
+					</div>
+			{% endcase %}
+		{% else %}
+			{% assign soon = 'false' %}
+			{% for collection in product.collections %}
+				{% if collection.handle == 'soon' %}
+					{% assign soon = 'true' %}
+				{% endif %}
+			{% endfor %}
+			{% if soon =='true' %}
+				<div class="money" style="color:green;">
+					Coming Soon
+				</div>
+			{% else %}
+				<div class="money" style="color:red;">
+					Sold Out
+				</div>
+			{% endif %}
+		{% endif %}
+
+	</div><!-- /.productbasic -->
+</div><!-- /.product -->

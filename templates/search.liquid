@@ -1,0 +1,14 @@
+<div id="searchpage">
+
+	{% if search.results_count > 0 %}
+		<h1>Results for '{{search.terms}}'</h1>
+		<div class="gallery">
+			{% for product in search.results %}  
+				{% include 'galleryproduct' %}
+			{% endfor %}
+		</div><!-- /#gallery -->
+	{% else %}
+		<h1 style="margin-bottom:256px;">No Results for '{{search.terms}}'</h1>		
+	{% endif %}
+	
+</div><!-- /#searchpage -->
