@@ -1,7 +1,10 @@
 $color-tab: #f2eed9;
 $color-logo: #0ff;
+$color-linkmenu: rgba(0, 230, 230, 0.6);
 $color-link: dodgerblue;
 $color-leftlinks: #00baf2;
+$color-black: #383521;
+$color-footer: #6c6757;
 
 /* Global */
 a,
@@ -30,25 +33,12 @@ body {
     .tab-off {
       a,
       a:visited {
-        background-color: #383521;
+        background-color: $color-black;
         color: yellow;
       }
     }
   }
 }
-
-// body #header .tab-off a,
-// body #header .tab-off a:visited {
-//   background-color: #383521;
-//   color: yellow;
-// }
-
-// body #header .tab-on a,
-// body #header .tab-on a:visited {
-//   background-color: $color-tab;
-//   color: $color-logo;
-// }
-
 
 body #header #sddm .tab-on a:hover,
 body #header #sddm .tab-off a:hover {
@@ -57,21 +47,6 @@ body #header #sddm .tab-off a:hover {
 }
 
 /* Colors Submenu */
-body #header #sddm li .dropdown {
-  background: white;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-body #header #sddm li .dropdown a,
-body #header #sddm li .dropdown a:visited {
-  background-color: white;
-  color: #444;
-}
-
-body #header #sddm li .dropdown a:hover {
-  background-color: yellow;
-}
-
 #header .status-shop-country {
   color: #004069;
 }
@@ -81,34 +56,19 @@ body #header #sddm li .dropdown a:hover {
 }
 
 #carthead #breadcrumb {
-  color: rgba(0, 0, 0, 0.7);
+  color: $color-black;
 }
 
 #breadcrumb a,
 #cartcount,
 #cartcount a {
-  color: rgba(0, 230, 230, 0.6);
+  color: $color-linkmenu;
 }
 
 #breadcrumb a:hover,
 #cartcount a:hover {
-  color: white;
-  background-color: $color-link;
-}
-
-#status-switch,
-#status-switch a {
-  color: #8bd1ff;
-}
-
-#status-switch a:hover {
-  color: white;
-  background-color: $color-link;
-}
-
-#newshead {
-  background-color: #002035;
-  color: yellow;
+  color: $color-black;
+  background-color: $color-linkmenu;
 }
 
 /* Left Navigation */
@@ -127,7 +87,7 @@ ul.leftlinks li a:hover {
 
 /* Cart Page */
 #cart {
-  background-color: #EDECE6;
+  background-color: #edece6;
 }
 
 h3.saverow {
@@ -208,6 +168,7 @@ h3.saverow {
 }
 
 /* PRODUCTS */
+
 /* Products on the front page */
 #frontarticles h1 {
   background-color: black;
@@ -224,7 +185,7 @@ h3.saverow {
 
 /* Collection Pages */
 #collectionpage h1 {
-  color: #4B4944;
+  color: #4b4944;
   background-color: white;
 }
 
@@ -238,28 +199,28 @@ h3.saverow {
 
 #pagination a {
   color: lightgrey;
-  background: #FAFAFA;
+  background: #fafafa;
 }
 
 #pagination a:hover,
 #pagination a:active {
-  background: #3f3800;
+  background: $color-black;
   color: yellow;
 }
 
 #pagination .current {
-  color: #3f3800;
+  color: $color-black;
   background: white;
 }
 
 .gallery .product .money {
-  color: #3f3800;
+  color: $color-black;
 }
 
-/* Search Pages (mostly identical to the Collection Page)*/
+/* Search Pages (mostly identical to the Collection Page) */
 #searchpage h1 {
   color: white;
-  background-color: #3DB741;
+  background-color: #3db741;
 }
 
 /* Product Pages */
@@ -271,20 +232,6 @@ h3.saverow {
 .BUYbuttonAsLink:hover {
   background-color: $color-link;
   color: white;
-}
-
-.soonpro .BUYbuttonAsLink {
-  color: green;
-  background-color: white;
-  border-color: green;
-  /* overwrites default at css-shop-layout.css*/
-}
-
-.soonpro .BUYbuttonAsLink:hover {
-  background-color: green;
-  color: white;
-  border-color: green;
-  /* overwrites default at css-shop-layout.css*/
 }
 
 .soldoutpro .BUYbuttonAsLink {
@@ -342,7 +289,7 @@ ul#variants label {
 /* Footer */
 #footer {
   color: #999;
-  background-color: #E6E3DE;
+  background-color: #e6e3de;
   border-top-color: #dfdcd7;
 }
 
@@ -351,16 +298,16 @@ ul#variants label {
 }
 
 #footer a {
-  color: #6c6757;
+  color: $color-footer;
 }
 
 #footer #searchform #s {
-  color: #6c6757;
+  color: $color-footer;
   background-color: #f6f6f6;
 }
 
 #footer #footertxt {
-  color: #6c6757;
+  color: $color-footer;
 }
 
 #footer .spacedot {
