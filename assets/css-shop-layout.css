@@ -101,7 +101,7 @@
   border-bottom: 1px solid #eae7d0;
 }
 
-#carthead #status-country {
+#carthead #breadcrumb {
   float: left;
   font-size: 24px;
   margin: 0 0 0 24px;
@@ -113,18 +113,18 @@ h1#cartcount {
   white-space: nowrap;
 }
 
-#status-country {
+#breadcrumb {
   width: 560px;
   text-align: left;
 }
 
-#status-country a,
+#breadcrumb a,
 #cartcount a {
   padding: 0;
   text-decoration: none;
 }
 
-#status-country a:hover,
+#breadcrumb a:hover,
 #cartcount a:hover {
   margin-left: -6px;
   margin-right: -6px;

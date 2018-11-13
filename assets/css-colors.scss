@@ -80,17 +80,17 @@ body #header #sddm li .dropdown a:hover {
   background-color: $color-tab;
 }
 
-#carthead #status-country {
+#carthead #breadcrumb {
   color: rgba(0, 0, 0, 0.7);
 }
 
-#status-country a,
+#breadcrumb a,
 #cartcount,
 #cartcount a {
   color: rgba(0, 230, 230, 0.6);
 }
 
-#status-country a:hover,
+#breadcrumb a:hover,
 #cartcount a:hover {
   color: white;
   background-color: $color-link;
