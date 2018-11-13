@@ -1,30 +1,30 @@
   <script type="text/javascript">
       $.noConflict();
-     jQuery(document).ready(function() {  
-         
+     jQuery(document).ready(function() {
+
          /*
-        jQuery(".BUYbutton").attr("disabled","disabled"); 
-       
+        jQuery(".BUYbutton").attr("disabled","disabled");
+
        jQuery('#variant-dropdown').change(function() {
             var test = jQuery('#variant-dropdown').val();
             if(test == "select_tee"){
                 jQuery(".BUYbutton").attr("disabled","disabled");
             }
-            
+
             else{
                 jQuery(".BUYbutton").removeAttr("disabled");
             }
-       });   
+       });
        */
-       
+
        jQuery('.BUYbutton').click(function(){
-            var test = jQuery('#variant-dropdown option:selected').val(); 
+            var test = jQuery('#variant-dropdown option:selected').val();
             if(test == "select_tee"){
                 alert("Please select a size!");
-                return false;     
+                return false;
             }
        });
-       
+
     });
   </script>
 
@@ -36,17 +36,14 @@
 {% endfor %}
 
 
-<div id="productpage">
-    
-<!--     <div id="breadcrumb"><a href="{{shop.url}}"><img src="{{ 'homeicon.png' | asset_url }}" alt="home" /> Home</a> &gt; {{ product.type | link_to_type }} &gt; <b>{{ product.title }}</b></div> -->
-    
+<div id="productpage">    
     <div id="product-images">
 		{% for mytag in product.tags %}
 			{% if mytag == 'Signed' %}
 				<img class="signedpro" src="{{ 'signedbig_01k.png' | asset_url }}" alt="signed" />
 			{% endif %}
 		{% endfor %}
-        
+
         <!-- banderolas -->
     	{% for collection in product.collections %}
 			{% case collection.handle %}
@@ -69,7 +66,7 @@
 			{% endfor %}
 		{% else %}
 			{% if soon =='true' %}
-			
+
 				{% for tag in product.tags %}
 					{% if tag == 'Limited' %}
 						<a href="{{product.url}}">
@@ -77,15 +74,15 @@
 						</a>
 					{% endif %}
 				{% endfor %}
-			
+
 			{% else %}
       			<img class="limitedstarpro" src="{{ 'starsoldout-10k-big-2x.png' | asset_url }}" alt="sold out" width="160" height="167" />
 			{% endif %}
 		{% endif %}
-		
+
 		{% for image in product.images %}
 			<div id="pimage-{{forloop.index}}" class="pimage" {% if forloop.first %} style="display: block;" {% else %} style="display: none;" {% endif %}>
-				<img class="bigsquare" src="{{ image | product_img_url: 'original'}}" alt="{{product.title}}" />        
+				<img class="bigsquare" src="{{ image | product_img_url: 'original'}}" alt="{{product.title}}" />
 			</div>
 		{% endfor %}
 
@@ -95,7 +92,7 @@
 			{% endfor %}
 		</div>
 	</div><!-- /#product-images -->
-  
+
 	{% include 'product-related' %}
-  
+
 </div>

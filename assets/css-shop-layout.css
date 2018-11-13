@@ -1,68 +1,6 @@
-/*eBoy NORTH AMERICA SHOPLAYOUT CSS*/
-html {
-  height: 100%;
-}
-
-body {
-  margin: 0px;
-  padding: 0px 0px 0px 0px;
-  height: 100%;
-  /*!!!!*/
-  width: 100%;
-  /*!!!!*/
-  display: table;
-  /*!!!!*/
-}
-
 /* Primary Layout */
-.topnewsbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #0ff;
-  color: #248c8c;
-  /*   background-color: grey; */
-  text-align: center;
-  z-index: 5000;
-  height: 32px;
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 32px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  display: block;
-}
-
-.topnewsbar a,
-.topnewsbar a:visited {
-  color: #000;
-  text-decoration: none;
-}
-
-.topnewsbar a:hover {
-  text-decoration: underline;
-}
-
-/* add space because of topnewsbar */
-body {
-  /* margin-top: 32px;  */
-}
-
-body #autocenterbox {
-  left: 0px;
-  right: 0px;
-  top: 0px;
-  bottom: 0px;
-  margin-top: 0px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 942px;
-  height: 100%;
-  padding: 0px;
-}
-
 #borderbox {
-  padding: 0px 6px 0px 6px;
+  padding: 0 6px 0 6px;
   height: auto;
 }
 
@@ -74,30 +12,29 @@ body #autocenterbox {
 
 /* Header Styles */
 #header {
-  margin: 0px 6px;
-  padding: 12px 0px 0px 0px;
+  margin: 0 6px;
+  padding: 12px 0 0 0;
   display: table;
-  /*!!!!*/
   width: 930px;
   text-align: right;
 }
 
-/*Submenublock*/
+/* Submenublock */
 #sddm {
   margin: 0;
-  padding: 0px 0px 0px 44px;
+  padding: 0 0 0 44px;
   z-index: 500;
 }
 
 #sddm li {
-  margin: 0px 0px 0px 12px;
+  margin: 0 0 0 12px;
   list-style: none;
   float: left;
   height: auto;
 }
 
 #sddm li a {
-  padding: 0px 24px 0px 24px;
+  padding: 0 24px 0 24px;
   display: block;
   width: auto;
   text-align: center;
@@ -108,7 +45,7 @@ body #autocenterbox {
   position: absolute;
   visibility: hidden;
   margin: 0;
-  padding: 6px 0px 6px 0px;
+  padding: 6px 0px 6px 0;
   z-index: 500;
   background: orange;
   display: table;
@@ -125,12 +62,12 @@ body #autocenterbox {
 }
 
 #sddm .dropdown .menublock-noline {
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 #sddm .dropdown .menublock-topline {
   margin-top: 6px;
-  border-top: 1px solid #DDD;
+  border-top: 1px solid #ddd;
   padding-top: 6px;
 }
 
@@ -154,37 +91,25 @@ body #autocenterbox {
   display: none;
 }
 
-/* Top Info Strips */
-#wholesale {
-  margin: 0px 0px;
-  width: 930px;
-  text-align: center;
-  display: table;
-  /*!!!!*/
-  border-top: 12px solid;
-  line-height: 24px;
-}
-
 #carthead {
-  border-top: 1px solid;
-  margin: 0px 0px;
+  border-top: 1px solid #f2eed9;
+  margin: 0;
   width: 930px;
-  padding: 12px 0px;
+  padding: 12px 0;
   text-align: right;
   display: table;
-  /*!!!!*/
-  border-bottom: 1px solid;
+  border-bottom: 1px solid #eae7d0;
 }
 
 #carthead #status-country {
   float: left;
   font-size: 24px;
-  margin-left: 24px;
+  margin: 0 0 0 24px;
 }
 
 h1#cartcount {
   padding: 0;
-  margin-right: 24px;
+  margin: 0 24px 0 0;
   white-space: nowrap;
 }
 
@@ -212,9 +137,9 @@ h1#cartcount {
 }
 
 #newshead {
-  margin: 0px 0px;
+  margin: 0px 0;
   width: 930px;
-  padding: 6px 0px;
+  padding: 6px 0;
   text-align: center;
   display: table;
   /*!!!!*/
@@ -229,7 +154,7 @@ h1#cartcount {
 /* Main Content Area */
 #content {
   width: 660px;
-  margin: 48px 0px 24px 0px;
+  margin: 48px 0px 24px 0;
   margin-right: 24px;
   float: right;
   display: table;
@@ -237,7 +162,7 @@ h1#cartcount {
 
 #content h1 {
   padding: 0px 6px;
-  margin: 0px 0px 12px 0px;
+  margin: 0px 0px 12px 0;
 }
 
 /* Left Navigation */
@@ -320,7 +245,7 @@ hr {
 }
 
 h3.saverow {
-  padding: 12px 0px;
+  padding: 12px 0;
   width: 100%;
   display: table;
   text-align: center;
@@ -335,7 +260,7 @@ h3.saverow {
 }
 
 #line-items li {
-  padding: 6px 0px;
+  padding: 6px 0;
   margin-bottom: 6px;
   position: relative;
   display: table;
@@ -347,12 +272,12 @@ h3.saverow {
   display: table;
   width: 50px;
   height: 50px;
-  padding: 0px;
+  padding: 0;
   margin: 6px 12px;
 }
 
 #line-items li .thumb a {
-  margin: 0px;
+  margin: 0;
   border: 1px solid #fff;
   text-align: center;
   float: left;
@@ -413,7 +338,7 @@ h3.saverow {
 #update-cart {}
 
 #line-items li#total .subtotal {
-  margin: 0px;
+  margin: 0;
   float: right;
   padding: 3px 12px;
   margin-left: 24px;
@@ -490,7 +415,7 @@ h3.saverow {
 }
 
 #frontpage {
-  margin: 0px;
+  margin: 0;
   padding: 0;
 }
 
@@ -519,7 +444,7 @@ h3.saverow {
 .gallery {
   width: 666px;
   display: table;
-  margin: 0px -6px -6px 0px;
+  margin: 0px -6px -6px 0;
 }
 
 .gallery .product {
@@ -547,7 +472,7 @@ h3.saverow {
 #pagination {
   display: table;
   clear: left;
-  margin: 24px 0px 0px 0px;
+  margin: 24px 0px 0px 0;
 }
 
 #pagination a {
@@ -580,8 +505,8 @@ h3.saverow {
 
 /* Search Pages (mostly identical to the Collection Page)*/
 #searchpage {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 #searchpage h1 {
@@ -599,7 +524,7 @@ h3.saverow {
 
 #content-product h1 {
   padding: 0px 6px;
-  margin: 0px 0px 12px 0px;
+  margin: 0px 0px 12px 0;
 }
 
 #productpage {
@@ -607,12 +532,8 @@ h3.saverow {
   width: 100%;
 }
 
-#breadcrumb {
-  padding: 0 0 12px 0;
-}
-
 .BUYbutton {
-  margin: 12px 0px;
+  margin: 12px 0;
   display: block;
   width: 144px;
   height: 72px;
@@ -628,13 +549,13 @@ h3.saverow {
 .SOLDbutton {
   width: 168px;
   height: 72px;
-  margin: 12px 0px;
+  margin: 12px 0;
 }
 
 .APPSTOREbutton {
   width: 168px;
   height: 72px;
-  margin: 12px 0px;
+  margin: 12px 0;
 }
 
 .APPSTOREbutton:hover {
@@ -724,7 +645,7 @@ ul#variants li label {
   width: 198px;
   padding-top: 12px;
   border-top: 1px lightgrey solid;
-  margin: 24px 0px 0px 0px;
+  margin: 24px 0px 0px 0;
 }
 
 #description p {
@@ -736,19 +657,19 @@ ul#variants li label {
   width: 198px;
   padding-top: 12px;
   border-top: 1px lightgrey solid;
-  margin: 12px 0px 0px 0px;
+  margin: 12px 0px 0px 0;
 }
 
 .productinfo {
-  left: 0px;
-  top: 0px;
+  left: 0;
+  top: 0;
   width: 100%;
 }
 
 #productcontrols {
   width: 198px;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   display: table;
 }
 
@@ -843,18 +764,18 @@ ul#variants li label {
 
 /* Product Page - Related */
 #related {
-  margin: 24px 0px 0px 0px;
+  margin: 24px 0px 0px 0;
   border-top: 1px lightgrey dotted;
   padding-top: 48px;
 }
 
 #related h2 {
-  margin: 6px 0px 12px 0px;
+  margin: 6px 0px 12px 0;
 }
 
 /* Footer */
 #footer {
-  margin: 0px;
+  margin: 0;
   clear: left;
   width: 100%;
   text-align: right;

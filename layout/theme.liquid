@@ -42,11 +42,12 @@
   <link rel="shortcut icon" href="{{ 'favicon.png' | asset_url }}" />
   <link rel="favicon" href="{{ 'favicon.png' | asset_url }}" />
 
-  {{ 'css-shop-reset.css' | asset_url | stylesheet_tag }}
+  {{ 'css-base.scss.css' | asset_url | stylesheet_tag }}
+  {{ 'css-colors.scss.css' | asset_url | stylesheet_tag }}
+  {{ 'css-colors-background.scss.css' | asset_url | stylesheet_tag }}
+
   {{ 'css-shop-layout.css' | asset_url | stylesheet_tag }}
   {{ 'css-shop-typography.css'| asset_url | stylesheet_tag }}
-  {{ 'css-shop-colors-background.css' | asset_url | stylesheet_tag }}
-  {{ 'css-shop-colors.css' | asset_url | stylesheet_tag }}
   {{ 'css-shop-icons.css' | asset_url | stylesheet_tag }}
   {{ 'css-shop-debugX.css' | asset_url | stylesheet_tag }}
   {{ 'lightbox/v2/lightbox.css' | global_asset_url | stylesheet_tag }}
@@ -54,6 +55,7 @@
   {{ 'script-shop.js' | asset_url | script_tag }}
   {{ 'script-dropdownmenu_01k.js' | asset_url | script_tag }}
   {{ 'script-toggle_01k.js' | asset_url | script_tag }}
+
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
   <script type="text/javascript">

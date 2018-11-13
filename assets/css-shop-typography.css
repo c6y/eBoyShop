@@ -47,7 +47,7 @@ a:hover {
 #header .tab-off a,
 #header .tab-off a:visited {
   text-decoration: none;
-  margin-left: 0px;
+  margin-left: 0;
 }
 
 #header .tab-on a:hover,
@@ -79,7 +79,7 @@ a:hover {
   white-space: nowrap;
   text-decoration: none;
   font-weight: normal;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   font-size: 24px;
   line-height: 1em;
 }
@@ -88,16 +88,10 @@ a:hover {
   font-weight: normal;
 }
 
-/* Top Info Strips */
 h1 {
   line-height: 1.2em;
   font-size: 24px;
   font-weight: normal;
-}
-
-#wholesale {
-  font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
-  font-size: 14px;
 }
 
 #carthead #cartcount {
@@ -150,28 +144,6 @@ ul.leftcolorbox li {
 }
 
 /* Product Pages */
-#breadcrumb {
-  color: grey;
-  font-size: 14px;
-  font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
-}
-
-#breadcrumb b {
-  font-weight: normal;
-  text-decoration: none;
-  color: dodgerblue;
-}
-
-#breadcrumb a {
-  text-decoration: none;
-  color: grey;
-}
-
-#breadcrumb a:hover {
-  text-decoration: none;
-  color: dodgerblue;
-}
-
 .productleft h2,
 .productleftsold h2 {
   font-size: 24px;

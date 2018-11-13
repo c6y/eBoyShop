@@ -1,10 +1,13 @@
-/*eBoy EUROPE SHOP-COLORS CSS*/
-/* ACHTUNG! find border color definitions at css-shop-layout.css */
+$color-tab: #f2eed9;
+$color-logo: #0ff;
+$color-link: dodgerblue;
+$color-leftlinks: #00baf2;
+
 /* Global */
 a,
 a:visited,
 a:hover {
-  color: dodgerblue;
+  color: $color-link;
 }
 
 #contentbox {
@@ -12,22 +15,40 @@ a:hover {
 }
 
 /* Header */
-body #header {
-  background-color: none;
-  /*#beb69f*/
+body {
+  #header {
+    background-color: none;
+
+    .tab-on {
+      a,
+      a:visited {
+        background-color: $color-tab;
+        color: $color-logo;
+      }
+    }
+
+    .tab-off {
+      a,
+      a:visited {
+        background-color: #383521;
+        color: yellow;
+      }
+    }
+  }
 }
 
-body #header .tab-on a,
-body #header .tab-on a:visited {
-  background-color: #f2eed9;
-  color: #00ffff;
-}
+// body #header .tab-off a,
+// body #header .tab-off a:visited {
+//   background-color: #383521;
+//   color: yellow;
+// }
 
-body #header .tab-off a,
-body #header .tab-off a:visited {
-  background-color: #383521;
-  color: yellow;
-}
+// body #header .tab-on a,
+// body #header .tab-on a:visited {
+//   background-color: $color-tab;
+//   color: $color-logo;
+// }
+
 
 body #header #sddm .tab-on a:hover,
 body #header #sddm .tab-off a:hover {
@@ -35,10 +56,10 @@ body #header #sddm .tab-off a:hover {
   color: #383521;
 }
 
-/*Colors Submenu*/
+/* Colors Submenu */
 body #header #sddm li .dropdown {
   background: white;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, .1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 body #header #sddm li .dropdown a,
@@ -53,26 +74,10 @@ body #header #sddm li .dropdown a:hover {
 
 #header .status-shop-country {
   color: #004069;
-  /*#98917F;*/
-}
-
-/* Top Info Strips */
-#wholesale {
-  background-color: #0E5E95;
-  color: cyan;
-  border-top-color: #0E5E95;
-}
-
-#wholesale a,
-#wholesale a:hover,
-#wholesale a:visited {
-  color: SeaShell;
 }
 
 #carthead {
-  background-color: #f2eed9;
-  border-top-color: #f2eed9;
-  border-bottom-color: #eae7d0;
+  background-color: $color-tab;
 }
 
 #carthead #status-country {
@@ -88,7 +93,7 @@ body #header #sddm li .dropdown a:hover {
 #status-country a:hover,
 #cartcount a:hover {
   color: white;
-  background-color: dodgerblue;
+  background-color: $color-link;
 }
 
 #status-switch,
@@ -98,7 +103,7 @@ body #header #sddm li .dropdown a:hover {
 
 #status-switch a:hover {
   color: white;
-  background-color: dodgerblue;
+  background-color: $color-link;
 }
 
 #newshead {
@@ -111,19 +116,13 @@ body #header #sddm li .dropdown a:hover {
   color: #333;
 }
 
-ul.leftlinks {
-  /* background-color: white; */
-  /* border-color: #e5e5e5; */
-}
-
 ul.leftlinks li a {
-  /* color:#3f3800; */
-  color: #00baf2;
+  color: $color-leftlinks;
 }
 
 ul.leftlinks li a:hover {
   color: white;
-  background-color: #00baf2;
+  background-color: $color-leftlinks;
 }
 
 /* Cart Page */
@@ -156,7 +155,6 @@ h3.saverow {
 
 #cart ul li h3 a {
   color: #333;
-  ;
 }
 
 .itemcost {
@@ -177,12 +175,12 @@ h3.saverow {
 }
 
 #line-items li#total .buttonAsLink {
-  color: #AAA;
+  color: #aaa;
   background-color: #ddd;
 }
 
 #line-items li#total .buttonAsLink:hover {
-  background-color: #AAA;
+  background-color: #aaa;
   color: #ddd;
 }
 
@@ -192,7 +190,7 @@ h3.saverow {
 
 .checkoutrow .buttonAsLink {
   color: white;
-  background-color: dodgerblue;
+  background-color: $color-link;
 }
 
 .checkoutrow .buttonAsLink:hover {
@@ -201,12 +199,12 @@ h3.saverow {
 }
 
 .shipinfo {
-  color: dodgerblue;
+  color: $color-link;
 }
 
 /* Page */
 #page h1 {
-  background-color: dodgerblue;
+  background-color: $color-link;
 }
 
 /* PRODUCTS */
@@ -266,12 +264,12 @@ h3.saverow {
 
 /* Product Pages */
 .BUYbuttonAsLink {
-  color: dodgerblue;
+  color: $color-link;
   background-color: white;
 }
 
 .BUYbuttonAsLink:hover {
-  background-color: dodgerblue;
+  background-color: $color-link;
   color: white;
 }
 
@@ -317,7 +315,7 @@ h3.saverow {
 }
 
 .price {
-  color: dodgerblue;
+  color: $color-link;
 }
 
 ul#variants label {
@@ -325,7 +323,7 @@ ul#variants label {
 }
 
 #productpage #description a {
-  color: dodgerblue;
+  color: $color-link;
 }
 
 #productpage #description #details {
