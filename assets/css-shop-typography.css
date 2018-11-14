@@ -86,11 +86,10 @@ ul.leftlinks li a {
 }
 
 /* Products on the front page */
-#frontpage h3 {
+/* #frontpage h3 {
   font-size: 100%;
   line-height: 1.5em;
-}
-
+} */
 /* Product Pages */
 .price {
   font-size: 36px;
@@ -149,7 +148,7 @@ ul.leftlinks li a {
   font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
 }
 
-.product h3 {
+.product .productbasic h3 {
   font-size: 1rem;
   font-weight: 400;
 }
