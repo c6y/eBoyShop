@@ -1,23 +1,24 @@
-/* Primary Layout */
-#borderbox {
-  padding: 0 6px 0 6px;
-  height: auto;
-}
+$cell: 16rem;
+$cell-margin: 0.5rem;
+$content-min-width: 2 * $cell + 3 * $cell-margin;
+$breakpoint: 480px;
 
-#contentbox {
-  width: 930px;
-  height: auto;
-  display: table;
-}
+
+/* Primary Layout */
+// #contentbox {
+//   width: 930px;
+//   height: auto;
+//   display: table;
+// }
 
 /* Header Styles */
-#header {
-  margin: 0 6px;
-  padding: 12px 0 0 0;
-  display: table;
-  width: 930px;
-  text-align: right;
-}
+// #appheader {
+//   margin: 0 6px;
+//   padding: 12px 0 0 0;
+//   display: table;
+//   width: 930px;
+//   text-align: right;
+// }
 
 /* Submenublock */
 #sddm {
@@ -44,7 +45,7 @@
 #carthead {
   border-top: 1px solid #f2eed9;
   margin: 0;
-  width: 930px;
+  width: 100%;
   padding: 12px 0;
   text-align: right;
   display: table;
@@ -82,22 +83,32 @@ h1#cartcount {
   text-decoration: none;
 }
 
-/* Main Content Area */
-#content {
-  width: 660px;
-  margin: 48px 0 24px 0;
-  margin-right: 24px;
-  float: right;
-  display: table;
+/* Main mainBoxx Area */
+@media only screen
+  and (max-device-width: $breakpoint) {
+  #mainBox {
+    min-width: 100%;
+  }
+}
+
+#mainBox {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  flex-grow: 1;
+  align-items: baseline;
+  flex-direction: column;
+  z-index: 20;
 }
 
 /* Left Navigation */
-#leftsiders {
-  width: 222px;
-  float: left;
-  text-align: left;
-  margin-top: 24px;
-  display: table;
+#sideBox {
+  box-sizing: border-box;
+  width: $cell;
+  padding: $cell-margin;
+  overflow: hidden;
+  min-width: $cell + $cell-margin;
+  max-width: $cell + $cell-margin;
 }
 
 ul.leftlinks {
@@ -339,37 +350,47 @@ h3.saverow {
 }
 
 /* Collection Pages */
+
+#collectionpage {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.25rem;
+}
+
 #collectionpage h1 {
-  width: 648px;
+  // width: 648px;
   margin-bottom: 12px;
-}
-
-.gallery {
-  width: 666px;
-  display: table;
-  margin: 0 -6px -6px 0;
-}
-
-.gallery .product {
-  float: left;
-  width: 214px;
-  margin: 0 6px 6px 0;
-  border: 1px solid #ddd;
-}
-
-.gallery-image img {
-  width: 214px;
-  height: 214px;
-}
-
-.productbasic {
-  padding: 6px 6px 9px 6px;
 }
 
 #collectionpage h2 {
   padding-top: 12px;
   margin: 0;
 }
+
+.gallery {
+  width: auto;
+  display: table;
+  margin: 0 -6px -6px 0;
+}
+
+.gallery .product {
+  float: left;
+  width: $cell;
+  margin: $cell-margin * 0.5;
+  // margin: 0 6px 6px 0;
+  // border: 1px solid #ddd;
+}
+
+.gallery-image img {
+  width: $cell;
+  height: $cell;
+}
+
+.productbasic {
+  padding: 6px 6px 9px 6px;
+}
+
+
 
 #pagination {
   display: table;

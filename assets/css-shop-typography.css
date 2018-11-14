@@ -20,28 +20,28 @@ a:hover {
 }
 
 /* Header Styles */
-#header {
+#appheader {
   font-size: 48px;
   line-height: 64px;
 }
 
-#header,
-#header a,
-#header a:visited,
-#header a:hover {
+#appheader,
+#appheader a,
+#appheader a:visited,
+#appheader a:hover {
   text-decoration: none;
 }
 
-#header .tab-on a,
-#header .tab-on a:visited,
-#header .tab-off a,
-#header .tab-off a:visited {
+#appheader .tab-on a,
+#appheader .tab-on a:visited,
+#appheader .tab-off a,
+#appheader .tab-off a:visited {
   text-decoration: none;
   margin-left: 0;
 }
 
-#header .tab-on a:hover,
-#header .tab-off a:hover {
+#appheader .tab-on a:hover,
+#appheader .tab-off a:hover {
   text-decoration: none;
 }
 

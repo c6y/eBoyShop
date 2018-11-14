@@ -43,18 +43,22 @@
   <link rel="favicon" href="{{ 'favicon.png' | asset_url }}" />
 
   {{ 'css-base.scss.css' | asset_url | stylesheet_tag }}
+  {{ 'css-layout.scss.css' | asset_url | stylesheet_tag }}
+  {{ 'css-header.scss.css' | asset_url | stylesheet_tag }}
+  {{ 'css-body.scss.css' | asset_url | stylesheet_tag }}
+  {{ 'css-sidebox.scss.css' | asset_url | stylesheet_tag }}
   {{ 'css-colors.scss.css' | asset_url | stylesheet_tag }}
   {{ 'css-colors-background.scss.css' | asset_url | stylesheet_tag }}
 
-  {{ 'css-shop-layout.css' | asset_url | stylesheet_tag }}
   {{ 'css-shop-typography.css'| asset_url | stylesheet_tag }}
   {{ 'css-shop-icons.css' | asset_url | stylesheet_tag }}
-  {{ 'css-shop-debugX.css' | asset_url | stylesheet_tag }}
   {{ 'lightbox/v2/lightbox.css' | global_asset_url | stylesheet_tag }}
   {{ 'lightbox/v2/lightbox.js' | global_asset_url | script_tag }}
   {{ 'script-shop.js' | asset_url | script_tag }}
   {{ 'script-dropdownmenu_01k.js' | asset_url | script_tag }}
   {{ 'script-toggle_01k.js' | asset_url | script_tag }}
+
+  {{ 'css-debug.scss.css' | asset_url | stylesheet_tag }}
 
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
@@ -74,24 +78,14 @@
 
 <body id="page-{{template}}">
 
-  <!-- <div class="topnewsbar">
-    TEST Check our <a href="http://db.eboy.com" target="_blank">database</a> | follow us on <a href="https://twitter.com/eBoyArts" target="_blank">Twitter</a>, <a href="https://www.instagram.com/eboyarts/" target="_blank">Instagram</a> and <a href="https://ello.co/eboy" target="_blank">Ello</a>
-  </div> -->
-
   <div id="autocenterbox">
 
-    <div id="header">
+    <div id="appheader">
       <ul id="sddm">
         <li class="tab-on">
           <a class="logotype" href="/" onmouseover="mopen('m3')" onmouseout="mclosetime()">eBoy</a>
         </li>
-        <!-- <li class="tab-off">
-          <a class="logotype" href="http://hello.eboy.com/eboy/" onmouseover="mopen('m2')" onmouseout="mclosetime()">Work</a>
-        </li> -->
       </ul>
-    </div>
-
-    <div id="borderbox">
       <div id="carthead">
         <h1 id="breadcrumb">
           <a href="/">Shop</a>
@@ -106,7 +100,9 @@
         <h1 id="cartcount"><a href="/cart" class="mdi-cart">Cart:</a> {{ cart.item_count }}</h1>
       </div>
 
-      <div id="contentbox">
+    </div>
+
+    <div id="appbody">
         {% case template %}
           {% when 'product' %}
             <div id="content-product">
@@ -115,13 +111,12 @@
             {% include 'sidebar-product' %}
           {% else %}
             {% include 'sidebar-left' %}
-            <div id="content">
+            <div id="mainBox">
               {{ content_for_layout }}
             </div>
         {% endcase %}
-      </div>
 
-      <div id="footer">
+      <!-- <div id="footer">
         <form id="searchform" method="get" action="/search">
           <input type="text" value="Search Shop" name="q" id="s" size="24" onfocus="clearMe(this)"/>
         </form>
@@ -131,9 +126,9 @@
           {% endfor %}
           Powered by <a href="http://shopify.com" title="powered by Shopify">Shopify</a>
         </div>
-      </div>
+      </div> -->
 
-    </div><!-- /#borderbox -->
+    </div><!-- /#appbody -->
   </div> <!-- /#autocenterbox -->
 </body>
 </html>

@@ -2,7 +2,8 @@ $color-tab: #f2eed9;
 $color-logo: #0ff;
 $color-linkmenu: rgba(0, 230, 230, 0.6);
 $color-link: dodgerblue;
-$color-leftlinks: #00baf2;
+$color-sidebox-text: {{ settings.color-sidebox-text }};
+$color-sidebox-link: {{ settings.color-sidebox-link }};
 $color-black: #383521;
 $color-footer: #6c6757;
 
@@ -13,13 +14,13 @@ a:hover {
   color: $color-link;
 }
 
-#contentbox {
-  background-color: white;
-}
+// #contentbox {
+//   background-color: white;
+// }
 
 /* Header */
 body {
-  #header {
+  #appheader {
     background-color: none;
 
     .tab-on {
@@ -40,14 +41,14 @@ body {
   }
 }
 
-body #header #sddm .tab-on a:hover,
-body #header #sddm .tab-off a:hover {
+body #appheader #sddm .tab-on a:hover,
+body #appheader #sddm .tab-off a:hover {
   background-color: yellow;
   color: #383521;
 }
 
 /* Colors Submenu */
-#header .status-shop-country {
+#appheader .status-shop-country {
   color: #004069;
 }
 
@@ -72,17 +73,17 @@ body #header #sddm .tab-off a:hover {
 }
 
 /* Left Navigation */
-#leftsiders h3 {
+#sideBox h3 {
   color: #333;
 }
 
 ul.leftlinks li a {
-  color: $color-leftlinks;
+  color: $color-sidebox-link;
 }
 
 ul.leftlinks li a:hover {
   color: white;
-  background-color: $color-leftlinks;
+  background-color: $color-sidebox-link;
 }
 
 /* Cart Page */

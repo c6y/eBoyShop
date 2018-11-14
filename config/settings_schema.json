@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "color",
+        "id": "color-sidebox-text",
+        "label": "Sidebar text color",
+        "default": "#383521"
+      },
+      {
+        "type": "color",
+        "id": "color-sidebox-link",
+        "label": "Sidebar link color",
+        "default": "#00baf2"
+      }
+    ]
+  }
+]
