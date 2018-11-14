@@ -77,9 +77,7 @@
 </head>
 
 <body id="page-{{template}}">
-
   <div id="autocenterbox">
-
     <div id="appheader">
       <ul id="sddm">
         <li class="tab-on">
@@ -97,11 +95,9 @@
             {% else %}
           {% endcase %}
         </h1>
-        <h1 id="cartcount"><a href="/cart" class="mdi-cart">Cart:</a> {{ cart.item_count }}</h1>
+        <h1 id="cartcount"><a href="/cart" class="mdi-cart"></a> {{ cart.item_count }}</h1>
       </div>
-
     </div>
-
     <div id="appbody">
         {% case template %}
           {% when 'product' %}
@@ -115,20 +111,7 @@
               {{ content_for_layout }}
             </div>
         {% endcase %}
-
-      <!-- <div id="footer">
-        <form id="searchform" method="get" action="/search">
-          <input type="text" value="Search Shop" name="q" id="s" size="24" onfocus="clearMe(this)"/>
-        </form>
-        <div id="footertxt">
-          {% for link in linklists.footer.links %}
-            {{ link.title | link_to: link.url }} |
-          {% endfor %}
-          Powered by <a href="http://shopify.com" title="powered by Shopify">Shopify</a>
-        </div>
-      </div> -->
-
-    </div><!-- /#appbody -->
-  </div> <!-- /#autocenterbox -->
+    </div>
+  </div>
 </body>
 </html>

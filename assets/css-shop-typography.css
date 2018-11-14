@@ -145,16 +145,17 @@ ul.leftlinks li a {
 }
 
 /* Collection Pages */
-.gallery {
+.product {
   font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
 }
 
-.gallery h3 {
-  font-size: 14px;
+.product h3 {
+  font-size: 1rem;
+  font-weight: 400;
 }
 
-.gallery .product .money {
-  font-size: 24px;
+.product .money {
+  font-size: 1.5rem;
   font-weight: normal;
 }
 

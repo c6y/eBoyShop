@@ -13,6 +13,41 @@
         "id": "color-sidebox-link",
         "label": "Sidebar link color",
         "default": "#00baf2"
+      },
+      {
+        "type": "color",
+        "id": "color-header",
+        "label": "Header color",
+        "default": "#f2eed9"
+      },
+      {
+        "type": "color",
+        "id": "color-logo",
+        "label": "Logo color",
+        "default": "#0ff"
+      }
+    ]
+  },
+  {
+    "name": "Dimensions",
+    "settings": [
+      {
+        "type": "text",
+        "id": "cell",
+        "label": "Cell dimension",
+        "default": "16rem"
+      },
+      {
+        "type": "text",
+        "id": "cell-margin",
+        "label": "Cell margin",
+        "default": "0.5rem"
+      },
+      {
+        "type": "text",
+        "id": "breakpoint",
+        "label": "Breakpoint",
+        "default": "480px"
       }
     ]
   }
