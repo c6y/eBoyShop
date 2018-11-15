@@ -46,7 +46,7 @@
   {{ 'css-layout.scss.css' | asset_url | stylesheet_tag }}
   {{ 'css-appheader.scss.css' | asset_url | stylesheet_tag }}
   {{ 'css-appbody.scss.css' | asset_url | stylesheet_tag }}
-  {{ 'css-sidebox.scss.css' | asset_url | stylesheet_tag }}
+  {{ 'css-sidebarleft.scss.css' | asset_url | stylesheet_tag }}
   {{ 'css-colors.scss.css' | asset_url | stylesheet_tag }}
   {{ 'css-colors-background.scss.css' | asset_url | stylesheet_tag }}
 
@@ -99,13 +99,13 @@
     <div id="appbody">
         {% case template %}
           {% when 'product' %}
-            <div id="content-product">
+            <div id="productbox">
               {{ content_for_layout }}
             </div>
-            {% include 'sidebar-product' %}
+            {% include 'sidebarright' %}
           {% else %}
-            {% include 'sidebar-left' %}
-            <div id="mainBox">
+            {% include 'sidebarleft' %}
+            <div id="mainbox">
               {{ content_for_layout }}
             </div>
         {% endcase %}

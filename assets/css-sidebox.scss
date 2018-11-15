@@ -9,7 +9,7 @@ $breakpoint: 480px;
     display: none;
   }
 
-  #sideBox {
+  #sidebarleft {
     // order: 1;
     min-width: $cell;
 
@@ -36,7 +36,7 @@ $breakpoint: 480px;
     transition: 0.05s;
   }
 
-  #sideBox {
+  #sidebarleft {
     order: 0;
     min-width: $cell + $cell-margin;
     max-width: $cell + $cell-margin;
@@ -51,7 +51,7 @@ $breakpoint: 480px;
   }
 }
 
-#sideBox {
+#sidebarleft {
   box-sizing: border-box;
   padding: $cell-margin;
   // font-family: @font-sidebig;
@@ -60,7 +60,7 @@ $breakpoint: 480px;
   // line-height: @font-sidebig-lineheight;
   overflow: hidden;
 
-  .sideBoxMain {
+  .sidebarleftMain {
     z-index: 40;
     position: relative;
     // background-color: @color-0;

@@ -3,15 +3,15 @@ $cell-margin: {{ settings.cell-margin }};
 $content-min-width: 2 * $cell + 3 * $cell-margin;
 $breakpoint: {{ settings.breakpoint }};
 
-/* Main mainBox Area */
+/* Main mainbox Area */
 @media only screen
   and (max-device-width: $breakpoint) {
-  #mainBox {
+  #mainbox {
     min-width: 100%;
   }
 }
 
-#mainBox {
+#mainbox {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
@@ -22,7 +22,7 @@ $breakpoint: {{ settings.breakpoint }};
 }
 
 /* Left Navigation */
-#sideBox {
+#sidebarleft {
   box-sizing: border-box;
   width: $cell;
   padding: $cell-margin;
@@ -249,34 +249,40 @@ h3.saverow {
   font-weight: bold;
 }
 
-// #frontpage p.money {
+// #frontbox p.money {
 //   margin: 2px 0;
 // }
 
-// #frontpage h3 {
+// #frontbox h3 {
 //   margin: 0;
 //   padding: 0;
 // }
 
-#frontpage .coverpics {
+.coverproduct {
   width: 100%;
-  margin: $cell-margin * 0.5;
+  margin: $cell-margin * 0.5
+}
+
+
+.coverpic {
+  width: 100%;
+  margin: 0;
 }
 
 /* Collection Pages */
 
-#collectionpage,
-#frontpage {
+#collectionbox,
+#frontbox {
   display: flex;
   flex-wrap: wrap;
   padding: 0.25rem;
 }
 
-#collectionpage h1 {
+#collectionbox h1 {
   margin-bottom: 12px;
 }
 
-#collectionpage h2 {
+#collectionbox h2 {
   padding-top: 12px;
   margin: 0;
 }
@@ -347,14 +353,14 @@ h3.saverow {
 }
 
 /* Product Pages */
-#content-product {
+#productbox {
   width: 672px;
   margin: 24px 0 18px 24px;
   float: left;
   display: table;
 }
 
-#content-product h1 {
+#productbox h1 {
   padding: 0 6px;
   margin: 0 0 12px 0;
 }
@@ -465,7 +471,7 @@ ul#variants li label {
   margin-top: 12px;
 }
 
-#productbox {
+#sidebar-right {
   display: table;
   width: 222px;
   float: right;

@@ -1,4 +1,4 @@
-<div id="frontpage">
+<div id="frontbox">
 
   {% if blogs.frontpage.articles_count > 0 %}
     <div id="frontarticles">
@@ -11,33 +11,31 @@
     </div>
   {% endif %}
 
-  <!-- featured products -->
   {% for product in collections.frontcover.products %}
-    <!-- banderolas -->
-    {% for collection in product.collections %}
-      {% case collection.handle %}
-        {% when 'new' %}
-          <img class="new" src="{{ 'new04s.png' | asset_url }}" alt="new" height="107" width="107"/>
-        {% when 'soon' %}
-          <img class="new" src="{{ 'soon01k.png' | asset_url }}" alt="soon" />
-        {% when 'pre-order' %}
-          <img class="newbig" src="{{ 'PREORDERBANNER-02k-2x.png' | asset_url }}" alt="pre-order" />
-        {% else %}
-      {% endcase %}
-    {% endfor %}
-    <!-- Love Sticker -->
-    <a href="{{product.url}}" title="{{ item.title }}">
-      <img class="love" src="{{ 'Sticker-Love-2x-01k.png' | asset_url }}" alt="featured" width="151" height="147" />
-    </a>
-    <!-- cover product image -->
-    <div class="coverpics">
-      <a href="{{product.url}}" title="{{ item.title }}">
-         <img class="bigsquare" src="{{ product.featured_image | product_img_url: 'original'}}" alt="{{product.title}}" />
-      </a>
+    <!-- cover products -->
+    <div class="coverproduct">
+      <!-- banderolas -->
+      {% for collection in product.collections %}
+        {% case collection.handle %}
+          {% when 'new' %}
+            <img class="new" src="{{ 'new04s.png' | asset_url }}" alt="new" height="107" width="107"/>
+          {% when 'soon' %}
+            <img class="new" src="{{ 'soon01k.png' | asset_url }}" alt="soon" />
+          {% when 'pre-order' %}
+            <img class="newbig" src="{{ 'PREORDERBANNER-02k-2x.png' | asset_url }}" alt="pre-order" />
+          {% else %}
+        {% endcase %}
+      {% endfor %}
+      <!-- cover product image -->
+      <div class="coverpic">
+        <a href="{{product.url}}" title="{{ item.title }}">
+           <img class="bigsquare" src="{{ product.featured_image | product_img_url: 'original'}}" alt="{{product.title}}" />
+        </a>
+      </div>
     </div>
   {% endfor %}
 
-  <!-- gallery -->
+  <!-- featured products -->
   {% for product in collections.frontpage.products %}
     {% include 'galleryproduct' %}
   {% endfor %}
