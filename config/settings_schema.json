@@ -80,5 +80,23 @@
         "default": "480px"
       }
     ]
+  },
+  {
+    "name": "Fonts",
+    "settings": [
+      {
+        "type": "text",
+        "id": "fontsize-sidebar-big",
+        "label": "Big font size sidebar",
+        "default": "2rem"
+      },
+      {
+        "type": "text",
+        "id": "fontweight-sidebar-big",
+        "label": "Big font weight sidebar",
+        "default": "400"
+      }
+    ]
   }
+
 ]

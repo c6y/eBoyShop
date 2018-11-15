@@ -10,56 +10,56 @@
   <div id="productcontrols">
     {% case product.type %}
       {% when 'App Store' %}
-        <div class="productleft">
+        <div class="producttopinfo">
           <h2 class="productinfo">{{ product.title }}</h2>
         </div>
         <div class="APPSTOREbutton">
                     <a href="{% for variant in product.variants %}{{ variant.sku }}{% endfor %}" target="_blank"><img src="{{ 'AppStoreButton-2x-01k.png' | asset_url }}" width="168" height="71" /></a>
         </div>
       {% when 'Kickstarter' %}
-        <div class="productleft">
+        <div class="producttopinfo">
           <h2 class="productinfo">{{ product.title }}</h2>
         </div>
         <div class="APPSTOREbutton">
                     <a href="{% for variant in product.variants %}{{ variant.sku }}{% endfor %}" target="_blank"><img src="{{ 'KickstarterButton-2x-01s.png' | asset_url }}" width="168" height="71" /></a>
         </div>
       {% when 'Nuvango' %}
-        <div class="productleft">
+        <div class="producttopinfo">
           <h2 class="productinfo">{{ product.title }}</h2>
         </div>
         <div class="APPSTOREbutton">
           <a href="{% for variant in product.variants %}{{ variant.sku }}{% endfor %}" target="_blank"><img src="{{ 'NuvangoButton-2x-01k.png' | asset_url }}" width="168" height="71" /></a>
         </div>
           {% when 'Store' %}
-        <div class="productleft">
+        <div class="producttopinfo">
           <h2 class="productinfo">{{ product.title }}</h2>
         </div>
         <div class="APPSTOREbutton">
           <a href="{% for variant in product.variants %}{{ variant.sku }}{% endfor %}" target="_blank"><img src="{{ 'OPEN-2x-01t.png' | asset_url }}" width="168" height="71" /></a>
         </div>
           {% when 'Louis Vuitton Malletier' %}
-        <div class="productleft">
+        <div class="producttopinfo">
           <h2 class="productinfo">{{ product.title }}</h2>
         </div>
         <div class="APPSTOREbutton">
           <a href="{% for variant in product.variants %}{{ variant.sku }}{% endfor %}" target="_blank"><img src="{{ 'LouisVuittonButton-2x-01k.png' | asset_url }}" width="168" height="71" /></a>
         </div>
           {% when 'Gela Skins' %}
-        <div class="productleft">
+        <div class="producttopinfo">
           <h2 class="productinfo">{{ product.title }}</h2>
         </div>
         <div class="APPSTOREbutton">
           <a href="{% for variant in product.variants %}{{ variant.sku }}{% endfor %}" target="_blank"><img src="{{ 'GelaskinsButton-2x-01t.png' | asset_url }}" width="168" height="71" /></a>
         </div>
           {% when 'Milton and King' %}
-        <div class="productleft">
+        <div class="producttopinfo">
           <h2 class="productinfo">{{ product.title }}</h2>
         </div>
         <div class="APPSTOREbutton">
           <a href="{% for variant in product.variants %}{{ variant.sku }}{% endfor %}" target="_blank"><img src="{{ 'Milton-2x-02t.png' | asset_url }}" width="168" height="71" /></a>
         </div>
           {% when 'Threadless' %}
-        <div class="productleft">
+        <div class="producttopinfo">
           <h2 class="productinfo">{{ product.title }}</h2>
         </div>
         <div class="APPSTOREbutton">
@@ -69,7 +69,7 @@
         {% if product.available %}
 
           <form action="/cart/add" method="post">
-            <div class="productleft" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <div class="producttopinfo" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
               <h2 class="productinfo" itemprop="priceCurrency" content="{{shop.currency}}">{{ product.title }}</h2>
 
                         <!-- variants -->
@@ -113,7 +113,7 @@
           </form>
 
         {% else %}
-          <div class="productleft">
+          <div class="producttopinfo">
             <h2 class="productinfo">{{ product.title }}</h2>
           </div>
 

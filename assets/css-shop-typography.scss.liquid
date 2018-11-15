@@ -1,3 +1,8 @@
+$fontsize-leftlinks: {{ settings.fontsize-sidebar-big }};
+$fontweight-leftlinks: {{ settings.fontweight-sidebar-big }};
+$fontsize-producttopinfo: {{ settings.fontsize-sidebar-big }};
+$fontweight-producttopinfo: {{ settings.fontweight-sidebar-big }};
+
 /*eBoy SHOP-TYPOGRAPHY CSS*/
 @font-face {
   font-family: Moxie;
@@ -7,7 +12,7 @@
 /* Global */
 body {
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.4rem;
+  font-size: 1rem;
 }
 
 a,
@@ -70,8 +75,8 @@ h1 {
 }
 
 ul.leftlinks {
-  font-size: 2rem;
-  font-weight: 400;
+  font-size: $fontsize-leftlinks;
+  font-weight: $fontweight-leftlinks;
   line-height: 1.5rem;
   text-transform: lowercase;
 }
@@ -84,12 +89,17 @@ ul.leftlinks li a {
   text-decoration: none;
 }
 
-/* Products on the front page */
-/* #frontbox h3 {
-  font-size: 100%;
-  line-height: 1.5em;
-} */
 /* Product Pages */
+
+.producttopinfo,
+.producttopinfosold {
+  h2 {
+    font-size: $fontsize-producttopinfo;
+    font-weight: $fontweight-producttopinfo;
+    margin: 0 0 1rem 0;
+  };
+}
+
 .price {
   font-size: 36px;
   font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
@@ -102,12 +112,12 @@ ul.leftlinks li a {
 }
 
 #description {
-  line-height: 1.4em;
+  line-height: 1.5rem;
   font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
 }
 
 #description ul {
-  margin-bottom: .5em;
+  margin-bottom: 0.5rem;
 }
 
 #description ul li {
