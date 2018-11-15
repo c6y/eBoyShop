@@ -110,6 +110,13 @@
             </div>
         {% endcase %}
     </div>
+    <div id="appfooter">
+      {% case template %}
+        {% when 'product' %}
+          {% include 'productrelated' %}
+        {% else %}
+      {% endcase %}
+    </div>
   </div>
 </body>
 </html>

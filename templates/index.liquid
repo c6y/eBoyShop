@@ -1,5 +1,4 @@
 <div id="frontbox">
-
   {% if blogs.frontpage.articles_count > 0 %}
     <div id="frontarticles">
       {% for article in blogs.frontpage.articles  %}
@@ -39,5 +38,4 @@
   {% for product in collections.frontpage.products %}
     {% include 'galleryproduct' %}
   {% endfor %}
-
 </div>
