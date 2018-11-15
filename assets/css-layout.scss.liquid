@@ -3,7 +3,7 @@ $cell-margin: {{ settings.cell-margin }};
 $content-min-width: 2 * $cell + 3 * $cell-margin;
 $breakpoint: {{ settings.breakpoint }};
 
-/* Main mainbox Area */
+// mobile
 @media only screen
   and (max-device-width: $breakpoint) {
   #mainbox {
@@ -275,7 +275,7 @@ h3.saverow {
 #frontbox {
   display: flex;
   flex-wrap: wrap;
-  padding: 0.25rem;
+  padding: $cell-margin * 0.5;
 }
 
 #collectionbox h1 {
@@ -352,12 +352,14 @@ h3.saverow {
   width: 648px;
 }
 
-/* Product Pages */
 #productbox {
-  width: 672px;
-  margin: 24px 0 18px 24px;
-  float: left;
-  display: table;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  flex-grow: 1;
+  align-items: baseline;
+  flex-direction: column;
+  z-index: 20;
 }
 
 #productbox h1 {
@@ -366,8 +368,9 @@ h3.saverow {
 }
 
 #productpage {
-  float: left;
-  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: $cell-margin * 0.5 0 $cell-margin * 0.5 $cell-margin * 0.5;
 }
 
 .BUYbutton {
@@ -407,6 +410,7 @@ h3.saverow {
 
 .bigsquare {
   width: 100%;
+  // margin: $cell-margin;
   // height: 660px;
   // border: 0 solid #ccc;
 }
@@ -432,18 +436,26 @@ a.productimage-small:hover {
   border-color: #000;
 }
 
-#pimage-select {
-  width: 666px;
-  margin: 12px 0 0 0;
-  padding: 0 0 0 0;
-  float: left;
+.pimage {
+  margin: $cell-margin * 0.5 $cell-margin $cell-margin * 0.5 $cell-margin * 0.5;
 }
 
-#pimage-select a img {
-  width: 214px;
-  height: 214px;
-  margin: 0 3px 3px 0;
-  border: 1px #CCC solid;
+#pimage-select {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  float: left;
+
+  .thumbnail {
+    margin: $cell-margin * 0.5;
+    width: $cell;
+    height: $cell;
+    float: left;
+
+    img {
+      width: 100%;
+    }
+  }
 }
 
 ul.hlist {
@@ -471,11 +483,13 @@ ul#variants li label {
   margin-top: 12px;
 }
 
-#sidebar-right {
-  display: table;
-  width: 222px;
-  float: right;
-  margin-top: 48px;
+#sidebarright {
+  box-sizing: border-box;
+  width: $cell;
+  padding: $cell-margin;
+  overflow: hidden;
+  min-width: $cell + $cell-margin;
+  max-width: $cell + $cell-margin;
 }
 
 #description {
