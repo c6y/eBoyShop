@@ -1,3 +1,7 @@
+$cell: {{ settings.cell }};
+$cell-margin: {{ settings.cell-margin }};
+$content-min-width: 2 * $cell + 3 * $cell-margin;
+$breakpoint: {{ settings.breakpoint }};
 $color-header: {{ settings.color-header }};
 $color-header-link: rgba(0, 230, 230, 0.6);
 $color-logo: {{ settings.color-logo }};
@@ -6,6 +10,11 @@ $color-sidebox-text: {{ settings.color-sidebox-text }};
 $color-sidebox-link: {{ settings.color-sidebox-link }};
 $color-black: #383521;
 $color-footer: #6c6757;
+$color-2c: {{ settings.color-2c }};
+$color-3c: {{ settings.color-3c }};
+$color-4c: {{ settings.color-4c }};
+$color-5c: {{ settings.color-5c }};
+$color-6c: {{ settings.color-6c }};
 
 /* Global */
 a,
@@ -15,39 +24,50 @@ a:hover {
 }
 
 /* Header */
-body {
-  #appheader {
-    background-color: none;
+// dynamic color of logo changes based on columns
+#logotype,
+#logotype a,
+#logotype a:visited {
+  background-color: $color-header;
+  color: $color-logo;
 
-    .tab-on {
-      a,
-      a:visited {
-        background-color: $color-header;
-        color: $color-logo;
-      }
-    }
+  // 2 column container
+  @media only screen
+  and (min-width: (2 * $cell + 3 * $cell-margin))
+  and (max-width: (3 * $cell + 4 * $cell-margin)) {
+    color: lighten( $color-2c, 10% );
+  }
 
-    .tab-off {
-      a,
-      a:visited {
-        background-color: $color-black;
-        color: yellow;
-      }
-    }
+  // 3 column container
+  @media only screen
+  and (min-width: (3 * $cell + 4 * $cell-margin))
+  and (max-width: (4 * $cell + 5 * $cell-margin)) {
+    color: lighten( $color-3c, 10% );
+  }
+
+  // 4 column container
+  @media only screen
+  and (min-width: (4 * $cell + 5 * $cell-margin))
+  and (max-width: (5 * $cell + 6 * $cell-margin)) {
+    color: lighten( $color-4c, 10% );
+  }
+
+  // 5 column container
+  @media only screen
+  and (min-width: (5 * $cell + 6 * $cell-margin))
+  and (max-width: (6 * $cell + 7 * $cell-margin)) {
+    color: lighten( $color-5c, 10% );
+  }
+
+  // 6 column container
+  @media only screen
+  and (min-width: (6 * $cell + 7 * $cell-margin)) {
+  width: 6 * $cell + 7 * $cell-margin;
+    color: lighten( $color-6c, 10% );
   }
 }
 
-body #appheader #sddm .tab-on a:hover,
-body #appheader #sddm .tab-off a:hover {
-  background-color: yellow;
-  color: #383521;
-}
-
 /* Colors Submenu */
-#appheader .status-shop-country {
-  color: #004069;
-}
-
 #carthead {
   background-color: $color-header;
 }

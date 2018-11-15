@@ -44,8 +44,8 @@
 
   {{ 'css-base.scss.css' | asset_url | stylesheet_tag }}
   {{ 'css-layout.scss.css' | asset_url | stylesheet_tag }}
-  {{ 'css-header.scss.css' | asset_url | stylesheet_tag }}
-  {{ 'css-body.scss.css' | asset_url | stylesheet_tag }}
+  {{ 'css-appheader.scss.css' | asset_url | stylesheet_tag }}
+  {{ 'css-appbody.scss.css' | asset_url | stylesheet_tag }}
   {{ 'css-sidebox.scss.css' | asset_url | stylesheet_tag }}
   {{ 'css-colors.scss.css' | asset_url | stylesheet_tag }}
   {{ 'css-colors-background.scss.css' | asset_url | stylesheet_tag }}
@@ -79,11 +79,9 @@
 <body id="page-{{template}}">
   <div id="autocenterbox">
     <div id="appheader">
-      <ul id="sddm">
-        <li class="tab-on">
-          <a class="logotype" href="/" onmouseover="mopen('m3')" onmouseout="mclosetime()">eBoy</a>
-        </li>
-      </ul>
+      <div id="appheader-left">
+        <a id="logotype" href="/">eBoy</a>
+      </div>
       <div id="carthead">
         <h1 id="breadcrumb">
           <a href="/">Shop</a>

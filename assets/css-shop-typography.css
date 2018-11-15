@@ -45,8 +45,7 @@ a:hover {
   text-decoration: none;
 }
 
-.logotype {
-  /* font-size: 96px; */
+#logotype {
   font-size: 4rem;
   font-weight: normal;
   font-family: Moxie;

@@ -1,7 +1,12 @@
-$cell: 16rem;
-$cell-margin: 0.5rem;
+$cell: {{ settings.cell }};
+$cell-margin: {{ settings.cell-margin }};
 $content-min-width: 2 * $cell + 3 * $cell-margin;
-$breakpoint: 480px;
+$breakpoint: {{ settings.breakpoint }};
+$color-2c: {{ settings.color-2c }};
+$color-3c: {{ settings.color-3c }};
+$color-4c: {{ settings.color-4c }};
+$color-5c: {{ settings.color-5c }};
+$color-6c: {{ settings.color-6c }};
 
 html {
   height: 100%;
@@ -16,21 +21,7 @@ body {
 }
 
 #autocenterbox {
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin-top: 0;
-  margin-left: auto;
-  margin-right: auto;
-  width: 942px;
-  height: 100%;
-  padding: 0;
-}
-
-#autocenterbox {
   margin: 0 auto;
-  // background-color: white;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -50,34 +41,34 @@ body {
     and (min-width: (2 * $cell + 3 * $cell-margin))
     and (max-width: (3 * $cell + 4 * $cell-margin)) {
     width: 2 * $cell + 3 * $cell-margin;
-    background-color: #EF3038;
+    background-color: $color-2c;
   }
   // 3 column container
   @media only screen
     and (min-width: (3 * $cell + 4 * $cell-margin))
     and (max-width: (4 * $cell + 5 * $cell-margin)) {
     width: 3 * $cell + 4 * $cell-margin;
-    background-color: #03C03C;
+    background-color: $color-3c;
   }
   // 4 column container
   @media only screen
     and (min-width: (4 * $cell + 5 * $cell-margin))
     and (max-width: (5 * $cell + 6 * $cell-margin)) {
     width: 4 * $cell + 5 * $cell-margin;
-    background-color: #2243B6;
+    background-color: $color-4c;
   }
   // 5 column container
   @media only screen
     and (min-width: (5 * $cell + 6 * $cell-margin))
     and (max-width: (6 * $cell + 7 * $cell-margin)) {
     width: 5 * $cell + 6 * $cell-margin;
-    background-color: orange;
+    background-color: $color-5c;
   }
   // 6 column container
   @media only screen
     and (min-width: (6 * $cell + 7 * $cell-margin)) {
     width: 6 * $cell + 7 * $cell-margin;
-    background-color: white;
+    background-color: $color-6c;
   }
 
   min-height: 100%;

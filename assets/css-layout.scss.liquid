@@ -1,69 +1,9 @@
 $cell: {{ settings.cell }};
 $cell-margin: {{ settings.cell-margin }};
 $content-min-width: 2 * $cell + 3 * $cell-margin;
-$breakpoint: {{ settings.breakpoint }};;
+$breakpoint: {{ settings.breakpoint }};
 
-/* Primary Layout */
-
-/* Submenublock */
-#sddm {
-  margin: 0;
-  padding: 0 0 0 44px;
-  z-index: 500;
-}
-
-#sddm li {
-  margin: 0 0 0 12px;
-  list-style: none;
-  float: left;
-  height: auto;
-}
-
-#sddm li a {
-  padding: 0 24px 0 24px;
-  display: block;
-  width: auto;
-  text-align: center;
-  text-decoration: none;
-}
-
-#carthead {
-  border-top: 1px solid #f2eed9;
-  margin: 0;
-  width: 100%;
-  padding: 12px 0;
-  text-align: right;
-  display: table;
-  border-bottom: 1px solid #eae7d0;
-}
-
-#carthead #breadcrumb {
-  float: left;
-  font-size: 24px;
-  margin: 0 0 0 24px;
-}
-
-h1#cartcount {
-  padding: 0;
-  margin: 0 24px 0 0;
-  white-space: nowrap;
-}
-
-#breadcrumb a,
-#cartcount a {
-  padding: 0;
-  text-decoration: none;
-}
-
-#breadcrumb a:hover,
-#cartcount a:hover {
-  margin-left: -6px;
-  margin-right: -6px;
-  padding: 0 6px;
-  text-decoration: none;
-}
-
-/* Main mainBoxx Area */
+/* Main mainBox Area */
 @media only screen
   and (max-device-width: $breakpoint) {
   #mainBox {
@@ -92,8 +32,8 @@ h1#cartcount {
 }
 
 ul.leftlinks {
-  margin: 0 0 12px 0;
-  padding: 12px 0 12px 12px;
+  margin: 0 0 $cell-margin 0;
+  padding: $cell-margin 0 $cell-margin $cell-margin;
   width: 210px;
   clear: left;
 }
