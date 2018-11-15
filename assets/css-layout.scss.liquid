@@ -355,11 +355,12 @@ h3.saverow {
 #productbox {
   display: flex;
   flex-wrap: wrap;
-  padding: 0;
+  // padding: 0;
   flex-grow: 1;
   align-items: baseline;
   flex-direction: column;
   z-index: 20;
+  padding: $cell-margin * 0.5 0 $cell-margin * 0.5 $cell-margin * 0.5;
 }
 
 #productbox h1 {
@@ -367,11 +368,11 @@ h3.saverow {
   margin: 0 0 12px 0;
 }
 
-#productpage {
-  display: flex;
-  flex-wrap: wrap;
-  padding: $cell-margin * 0.5 0 $cell-margin * 0.5 $cell-margin * 0.5;
-}
+// #productpage {
+//   display: flex;
+//   flex-wrap: wrap;
+//   padding: $cell-margin * 0.5 0 $cell-margin * 0.5 $cell-margin * 0.5;
+// }
 
 .BUYbutton {
   margin: 12px 0;
@@ -405,7 +406,7 @@ h3.saverow {
 
 #product-images {
   width: 100%;
-  display: table;
+  // display: table;
 }
 
 .bigsquare {
@@ -616,13 +617,13 @@ ul#variants li label {
 
 /* Product Page - Related */
 #related {
-  margin: 24px 0 0 0;
+  margin: 0;
   border-top: 1px lightgrey dotted;
-  padding-top: 48px;
+  margin-top: $cell-margin * 2;
 }
 
 #related h2 {
-  margin: 6px 0 12px 0;
+  margin: 0 $cell-margin * 0.5;
 }
 
 /* Footer */

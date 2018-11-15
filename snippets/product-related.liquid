@@ -1,26 +1,26 @@
-	<div id="related">
-		<h2>Other Fine eBoy Products</h2>
-		{% case product.type %}
-			{% when 'Poster' %}
-				{% assign recommendation = 'notposter' %}
-			{% when 'Toys' %}
-				{% assign recommendation = 'nottoys' %}
-			{% when 'T-Shirts' %}
-				{% assign recommendation = 'nottshirts' %}
-			{% when 'Other' %}
-				{% assign recommendation = 'notother' %}
-			{% when 'Books' %}
-				{% assign recommendation = 'notbooks' %}
-			{% when 'Bags' %}
-				{% assign recommendation = 'notbags' %}
-			{% else %}
-				{% assign recommendation = 'notother' %}
-		{% endcase %}
+<div id="related">
+  <h2>Other Fine eBoy Products</h2>
+  {% case product.type %}
+    {% when 'Poster' %}
+      {% assign recommendation = 'notposter' %}
+    {% when 'Toys' %}
+      {% assign recommendation = 'nottoys' %}
+    {% when 'T-Shirts' %}
+      {% assign recommendation = 'nottshirts' %}
+    {% when 'Other' %}
+      {% assign recommendation = 'notother' %}
+    {% when 'Books' %}
+      {% assign recommendation = 'notbooks' %}
+    {% when 'Bags' %}
+      {% assign recommendation = 'notbags' %}
+    {% else %}
+      {% assign recommendation = 'notother' %}
+  {% endcase %}
 
-		<div class="gallery">
-		{% for product in collections.[recommendation].products %}
-			{% include 'galleryproduct' %}
-		{% endfor %}
-		</div>  <!-- /.gallery -->
+  <div class="gallery">
+  {% for product in collections.[recommendation].products %}
+    {% include 'galleryproduct' %}
+  {% endfor %}
+  </div>
 
-	</div> <!-- /#related -->
+</div>
