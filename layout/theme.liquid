@@ -84,7 +84,11 @@
       </div>
       <div id="carthead">
         <h1 id="breadcrumb">
-          <a href="/">Shop</a>
+          {% if template.name != "index" %}
+            <a href="/">Shop</a>
+          {% else %}
+            Shop
+          {% endif %}
           {% case template %}
             {% when 'collection' %}
               &gt; <b>{{collection.title}}</b>

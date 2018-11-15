@@ -95,6 +95,12 @@
         "id": "fontweight-sidebar-big",
         "label": "Big font weight sidebar",
         "default": "400"
+      },
+      {
+        "type": "text",
+        "id": "fontweight-bold-big",
+        "label": "Big font bold weight",
+        "default": "500"
       }
     ]
   }
