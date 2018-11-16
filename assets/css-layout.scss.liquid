@@ -325,13 +325,13 @@ ul#variants li label {
 }
 
 #variant-dropdown {
-  margin-top: 12px;
+  margin: $cell-margin-half 0 0 0;
 }
 
 #sidebarright {
   box-sizing: border-box;
   width: $cell;
-  padding: $cell-margin;
+  padding: $cell-margin $cell-margin-double $cell-margin $cell-margin;
   overflow: hidden;
   min-width: $cell + $cell-margin;
   max-width: $cell + $cell-margin;
@@ -340,9 +340,9 @@ ul#variants li label {
 #description {
   display: table;
   width: 100%;
-  padding-top: 2rem;
-  border-top: 1px lightgrey solid;
-  margin: 2rem 0 0 0;
+  // padding-top: $cell-margin-triple;
+  // border-top: 1px lightgrey solid;
+  margin: $cell-margin-triple 0 0 0;
 }
 
 #description p {
@@ -357,21 +357,35 @@ ul#variants li label {
   margin: 12px 0 0 0;
 }
 
-.productinfo {
-  left: 0;
-  top: 0;
-  width: 100%;
-}
+
 
 #productcontrols {
   width: 100%;
   padding: 0;
   margin: 0;
-}
 
-.producttopinfo,
-.producttopinfosold {
-  width: 100%;
+  .producttopinfo,
+  .producttopinfosold {
+    width: 100%;
+
+    .productinfo {
+      margin: 0;
+      left: 0;
+      top: 0;
+      width: 100%;
+    }
+  }
+
+  form {
+    padding: 0;
+    margin: 0;
+
+    .price {
+      // float: right;
+      margin: 0;
+      display: block;
+    }
+  }
 }
 
 .soldoutsticker {
