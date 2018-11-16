@@ -116,9 +116,27 @@
       },
       {
         "type": "text",
-        "id": "cart-font-family",
-        "label": "Cart font ",
+        "id": "cart-font",
+        "label": "Cart font",
         "default": "Roboto Mono, monospace"
+      },
+      {
+        "type": "text",
+        "id": "body-font",
+        "label": "Body font ",
+        "default": "Georgia, Serif"
+      },
+      {
+        "type": "text",
+        "id": "headline-font",
+        "label": "Headline font ",
+        "default": "Product Sans, Sans-Serif"
+      },
+      {
+        "type": "text",
+        "id": "logo-font",
+        "label": "Logo font ",
+        "default": "Moxie, Sans-Serif"
       },
       {
         "type": "text",

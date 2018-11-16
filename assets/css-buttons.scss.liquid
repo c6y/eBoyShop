@@ -1,13 +1,15 @@
 $fontsize-button-small: {{ settings.fontsize-button-small }};
 $color-link: {{ settings.color-link }};
 $color-black: {{ settings.color-black }};
+$headline-font: {{ settings.headline-font }};
 
 
 .checkoutbutton {
+  font-family: $headline-font;
   background-color: $color-link;
   color: white;
   border: none;
-  padding: 0.3rem 2rem 0.5rem 2rem;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -28,6 +30,9 @@ $color-black: {{ settings.color-black }};
   border: none;
   font-size: inherit;
   cursor: pointer;
+  margin: 0;
+  padding: 0.25rem 1rem;
+  font-family: $headline-font;
 
   &:active {
     opacity: 1;

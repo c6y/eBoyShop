@@ -29,11 +29,10 @@
                 </a>
               </span>
               <span class="quantities">
-                <label for="updates_{{item.variant.id}}">{{ item.price | money_with_currency }}<span class="cartqty">Qty:</span></label>
-                <input type="text" size="4" name="updates[]" id="updates_{{item.variant.id}}" value="{{item.quantity}}" onfocus="this.select();"/>
+                <label for="updates_{{item.variant.id}}">{{ item.price | money_with_currency }}<span class="cartqty">qty:</span></label>
+                <input type="text" size="2" name="updates[]" id="updates_{{item.variant.id}}" value="{{item.quantity}}" onfocus="this.select();"/>
               </span>
             </div>
-            <div class="deleterow"><a href="#" onclick="remove_item({{item.variant.id}}); return false;" class="remove">Remove</a></div>
           </li>
         {% endfor %}
         <li id="total">

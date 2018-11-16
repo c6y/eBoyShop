@@ -1,15 +1,9 @@
-// $fontsize-button-small: {{ settings.fontsize-button-small }};
+$cell-margin: {{ settings.cell-margin }};
 
 form {
   width: 100%;
-  padding: 0.5rem;
+  padding: $cell-margin;
   box-sizing: border-box;
-}
-
-#cart {
-  // border: 1px solid #dadfcf;
-  // -moz-border-radius: 4px;
-  // -webkit-border-radius: 4px;
 }
 
 #cart .emptycart {
@@ -18,11 +12,11 @@ form {
 }
 
 h3.saverow {
-  padding: 12px 0;
-  width: 100%;
-  display: table;
+  width: calc(100% - 1rem);
   text-align: center;
-  margin-bottom: 12px;
+  box-sizing: border-box;
+  padding: 3rem 0.5rem;
+  margin: 0.5rem 0.5rem 0 0.5rem;
 }
 
 /* Cart Page: Single Product Line */
@@ -30,6 +24,42 @@ h3.saverow {
   list-style: none;
   margin: 0;
   padding: 0;
+
+  .itemline {
+    box-sizing: border-box;
+    padding: $cell-margin $cell-margin $cell-margin $cell-margin;
+    border-bottom: 1px dashed #ccc;
+    margin: 0;
+
+    .thumb {
+      float: left;
+      display: table;
+      margin: 0;
+      width: 50px;
+      height: 50px;
+      padding: 0;
+    }
+
+    .producttitle {
+      display: inline;
+      float: left;
+      margin-left: $cell-margin;
+    }
+
+    .cartqty {
+      margin: 0 0 0 1rem;
+    }
+
+    input {
+      padding: 0 $cell-margin;
+      border: 0;
+      margin: 0;
+      text-align: right;
+      background: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+
 }
 
 #line-items li {
@@ -38,22 +68,6 @@ h3.saverow {
   position: relative;
   display: table;
   width: 100%;
-}
-
-#line-items li .thumb {
-  float: left;
-  display: table;
-  width: 50px;
-  height: 50px;
-  padding: 0;
-  margin: 6px 12px;
-}
-
-#line-items li .thumb a {
-  margin: 0;
-  border: 1px solid #fff;
-  text-align: center;
-  float: left;
 }
 
 #line-items li .thumb a:hover {
@@ -67,11 +81,11 @@ h3.saverow {
   text-align: right;
 }
 
-#line-items li .txtcartrow .producttitle,
-#line-items li .txtcartrow .producttitle a {
-  display: inline;
-  float: left;
-}
+// #line-items li .txtcartrow .producttitle,
+// #line-items li .txtcartrow .producttitle a {
+//   display: inline;
+//   float: left;
+// }
 
 #cart li .txtcartrow .quantities {
   display: inline;
@@ -82,10 +96,6 @@ h3.saverow {
   display: table;
 }
 
-#line-items li.itemline {
-  border-bottom: 1px dashed #ccc;
-}
-
 .deleterow .remove {
   text-align: right;
   padding: 3px 6px;
@@ -93,10 +103,6 @@ h3.saverow {
   -webkit-border-radius: 4px;
   border-width: 0;
   margin-left: -2px;
-}
-
-#cart label {
-  padding-right: 3px;
 }
 
 #cart ul li h3 {
@@ -113,15 +119,6 @@ h3.saverow {
   float: right;
   padding: 3px 12px;
   margin-left: 24px;
-}
-
-#line-items li#total .buttonAsLink {
-  text-align: right;
-  padding: 3px 6px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
 }
 
 .checkoutrow {

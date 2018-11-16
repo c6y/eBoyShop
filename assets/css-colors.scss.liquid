@@ -108,8 +108,8 @@ ul.leftlinks li a:hover {
 }
 
 h3.saverow {
-  color: brown;
-  background: beige;
+  color: $color-black;
+  background-color: #ff0;
 }
 
 .deleterow .remove {
@@ -143,32 +143,16 @@ h3.saverow {
   color: #444;
 }
 
+.cartqty {
+  color: #999;
+}
+
 #line-items li#total {
   color: #666;
 }
 
 #line-items li#total .money {
   color: #3f3800;
-}
-
-#line-items li#total .buttonAsLink {
-  color: #aaa;
-  background-color: #ddd;
-}
-
-#line-items li#total .buttonAsLink:hover {
-  background-color: #aaa;
-  color: #ddd;
-}
-
-.checkoutrow .buttonAsLink {
-  color: white;
-  background-color: $color-link;
-}
-
-.checkoutrow .buttonAsLink:hover {
-  color: white;
-  background-color: green;
 }
 
 .shipinfo {
@@ -237,30 +221,6 @@ h3.saverow {
 }
 
 /* Product Pages */
-.BUYbuttonAsLink {
-  color: $color-link;
-  background-color: white;
-}
-
-.BUYbuttonAsLink:hover {
-  background-color: $color-link;
-  color: white;
-}
-
-.soldoutpro .BUYbuttonAsLink {
-  color: red;
-  background-color: white;
-  border-color: red;
-  /* overwrites default at css-shop-layout.css*/
-}
-
-.soldoutpro .BUYbuttonAsLink:hover {
-  background-color: red;
-  color: white;
-  border-color: red;
-  /* overwrites default at css-shop-layout.css*/
-}
-
 .producttopinfo h2,
 .producttopinfosold h2 {
   color: #3f3800;

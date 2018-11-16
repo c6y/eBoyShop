@@ -3,19 +3,29 @@ $fontweight-leftlinks: {{ settings.fontweight-sidebar-big }};
 $fontsize-producttopinfo: {{ settings.fontsize-sidebar-big }};
 $fontweight-producttopinfo: {{ settings.fontweight-bold-big }};
 $fontsize-buttonsmall: {{ settings.fontsize-button-small }};
-$cart-font-family: {{ settings.cart-font-family }};
+$headline-font: {{ settings.headline-font }};
+$body-font: {{ settings.body-font }};
+$cart-font: {{ settings.cart-font }};
+$logo-font: {{ settings.logo-font }};
 
 
 /*eBoy SHOP-TYPOGRAPHY CSS*/
+
+// Load local fonts
 @font-face {
   font-family: Moxie;
   src: url(Moxie-Bold.otf);
 }
 
+@font-face {
+  font-family: Product-Sans-Regular;
+  src: url(Product-Sans-Regular.ttf);
+}
+
 /* Global */
 body {
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1rem;
+  font-family: $body-font;
+  // font-size: 1rem;
 }
 
 b {
@@ -44,42 +54,34 @@ a:hover {
   text-decoration: none;
 }
 
-#appheader .tab-on a,
-#appheader .tab-on a:visited,
-#appheader .tab-off a,
-#appheader .tab-off a:visited {
-  text-decoration: none;
-  margin-left: 0;
-}
-
-#appheader .tab-on a:hover,
-#appheader .tab-off a:hover {
-  text-decoration: none;
-}
-
 #logotype {
   font-size: 4rem;
   font-weight: normal;
-  font-family: Moxie;
+  font-family: $logo-font;
   text-transform: uppercase;
   line-height: 1.2em;
 }
 
 /* Submenublock */
-#sddm {
-  font-size: 56px;
-  font-weight: normal;
-}
-
 h1 {
-  line-height: 1.2em;
-  font-size: 24px;
-  font-weight: normal;
+
 }
 
-#carthead #cartcount {
-  font-size: 24px;
+#carthead {
+  font-family: $headline-font;
+  font-size: 1.5rem;
+  line-height: 1.2em;
+  font-weight: 400;
+
+  #breadcrumb {
+    font-size: inherit;
+  }
+
+  #cartcount {
+    font-size: inherit;
+  }
 }
+
 
 ul.leftlinks {
   font-size: $fontsize-leftlinks;
@@ -109,7 +111,7 @@ ul.leftlinks li a {
 
 .price {
   font-size: 36px;
-  font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
+  font-family: $body-font;
 }
 
 .limited {
@@ -120,7 +122,7 @@ ul.leftlinks li a {
 
 #description {
   line-height: 1.5rem;
-  font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
+  font-family: $body-font;
 }
 
 #description ul {
@@ -150,7 +152,7 @@ ul.leftlinks li a {
 }
 
 #footertxt {
-  font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
+  font-family: $body-font;
   font-size: 12px;
   line-height: 1.4em;
 }
@@ -161,7 +163,7 @@ ul.leftlinks li a {
 
 /* Collection Pages */
 .product {
-  font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
+  font-family: $body-font;
 }
 
 .product .productbasic h3 {
@@ -181,8 +183,7 @@ ul.leftlinks li a {
 
 /* Cart Page */
 #cart {
-  font-family: $cart-font-family;
-  // font-size: 14px;
+  font-family: $cart-font;
 }
 
 .money,
@@ -190,43 +191,21 @@ ul.leftlinks li a {
   font-weight: bold;
 }
 
-#cart ul li#total {
-  // font-size: 24px;
-  // line-height: 1.2em;
-  // font-family: "Roboto", Helvetica, Arial, sans-serif;
-}
+#line-items {
+  font-size: 1rem;
 
-#cart label {
-  font-size: 14px;
-}
+  a {
+    text-decoration: none;
+  }
 
-#line-items li {
-  font-size: 14px;
-}
-
-#line-items li .producttitle a {
-  text-decoration: none;
-}
-
-#line-items li .producttitle a:hover {
-  text-decoration: underline;
-}
-
-.cartqty {
-  color: #999;
-  margin-left: 2em;
-}
-
-.buttonAsLink {
-  font-size: 24px;
-  line-height: 1.2em;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  input {
+    font-size: inherit;
+  }
 }
 
 h3.saverow {
-  font-size: 14px;
-  font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
-  font-style: italic;
+  font-size: 1.2rem;
+  font-family: $headline-font;
 }
 
 #cart ul li h3 a {
@@ -244,8 +223,6 @@ h3.saverow {
 
 .checkoutrow {
   font-size: $fontsize-buttonsmall;
-  // text-decoration: none;
-  // font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
 }
 
 a.shipinfo {
@@ -260,7 +237,7 @@ a:hover.shipinfo {
 /* Page */
 #page .textile {
   line-height: 1.4em;
-  font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
+  font-family: $body-font;
   font-size: 14px;
   margin-left: 6px;
 }
@@ -275,7 +252,7 @@ a:hover.shipinfo {
 }
 
 #page .textile h3 {
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-family: $body-font;
   font-weight: bold;
   margin: 0;
 }
@@ -308,6 +285,6 @@ a:hover.shipinfo {
 }
 
 #footer #searchform #s {
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-family: $body-font;
   font-size: 24px;
 }
