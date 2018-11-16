@@ -12,42 +12,10 @@
       <h2 class="productinfo">{{ product.title }}</h2>
     </div>
     {% case product.type %}
-      {% when 'App Store' %}
+      {% when 'linkothershop' %}
         <a href="{% for variant in product.variants %}{{ variant.sku }}{% endfor %}" target="_blank">
           <div class="buybutton">
-            App Store
-          </div>
-        </a>
-      {% when 'Kickstarter' %}
-        <div class="APPSTOREbutton">
-          <a href="{% for variant in product.variants %}{{ variant.sku }}{% endfor %}" target="_blank"><img src="{{ 'KickstarterButton-2x-01s.png' | asset_url }}" width="168" height="71" /></a>
-        </div>
-      {% when 'Nuvango' %}
-        <div class="APPSTOREbutton">
-          <a href="{% for variant in product.variants %}{{ variant.sku }}{% endfor %}" target="_blank"><img src="{{ 'NuvangoButton-2x-01k.png' | asset_url }}" width="168" height="71" /></a>
-        </div>
-      {% when 'Store' %}
-        <div class="APPSTOREbutton">
-          <a href="{% for variant in product.variants %}{{ variant.sku }}{% endfor %}" target="_blank"><img src="{{ 'OPEN-2x-01t.png' | asset_url }}" width="168" height="71" /></a>
-        </div>
-      {% when 'Louis Vuitton Malletier' %}
-      <a href="{% for variant in product.variants %}{{ variant.sku }}{% endfor %}" target="_blank">
-        <div class="buybutton">
-          Louis Vuitton
-        </div>
-      </a>
-      {% when 'Gela Skins' %}
-        <div class="APPSTOREbutton">
-          <a href="{% for variant in product.variants %}{{ variant.sku }}{% endfor %}" target="_blank"><img src="{{ 'GelaskinsButton-2x-01t.png' | asset_url }}" width="168" height="71" /></a>
-        </div>
-      {% when 'Milton and King' %}
-        <div class="APPSTOREbutton">
-          <a href="{% for variant in product.variants %}{{ variant.sku }}{% endfor %}" target="_blank"><img src="{{ 'Milton-2x-02t.png' | asset_url }}" width="168" height="71" /></a>
-        </div>
-      {% when 'Threadless' %}
-        <a href="{% for variant in product.variants %}{{ variant.sku }}{% endfor %}" target="_blank">
-          <div class="buybutton">
-            Threadless
+            {{ product.vendor }}
           </div>
         </a>
       {% else %}

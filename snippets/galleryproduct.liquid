@@ -82,37 +82,10 @@
 
     {% if product.available %}
         {% case product.type %}
-        {% when 'App Store' %}
+
+        {% when 'linkothershop' %}
           <div class="money">
-            App Store
-          </div>
-        {% when 'Kickstarter' %}
-          <div class="money">
-            on Kickstarter
-          </div>
-        {% when 'Nuvango' %}
-          <div class="money">
-            on Nuvango
-           </div>
-        {% when 'Store' %}
-          <div class="money">
-            visit
-          </div>
-        {% when 'Louis Vuitton Malletier' %}
-          <div class="money">
-            on Louis Vuitton
-          </div>
-        {% when 'Gela Skins' %}
-          <div class="money">
-            on Gela Skins
-          </div>
-        {% when 'Milton and King' %}
-          <div class="money">
-            on Milton/King
-          </div>
-        {% when 'Threadless' %}
-          <div class="money">
-            on Threadless
+            {{ product.vendor }}
           </div>
         {% else %}
           <div class="money">
