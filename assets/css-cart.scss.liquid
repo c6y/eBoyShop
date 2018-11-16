@@ -1,5 +1,9 @@
 $cell-margin: {{ settings.cell-margin }};
 
+$cell-margin-half: $cell-margin * 0.5;
+$cell-margin-double: $cell-margin * 2;
+$cell-margin-triple: $cell-margin * 3;
+
 form {
   width: 100%;
   padding: $cell-margin;
@@ -27,7 +31,7 @@ h3.saverow {
 
   .itemline {
     box-sizing: border-box;
-    padding: $cell-margin $cell-margin $cell-margin $cell-margin;
+    padding: $cell-margin;
     border-bottom: 1px dashed #ccc;
     margin: 0;
 
@@ -46,20 +50,38 @@ h3.saverow {
       margin-left: $cell-margin;
     }
 
-    .cartqty {
-      margin: 0 0 0 1rem;
-    }
+    .quantities {
 
-    input {
-      padding: 0 $cell-margin;
-      border: 0;
-      margin: 0;
-      text-align: right;
-      background: rgba(255, 255, 255, 0.5);
+      .cartqty {
+        margin: 0 0 0 1rem;
+      }
+
+      input {
+        padding: 0 $cell-margin;
+        border: 0;
+        margin: 0;
+        text-align: right;
+        background: rgba(255, 255, 255, 0.5);
+      }
+
+      label {
+        width: 8rem;
+        margin-right: $cell-margin;
+        display: inline-block;
+      }
     }
   }
+  #total {
+    text-align: right;
+    line-height: 1.2em;
 
-
+    #subtotal {
+      margin: 0;
+      float: right;
+      padding: $cell-margin $cell-margin-double;
+      margin-left: 1rem;
+    }
+  }
 }
 
 #line-items li {
@@ -76,16 +98,8 @@ h3.saverow {
 
 #line-items li .txtcartrow {
   margin-top: 1rem;
-  // display: table;
-  // width: 572px;
   text-align: right;
 }
-
-// #line-items li .txtcartrow .producttitle,
-// #line-items li .txtcartrow .producttitle a {
-//   display: inline;
-//   float: left;
-// }
 
 #cart li .txtcartrow .quantities {
   display: inline;
@@ -109,25 +123,9 @@ h3.saverow {
   width: 480px;
 }
 
-#line-items li#total {
-  text-align: right;
-  line-height: 1.2em;
-}
-
-#line-items li#total .subtotal {
-  margin: 0;
-  float: right;
-  padding: 3px 12px;
-  margin-left: 24px;
-}
-
 .checkoutrow {
   text-align: right;
   margin-top: 24px;
-}
-
-.checkoutrow label {
-  margin-right: 6px;
 }
 
 .checkoutrow img {

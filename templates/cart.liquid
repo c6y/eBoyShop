@@ -29,15 +29,15 @@
                 </a>
               </span>
               <span class="quantities">
-                <label for="updates_{{item.variant.id}}">{{ item.price | money_with_currency }}<span class="cartqty">qty:</span></label>
-                <input type="text" size="2" name="updates[]" id="updates_{{item.variant.id}}" value="{{item.quantity}}" onfocus="this.select();"/>
+                <span class="cartqty">qty:</span><input type="text" size="2" name="updates[]" id="updates_{{item.variant.id}}" value="{{item.quantity}}" onfocus="this.select();"/>
+                <label for="updates_{{item.variant.id}}">{{ item.price | money_with_currency }}</label>
               </span>
             </div>
           </li>
         {% endfor %}
         <li id="total">
           <input type="submit" id="update-cart" name="update" value="Update Cart" class="updatebutton" />
-          <span class="subtotal">Subtotal:
+          <span id="subtotal">Subtotal:
             <span class="money">{{ cart.total_price | money_with_currency }}</span>
           </span>
         </li>

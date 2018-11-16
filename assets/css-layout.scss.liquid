@@ -3,6 +3,10 @@ $cell-margin: {{ settings.cell-margin }};
 $content-min-width: 2 * $cell + 3 * $cell-margin;
 $breakpoint: {{ settings.breakpoint }};
 
+$cell-margin-half: $cell-margin * 0.5;
+$cell-margin-double: $cell-margin * 2;
+$cell-margin-triple: $cell-margin * 3;
+
 // mobile
 @media only screen
   and (max-device-width: $breakpoint) {
