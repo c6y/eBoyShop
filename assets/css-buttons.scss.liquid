@@ -1,0 +1,35 @@
+$fontsize-button-small: {{ settings.fontsize-button-small }};
+$color-link: {{ settings.color-link }};
+$color-black: {{ settings.color-black }};
+
+
+.checkoutbutton {
+  background-color: $color-link;
+  color: white;
+  border: none;
+  padding: 0.3rem 2rem 0.5rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: $fontsize-button-small;
+  line-height: $fontsize-button-small;
+  cursor: pointer;
+
+  &:active {
+    background-color: black;
+    color: white;
+  }
+}
+
+.updatebutton {
+  background-color: $color-black;
+  opacity: 0.2;
+  color: white;
+  border: none;
+  font-size: inherit;
+  cursor: pointer;
+
+  &:active {
+    opacity: 1;
+  }
+}

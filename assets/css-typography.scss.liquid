@@ -2,6 +2,8 @@ $fontsize-leftlinks: {{ settings.fontsize-sidebar-big }};
 $fontweight-leftlinks: {{ settings.fontweight-sidebar-big }};
 $fontsize-producttopinfo: {{ settings.fontsize-sidebar-big }};
 $fontweight-producttopinfo: {{ settings.fontweight-bold-big }};
+$fontsize-buttonsmall: {{ settings.fontsize-button-small }};
+$cart-font-family: {{ settings.cart-font-family }};
 
 
 /*eBoy SHOP-TYPOGRAPHY CSS*/
@@ -179,8 +181,8 @@ ul.leftlinks li a {
 
 /* Cart Page */
 #cart {
-  font-family: Monaco;
-  font-size: 14px;
+  font-family: $cart-font-family;
+  // font-size: 14px;
 }
 
 .money,
@@ -189,9 +191,9 @@ ul.leftlinks li a {
 }
 
 #cart ul li#total {
-  font-size: 24px;
-  line-height: 1.2em;
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  // font-size: 24px;
+  // line-height: 1.2em;
+  // font-family: "Roboto", Helvetica, Arial, sans-serif;
 }
 
 #cart label {
@@ -240,9 +242,10 @@ h3.saverow {
   text-decoration: none;
 }
 
-.checkoutrow a {
-  text-decoration: none;
-  font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
+.checkoutrow {
+  font-size: $fontsize-buttonsmall;
+  // text-decoration: none;
+  // font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
 }
 
 a.shipinfo {

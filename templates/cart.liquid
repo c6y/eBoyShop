@@ -7,11 +7,11 @@
 
 <h3 class="saverow">Save! Same shipping costs for any quantities of posters! <a href="/pages/info">Shipping Info</a></h3>
 {% if cart.item_count == 0 %}
-    <div id="cart">
-      <div class="emptycart">Your shopping cart is empty &#58;&#40;</div>
+  <div id="cart">
+    <div class="emptycart">Your shopping cart is empty &#58;&#40;</div>
   </div>
 {% else %}
-    <form action="/cart" method="post" id="cartform">
+  <form action="/cart" method="post" id="cartform">
     <div id="cart">
       <ul id="line-items">
         {% for item in cart.items %}
@@ -19,7 +19,6 @@
             <div class="thumb">
               <a href="{{item.product.url}}" title="View {{item.title}} Page"><img src="{{item.product.featured_image | product_img_url: 'thumb' }}" alt="{{item.title}}" /></a>
             </div>
-
             <div class="txtcartrow">
               <span class="producttitle">
                 <a href="{{item.product.url}}" title="View {{item.title}} Page">
@@ -35,28 +34,25 @@
               </span>
             </div>
             <div class="deleterow"><a href="#" onclick="remove_item({{item.variant.id}}); return false;" class="remove">Remove</a></div>
-          </li><!--/.itemline-->
+          </li>
         {% endfor %}
         <li id="total">
-                    <input type="image" id="update-cart" name="update" value="Update Cart" class="updatebutton" src="{{ 'UPDATECARTbutton-2x-01k.png' | asset_url }}" width="147" height="34" />
+          <input type="submit" id="update-cart" name="update" value="Update Cart" class="updatebutton" />
           <span class="subtotal">Subtotal:
-            <span class="money">{{ cart.total_price | money }}</span>
+            <span class="money">{{ cart.total_price | money_with_currency }}</span>
           </span>
         </li>
       </ul>
-    </div> <!--/#cart-->
-
-    <div class="checkoutrow">
-      <span class="shipinfo" href="/">
-        <img src="{{ 'paymentcards-2x-01k.png' | asset_url }}" alt="payment options" width="235" height="34" />
-      </span>
-            <input type="image" value="Proceed to Checkout! &rarr;" name="checkout" class="checkoutbutton" src="{{ 'CHECKOUT-2x-01k.png' | asset_url }}"/>
     </div>
 
-      {% if additional_checkout_buttons %}
-      <div class="additional_checkout_buttons visually-hidden">{{ content_for_additional_checkout_buttons }}</div>
-      {% endif %}
+    <div class="checkoutrow">
+      <span class="mdi-creditcard"></span>
+      <input type="submit" value="Proceed to Checkout" name="checkout" class="checkoutbutton"/>
+    </div>
 
+    {% if additional_checkout_buttons %}
+      <div class="additional_checkout_buttons visually-hidden">{{ content_for_additional_checkout_buttons }}</div>
+    {% endif %}
 
   </form>
 {% endif %}

@@ -4,6 +4,12 @@
     "settings": [
       {
         "type": "color",
+        "id": "color-black",
+        "label": "Shopwide black",
+        "default": "#383521"
+      },
+      {
+        "type": "color",
         "id": "color-sidebox-text",
         "label": "Sidebar text color",
         "default": "#383521"
@@ -13,6 +19,12 @@
         "id": "color-sidebox-link",
         "label": "Sidebar link color",
         "default": "#00baf2"
+      },
+      {
+        "type": "color",
+        "id": "color-link",
+        "label": "Link color",
+        "default": "#1e90ff"
       },
       {
         "type": "color",
@@ -101,6 +113,18 @@
         "id": "fontweight-bold-big",
         "label": "Big font bold weight",
         "default": "500"
+      },
+      {
+        "type": "text",
+        "id": "cart-font-family",
+        "label": "Cart font ",
+        "default": "Roboto Mono, monospace"
+      },
+      {
+        "type": "text",
+        "id": "fontsize-button-small",
+        "label": "Small button font size",
+        "default": "2rem"
       }
     ]
   }
