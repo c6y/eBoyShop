@@ -43,9 +43,10 @@ $cell-margin-triple: $cell-margin * 3;
   }
 }
 
-.buybutton {
+.buybutton,
+.soldbutton,
+.soonbutton {
   font-family: $headline-font;
-  background-color: $color-link;
   color: white;
   border: none;
   padding: $cell-margin $cell-margin-triple;
@@ -55,8 +56,20 @@ $cell-margin-triple: $cell-margin * 3;
   display: inline-block;
   font-size: $fontsize-button-small;
   line-height: $fontsize-button-small;
-  cursor: pointer;
   width: 100%;
   font-weight: 400;
   box-sizing: border-box;
+}
+
+.buybutton {
+  background-color: $color-link;
+  cursor: pointer;
+}
+
+.soldbutton {
+  background-color: red;
+}
+
+.soonbutton {
+  background-color: black;
 }
