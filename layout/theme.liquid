@@ -82,23 +82,7 @@
       <div id="appheader-left">
         <a id="logotype" href="/">eBoy</a>
       </div>
-      <div id="carthead">
-        <h1 id="breadcrumb">
-          {% if template.name != "index" %}
-            <a href="/">Shop</a>
-          {% else %}
-            Shop
-          {% endif %}
-          {% case template %}
-            {% when 'collection' %}
-              &gt; <b>{{collection.title}}</b>
-            {% when 'product' %}
-              &gt; {{ product.type | link_to_type }} &gt; <b>{{ product.title }}</b>
-            {% else %}
-          {% endcase %}
-        </h1>
-        <h1 id="cartcount"><a href="/cart" class="mdi-cart"></a> {{ cart.item_count }}</h1>
-      </div>
+      {% include 'carthead' %}
     </div>
     <div id="appbody">
         {% case template %}
