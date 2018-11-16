@@ -14,7 +14,8 @@
 .mdi-cart::before,
 .mdi-info::before,
 .mdi-settings::before,
-.mdi-edit::before {
+.mdi-edit::before,
+.mdi-creditcard::before {
   font-family: "materialdesignicons";
   line-height: inherit;
   font-size: inherit;
@@ -51,4 +52,8 @@
 
 .mdi-edit::before {
   content: "\f3eb";
+}
+
+.mdi-creditcard::before {
+  content: "\f19b";
 }

@@ -49,7 +49,8 @@
   {{ 'css-sidebarleft.scss.css' | asset_url | stylesheet_tag }}
   {{ 'css-colors.scss.css' | asset_url | stylesheet_tag }}
   {{ 'css-colors-background.scss.css' | asset_url | stylesheet_tag }}
-  {{ 'css-shop-typography.scss.css'| asset_url | stylesheet_tag }}
+  {{ 'css-typography.scss.css'| asset_url | stylesheet_tag }}
+  {{ 'css-cart.scss.css'| asset_url | stylesheet_tag }}
 
   {{ 'css-shop-icons.css' | asset_url | stylesheet_tag }}
   {{ 'lightbox/v2/lightbox.css' | global_asset_url | stylesheet_tag }}
@@ -106,6 +107,8 @@
       {% case template %}
         {% when 'product' %}
           {% include 'productrelated' %}
+        {% when 'cart' %}
+          {% include 'cartrelated' %}
         {% else %}
       {% endcase %}
     </div>
