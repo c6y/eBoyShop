@@ -91,6 +91,10 @@
               {{ content_for_layout }}
             </div>
             {% include 'sidebarright' %}
+          {% when 'cart' %}
+            <div id="mainbox">
+              {{ content_for_layout }}
+            </div>
           {% else %}
             {% include 'sidebarleft' %}
             <div id="mainbox">
