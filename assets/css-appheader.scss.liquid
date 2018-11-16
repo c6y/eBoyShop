@@ -2,7 +2,12 @@ $cell: {{ settings.cell }};
 $cell-margin: {{ settings.cell-margin }};
 $content-min-width: 2 * $cell + 3 * $cell-margin;
 $breakpoint: {{ settings.breakpoint }};
+$color-header: {{ settings.color-header }};
+$color-header-border: darken( $color-header, 10% );
 
+$cell-margin-half: $cell-margin * 0.5;
+$cell-margin-double: $cell-margin * 2;
+$cell-margin-triple: $cell-margin * 3;
 
 #appheader {
   width: 0 auto;
@@ -12,50 +17,48 @@ $breakpoint: {{ settings.breakpoint }};
   position: relative;
   flex-direction: column;
 
-  #appheader-left {
+  #appheadertop {
     position: relative;
     padding: 0;
     margin: 0 0 0 $cell * 0.25;
 
     #logotype {
-        padding: 0 1rem 0 1.5rem;
+      padding: 0 $cell-margin-double 0 $cell-margin-triple;
     }
   }
 
   #carthead {
-    border-top: 1px solid #f2eed9;
+    // border-top: 1px solid #f2eed9;
     margin: 0;
     width: 100%;
-    padding: 12px 0;
+    padding: $cell-margin 0;
     text-align: right;
     display: table;
-    border-bottom: 1px solid #eae7d0;
+    border-bottom: 1px solid $color-header-border;
+
+    #breadcrumb {
+      float: left;
+      margin: 0 0 0 $cell-margin-triple;
+    }
+
+    #cartcount {
+      padding: 0;
+      margin: 0 $cell-margin-double 0 0;
+      white-space: nowrap;
+    }
+
+    #breadcrumb a,
+    #cartcount a {
+      padding: 0;
+      text-decoration: none;
+    }
+
+    #breadcrumb a:hover,
+    #cartcount a:hover {
+      margin-left: -6px;
+      margin-right: -6px;
+      padding: 0 6px;
+      text-decoration: none;
+    }
   }
-}
-
-
-/* Submenublock */
-#carthead #breadcrumb {
-  float: left;
-  margin: 0 0 0 1.5rem;
-}
-
-h1#cartcount {
-  padding: 0;
-  margin: 0 24px 0 0;
-  white-space: nowrap;
-}
-
-#breadcrumb a,
-#cartcount a {
-  padding: 0;
-  text-decoration: none;
-}
-
-#breadcrumb a:hover,
-#cartcount a:hover {
-  margin-left: -6px;
-  margin-right: -6px;
-  padding: 0 6px;
-  text-decoration: none;
 }

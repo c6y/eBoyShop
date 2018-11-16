@@ -1,5 +1,5 @@
 <div id="carthead">
-  <h1 id="breadcrumb">
+  <h3 id="breadcrumb">
     {% if template.name != "index" %}
       <a href="/">Shop</a>
     {% else %}
@@ -12,6 +12,6 @@
         &gt; {{ product.type | link_to_type }} &gt; <b>{{ product.title }}</b>
       {% else %}
     {% endcase %}
-  </h1>
-  <h1 id="cartcount"><a href="/cart" class="mdi-cart"></a> {{ cart.item_count }}</h1>
+  </h3>
+  <h3 id="cartcount"><a href="/cart" class="mdi-cart"></a> {{ cart.item_count }}</h3>
 </div>
