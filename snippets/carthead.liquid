@@ -3,13 +3,13 @@
     {% if template.name != "index" %}
       <a href="/">Shop</a>
     {% else %}
-      <b>Shop</b>
+      Shop
     {% endif %}
     {% case template %}
       {% when 'collection' %}
-        &gt; <b>{{collection.title}}</b>
+        &gt; {{collection.title}}
       {% when 'product' %}
-        &gt; {{ product.type | link_to_type }} &gt; <b>{{ product.title }}</b>
+        &gt; {{ product.type | link_to_type }} &gt; {{ product.title }}
       {% else %}
     {% endcase %}
   </h3>

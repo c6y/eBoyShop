@@ -1,3 +1,4 @@
+$font-leftlinks: {{ settings.font-sidebar-big }};
 $fontsize-leftlinks: {{ settings.fontsize-sidebar-big }};
 $fontweight-leftlinks: {{ settings.fontweight-sidebar-big }};
 $fontsize-producttopinfo: {{ settings.fontsize-sidebar-big }};
@@ -83,14 +84,11 @@ h1 {
 
 
 ul.leftlinks {
+  font-family: $font-leftlinks;
   font-size: $fontsize-leftlinks;
   font-weight: $fontweight-leftlinks;
   line-height: 1.5rem;
   text-transform: lowercase;
-}
-
-ul.leftlinks li {
-  padding: 0.5rem;
 }
 
 ul.leftlinks li a {

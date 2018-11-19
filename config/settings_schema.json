@@ -24,7 +24,7 @@
         "type": "color",
         "id": "color-link",
         "label": "Link color",
-        "default": "#1e90ff"
+        "default": "#00baf2"
       },
       {
         "type": "color",
@@ -98,6 +98,11 @@
     "settings": [
       {
         "type": "text",
+        "id": "font-sidebar-big",
+        "label": "Big font sidebar",
+        "default": "Roboto, sans-serif"
+      },      {
+        "type": "text",
         "id": "fontsize-sidebar-big",
         "label": "Big font size sidebar",
         "default": "2rem"
@@ -124,19 +129,19 @@
         "type": "text",
         "id": "body-font",
         "label": "Body font ",
-        "default": "Georgia, Serif"
+        "default": "Georgia, serif"
       },
       {
         "type": "text",
         "id": "headline-font",
         "label": "Headline font ",
-        "default": "Product Sans, Sans-Serif"
+        "default": "Roboto, sans-serif"
       },
       {
         "type": "text",
         "id": "logo-font",
         "label": "Logo font ",
-        "default": "Moxie, Sans-Serif"
+        "default": "Moxie, sans-serif"
       },
       {
         "type": "text",
@@ -146,5 +151,4 @@
       }
     ]
   }
-
 ]

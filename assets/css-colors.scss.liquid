@@ -8,7 +8,7 @@ $color-logo: {{ settings.color-logo }};
 $color-link: {{ settings.color-link }};
 $color-sidebox-text: {{ settings.color-sidebox-text }};
 $color-sidebox-link: {{ settings.color-sidebox-link }};
-$color-black: #383521;
+$color-black: {{ settings.color-black }};
 $color-footer: #6c6757;
 $color-2c: {{ settings.color-2c }};
 $color-3c: {{ settings.color-3c }};
@@ -17,6 +17,10 @@ $color-5c: {{ settings.color-5c }};
 $color-6c: {{ settings.color-6c }};
 
 /* Global */
+body {
+  color: $color-black;
+}
+
 a,
 a:visited,
 a:hover {
@@ -79,18 +83,7 @@ a:hover {
 #breadcrumb a,
 #cartcount,
 #cartcount a {
-  color: $color-header-link;
-}
-
-#breadcrumb a:hover,
-#cartcount a:hover {
-  color: $color-black;
-  background-color: $color-header-link;
-}
-
-/* Left Navigation */
-#sidebarleft h3 {
-  color: #333;
+  color: inherit;
 }
 
 ul.leftlinks li a {
@@ -131,7 +124,7 @@ h3.saverow {
 }
 
 #cart ul li h3 a {
-  color: #333;
+  color: $color-black;
 }
 
 .itemcost {
@@ -140,7 +133,7 @@ h3.saverow {
 
 #line-items li .txtcartrow .producttitle,
 #line-items li .txtcartrow .producttitle a {
-  color: #444;
+  color: $color-black;
 }
 
 .cartqty {
@@ -168,7 +161,7 @@ h3.saverow {
 
 /* Products on the front page */
 #frontarticles h1 {
-  background-color: black;
+  background-color: $color-black;
   color: white;
 }
 
@@ -182,7 +175,7 @@ h3.saverow {
 
 /* Collection Pages */
 #collectionbox h1 {
-  color: #4b4944;
+  color: $color-black;
   background-color: white;
 }
 
@@ -223,11 +216,11 @@ h3.saverow {
 /* Product Pages */
 .producttopinfo h2,
 .producttopinfosold h2 {
-  color: #3f3800;
+  color: $color-black;
 }
 
 #productrelated h2 {
-  color: #3f3800;
+  color: $color-black;
 }
 
 #pimage-select a img {
@@ -247,7 +240,7 @@ ul#variants label {
 }
 
 #productpage #description #details {
-  background-color: #EDECE6;
+  background-color: #edece6;
   color: grey;
 }
 

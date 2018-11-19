@@ -33,27 +33,27 @@ $cell-margin-triple: $cell-margin * 3;
   overflow: hidden;
   min-width: $cell + $cell-margin;
   max-width: $cell + $cell-margin;
-}
 
-ul.leftlinks {
-  margin: 0 0 $cell-margin 0;
-  padding: $cell-margin 0 $cell-margin $cell-margin;
-  width: 210px;
-  clear: left;
-}
+  .leftlinks {
+    margin: 0 0 $cell-margin 0;
+    padding: $cell-margin 0 $cell-margin $cell-margin;
+    width: 210px;
+    clear: left;
 
-ul.leftlinks li {
-  list-style: none;
-  padding: 0;
-}
+    li {
+      list-style: none;
+      padding: 0.5rem;
 
-ul.leftlinks li a {
-  margin: 0;
-}
+      a {
+        margin: 0;
 
-ul.leftlinks li a:hover {
-  margin-left: -6px;
-  padding: 0 6px;
+        &:hover {
+          margin-left: -6px;
+          padding: 0 6px;
+        }
+      }
+    }
+  }
 }
 
 hr {
