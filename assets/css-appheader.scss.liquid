@@ -3,7 +3,7 @@ $cell-margin: {{ settings.cell-margin }};
 $content-min-width: 2 * $cell + 3 * $cell-margin;
 $breakpoint: {{ settings.breakpoint }};
 $color-header: {{ settings.color-header }};
-$color-header-border: darken( $color-header, 10% );
+$color-header-border: darken( $color-header, 3% );
 
 $cell-margin-half: $cell-margin * 0.5;
 $cell-margin-double: $cell-margin * 2;
@@ -19,21 +19,17 @@ $cell-margin-triple: $cell-margin * 3;
 
   #appheadertop {
     position: relative;
-    padding: 0;
-    margin: 0 0 0 $cell * 0.25;
-    height: 7rem;
+    padding: $cell-margin-double;
+    margin: 0;
+    height: 8rem;
+    box-sizing: border-box;
 
     #logotype {
-      padding: 0 $cell-margin-double 0 $cell-margin-triple;
-      padding: 0 $cell-margin-double $cell-margin-triple $cell-margin-triple;
-      bottom: 0;
-      left: 0;
-      position: absolute;
+      padding: 0 $cell-margin-double 0 $cell * 0.25;
     }
   }
 
   #carthead {
-    // border-top: 1px solid #f2eed9;
     margin: 0;
     width: 100%;
     padding: $cell-margin 0;
