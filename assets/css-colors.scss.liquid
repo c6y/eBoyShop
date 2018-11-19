@@ -28,47 +28,16 @@ a:hover {
 }
 
 /* Header */
-// dynamic color of logo changes based on columns
+
+#appheader {
+  background-color: $color-3c;
+}
+
 #logotype,
 #logotype a,
 #logotype a:visited {
   // background-color: $color-header;
   color: $color-logo;
-
-  // 2 column container
-  @media only screen
-  and (min-width: (2 * $cell + 3 * $cell-margin))
-  and (max-width: (3 * $cell + 4 * $cell-margin)) {
-    color: lighten( $color-2c, 10% );
-  }
-
-  // 3 column container
-  @media only screen
-  and (min-width: (3 * $cell + 4 * $cell-margin))
-  and (max-width: (4 * $cell + 5 * $cell-margin)) {
-    color: lighten( $color-3c, 10% );
-  }
-
-  // 4 column container
-  @media only screen
-  and (min-width: (4 * $cell + 5 * $cell-margin))
-  and (max-width: (5 * $cell + 6 * $cell-margin)) {
-    color: lighten( $color-4c, 10% );
-  }
-
-  // 5 column container
-  @media only screen
-  and (min-width: (5 * $cell + 6 * $cell-margin))
-  and (max-width: (6 * $cell + 7 * $cell-margin)) {
-    color: lighten( $color-5c, 10% );
-  }
-
-  // 6 column container
-  @media only screen
-  and (min-width: (6 * $cell + 7 * $cell-margin)) {
-  width: 6 * $cell + 7 * $cell-margin;
-    color: lighten( $color-6c, 10% );
-  }
 }
 
 /* Colors Submenu */
