@@ -4,23 +4,23 @@ $cell-margin-half: $cell-margin * 0.5;
 $cell-margin-double: $cell-margin * 2;
 $cell-margin-triple: $cell-margin * 3;
 
-#cartform {
-  width: 100%;
-  padding: $cell-margin;
-  box-sizing: border-box;
-}
-
-#cart .emptycart {
-  text-align: center;
-  padding: 64px 24px;
-}
-
-h3.saverow {
+.cartbanner {
   width: calc(100% - 1rem);
   text-align: center;
   box-sizing: border-box;
-  padding: 3rem 0.5rem;
+  padding: $cell-margin-triple $cell-margin-double;
   margin: 0.5rem 0.5rem 0 0.5rem;
+}
+
+#cartbox {
+  width: 100%;
+  padding: $cell-margin;
+  box-sizing: border-box;
+
+  #cart .emptycart {
+    text-align: center;
+    padding: 3rem 1rem;
+  }
 }
 
 /* Cart Page: Single Product Line */

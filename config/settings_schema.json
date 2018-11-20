@@ -28,9 +28,15 @@
       },
       {
         "type": "color",
-        "id": "color-header",
-        "label": "Header color",
+        "id": "color-header-cart",
+        "label": "Cart header color",
         "default": "#f2eed9"
+      },
+      {
+        "type": "color",
+        "id": "color-header-top",
+        "label": "Top header color",
+        "default": "#ef3038"
       },
       {
         "type": "color",
@@ -98,10 +104,17 @@
     "settings": [
       {
         "type": "text",
+        "id": "font-size-basic",
+        "label": "Basic font size",
+        "default": "1rem"
+      },
+      {
+        "type": "text",
         "id": "font-sidebar-big",
         "label": "Big font sidebar",
         "default": "Georgia, serif"
-      },      {
+      },
+      {
         "type": "text",
         "id": "fontsize-sidebar-big",
         "label": "Big font size sidebar",

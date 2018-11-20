@@ -1,17 +1,19 @@
 <script type="text/javascript">
   function remove_item(id) {
     document.getElementById('updates_'+id).value = 0;
-    document.getElementById('cartform').submit();
+    document.getElementById('cartbox').submit();
   }
 </script>
 
-<h3 class="saverow">Save! Same shipping costs for any quantities of posters! <a href="/pages/info">Shipping Info</a></h3>
+<div class="cartbanner">
+  Save! Same shipping costs for any quantities of posters! <a href="/pages/info">Shipping Info</a>
+</div>
 {% if cart.item_count == 0 %}
-  <div id="cart">
+  <div class="cartbanner">
     <div class="emptycart">Your shopping cart is empty &#58;&#40;</div>
   </div>
 {% else %}
-  <form action="/cart" method="post" id="cartform">
+  <form action="/cart" method="post" id="cartbox">
     <div id="cart">
       <ul id="line-items">
         {% for item in cart.items %}

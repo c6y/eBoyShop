@@ -2,12 +2,13 @@ $cell: {{ settings.cell }};
 $cell-margin: {{ settings.cell-margin }};
 $content-min-width: 2 * $cell + 3 * $cell-margin;
 $breakpoint: {{ settings.breakpoint }};
-$color-header: {{ settings.color-header }};
-$color-header-border: darken( $color-header, 3% );
+$color-header-cart: {{ settings.color-header-cart }};
+$color-header-border: darken( $color-header-cart, 3% );
 
 $cell-margin-half: $cell-margin * 0.5;
-$cell-margin-double: $cell-margin * 2;
-$cell-margin-triple: $cell-margin * 3;
+$cell-margin-2x: $cell-margin * 2;
+$cell-margin-3x: $cell-margin * 3;
+$cell-margin-4x: $cell-margin * 4;
 
 #appheader {
   width: 0 auto;
@@ -19,13 +20,12 @@ $cell-margin-triple: $cell-margin * 3;
 
   #appheadertop {
     position: relative;
-    padding: $cell-margin-double;
+    padding: $cell-margin-2x $cell-margin-2x $cell-margin-4x $cell-margin-2x;
     margin: 0;
-    // height: 8rem;
     box-sizing: border-box;
 
     #logotype {
-      padding: 0 $cell-margin-double 0 $cell * 0.25;
+      padding: 0 $cell-margin-2x 0 $cell * 0.25;
     }
   }
 
@@ -39,12 +39,12 @@ $cell-margin-triple: $cell-margin * 3;
 
     #breadcrumb {
       float: left;
-      margin: 0 0 0 $cell-margin-triple;
+      margin: 0 0 0 $cell-margin-3x;
     }
 
     #cartcount {
       padding: 0;
-      margin: 0 $cell-margin-double 0 0;
+      margin: 0 $cell-margin-2x 0 0;
       white-space: nowrap;
     }
 

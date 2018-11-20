@@ -2,7 +2,8 @@ $cell: {{ settings.cell }};
 $cell-margin: {{ settings.cell-margin }};
 $content-min-width: 2 * $cell + 3 * $cell-margin;
 $breakpoint: {{ settings.breakpoint }};
-$color-header: {{ settings.color-header }};
+$color-header-top: {{ settings.color-header-top }};
+$color-header-cart: {{ settings.color-header-cart }};
 $color-header-link: rgba(0, 230, 230, 0.6);
 $color-logo: {{ settings.color-logo }};
 $color-link: {{ settings.color-link }};
@@ -30,19 +31,19 @@ a:hover {
 /* Header */
 
 #appheader {
-  background-color: $color-3c;
+  background-color: $color-header-top;
 }
 
 #logotype,
 #logotype a,
 #logotype a:visited {
-  // background-color: $color-header;
+  // background-color: $color-header-cart;
   color: $color-logo;
 }
 
 /* Colors Submenu */
 #carthead {
-  background-color: $color-header;
+  background-color: $color-header-cart;
 }
 
 #carthead #breadcrumb {
@@ -69,9 +70,10 @@ ul.leftlinks li a:hover {
   background-color: #edece6;
 }
 
-h3.saverow {
-  color: $color-black;
-  background-color: #ff0;
+.cartbanner {
+  // color: $color-black;
+  color: $color-header-top;
+  background-color: #fbf6d7;
 }
 
 .deleterow .remove {
