@@ -52,6 +52,18 @@ $cell-margin-4x: $cell-margin * 4;
       display: inline;
       float: left;
       margin-left: $cell-margin;
+      text-align: left;
+
+      // crop product title when narrow layout
+      // 2 column container
+      @media only screen
+        and (min-width: (2 * $cell + 3 * $cell-margin))
+        and (max-width: (3 * $cell + 4 * $cell-margin)) {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 12rem;
+      }
     }
 
     .quantities {
