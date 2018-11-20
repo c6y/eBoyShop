@@ -1,14 +1,14 @@
 $cell-margin: {{ settings.cell-margin }};
 
 $cell-margin-half: $cell-margin * 0.5;
-$cell-margin-double: $cell-margin * 2;
-$cell-margin-triple: $cell-margin * 3;
+$cell-margin-2x: $cell-margin * 2;
+$cell-margin-3x: $cell-margin * 3;
 
 .cartbanner {
   width: calc(100% - 1rem);
   text-align: center;
   box-sizing: border-box;
-  padding: $cell-margin-triple $cell-margin-double;
+  padding: $cell-margin-3x $cell-margin-2x;
   margin: 0.5rem 0.5rem 0 0.5rem;
 }
 
@@ -80,7 +80,7 @@ $cell-margin-triple: $cell-margin * 3;
     #subtotal {
       margin: 0;
       float: right;
-      padding: $cell-margin $cell-margin-double;
+      padding: $cell-margin $cell-margin-2x;
       margin-left: 1rem;
     }
   }

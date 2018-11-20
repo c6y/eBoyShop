@@ -4,8 +4,9 @@ $content-min-width: 2 * $cell + 3 * $cell-margin;
 $breakpoint: {{ settings.breakpoint }};
 
 $cell-margin-half: $cell-margin * 0.5;
-$cell-margin-double: $cell-margin * 2;
-$cell-margin-triple: $cell-margin * 3;
+$cell-margin-2x: $cell-margin * 2;
+$cell-margin-3x: $cell-margin * 3;
+$cell-margin-4x: $cell-margin * 4;
 
 // mobile
 @media only screen
@@ -76,11 +77,20 @@ hr {
 /* Page */
 #page {
   margin: 0;
-  width: 660px;
-}
+  width: 100%;
+  padding: $cell-margin-half;
+  box-sizing: border-box;
 
-#page h1 {
-  width: 648px;
+  h1 {
+    width: 100%;
+    margin: 0 0 $cell-margin-3x 0;
+    padding: $cell-margin-3x;
+    box-sizing: border-box;
+  }
+
+  .textile {
+    padding: $cell-margin-half;
+  }
 }
 
 /* PRODUCTS */
@@ -96,15 +106,6 @@ hr {
   padding: 0 12px;
   font-weight: bold;
 }
-
-// #frontbox p.money {
-//   margin: 2px 0;
-// }
-
-// #frontbox h3 {
-//   margin: 0;
-//   padding: 0;
-// }
 
 .coverproduct {
   width: 100%;
@@ -193,17 +194,21 @@ hr {
 /* Search Pages (mostly identical to the Collection Page) */
 #searchpage {
   margin: 0;
-  padding: 0;
-}
+  width: 100%;
+  padding: $cell-margin-half;
+  box-sizing: border-box;
 
-#searchpage h1 {
-  width: 648px;
+  h1 {
+    width: 100%;
+    margin: 0 0 $cell-margin-3x 0;
+    padding: $cell-margin-3x;
+    box-sizing: border-box;
+  }
 }
 
 #productbox {
   display: flex;
   flex-wrap: wrap;
-  // padding: 0;
   flex-grow: 1;
   align-items: baseline;
   flex-direction: column;
@@ -214,42 +219,6 @@ hr {
 #productbox h1 {
   padding: 0 6px;
   margin: 0 0 12px 0;
-}
-
-// #productpage {
-//   display: flex;
-//   flex-wrap: wrap;
-//   padding: $cell-margin * 0.5 0 $cell-margin * 0.5 $cell-margin * 0.5;
-// }
-
-.BUYbutton {
-  margin: 12px 0;
-  display: block;
-  width: 144px;
-  height: 72px;
-  background: url(BUY-2x.png) center top no-repeat;
-  background-size: 144px 72px;
-}
-
-.BUYbutton:hover {
-  background: url(BUY-2x-HOVER.png);
-  background-size: 144px 72px;
-}
-
-.SOLDbutton {
-  width: 168px;
-  height: 72px;
-  margin: 12px 0;
-}
-
-.APPSTOREbutton {
-  width: 168px;
-  height: 72px;
-  margin: 12px 0;
-}
-
-.APPSTOREbutton:hover {
-  cursor: pointer;
 }
 
 #product-images {
@@ -331,7 +300,7 @@ ul#variants li label {
 #sidebarright {
   box-sizing: border-box;
   width: $cell;
-  padding: $cell-margin $cell-margin-double $cell-margin $cell-margin;
+  padding: $cell-margin $cell-margin-2x $cell-margin $cell-margin;
   overflow: hidden;
   min-width: $cell + $cell-margin;
   max-width: $cell + $cell-margin;
@@ -340,9 +309,7 @@ ul#variants li label {
 #description {
   display: table;
   width: 100%;
-  // padding-top: $cell-margin-triple;
-  // border-top: 1px lightgrey solid;
-  margin: $cell-margin-triple 0 0 0;
+  margin: $cell-margin-3x 0 0 0;
 }
 
 #description p {
@@ -356,8 +323,6 @@ ul#variants li label {
   border-top: 1px lightgrey solid;
   margin: 12px 0 0 0;
 }
-
-
 
 #productcontrols {
   width: 100%;
@@ -508,30 +473,27 @@ ul#variants li label {
   text-align: right;
   display: table;
   border-top: 1px solid;
-}
 
-#footer #searchform {
-  width: auto;
-  height: auto;
-  display: inline;
-  clear: left;
-  float: left;
-  padding: 12px 24px 12px 24px;
-  margin: auto;
-  vertical-align: top;
+  #searchform {
+    width: auto;
+    height: auto;
+    display: inline;
+    clear: left;
+    float: left;
+    padding: $cell-margin $cell-margin-3x;
+    margin: auto;
+    vertical-align: top;
+  }
 }
 
 #footer #searchform #s {
-  border-top: 1px solid;
-  border-right: 1px solid;
-  border-bottom: 1px solid;
-  border-left: 1px solid;
-  padding: 3px 12px 3px 12px;
-  margin: auto;
+  padding: 0 $cell-margin;
+  margin: 0;
   display: inline;
   vertical-align: top;
-  line-height: 24px;
-  width: 190px;
+  line-height: 2rem;
+  width: $cell - $cell-margin-4x;
+  box-sizing: border-box;
 }
 
 #footer #footertxt {
@@ -540,7 +502,7 @@ ul#variants li label {
   vertical-align: top;
   height: auto;
   text-align: right;
-  padding: 12px 24px 12px 24px;
+  padding: $cell-margin $cell-margin-2x $cell-margin $cell-margin-2x;
 }
 
 #footer #footertxt div {

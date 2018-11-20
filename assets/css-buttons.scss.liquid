@@ -5,15 +5,15 @@ $headline-font: {{ settings.headline-font }};
 $cell-margin: {{ settings.cell-margin }};
 
 $cell-margin-half: $cell-margin * 0.5;
-$cell-margin-double: $cell-margin * 2;
-$cell-margin-triple: $cell-margin * 3;
+$cell-margin-2x: $cell-margin * 2;
+$cell-margin-3x: $cell-margin * 3;
 
 .checkoutbutton {
   font-family: $headline-font;
   background-color: $color-link;
   color: white;
   border: none;
-  padding: $cell-margin $cell-margin-triple;
+  padding: $cell-margin $cell-margin-3x;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -35,7 +35,7 @@ $cell-margin-triple: $cell-margin * 3;
   font-size: inherit;
   cursor: pointer;
   margin: $cell-margin-half;
-  padding: $cell-margin-half $cell-margin-double;
+  padding: $cell-margin-half $cell-margin-2x;
   font-family: $headline-font;
 
   &:active {
@@ -49,8 +49,8 @@ $cell-margin-triple: $cell-margin * 3;
   font-family: $headline-font;
   color: white;
   border: none;
-  padding: $cell-margin $cell-margin-triple;
-  margin: $cell-margin-double 0 0 0;
+  padding: $cell-margin $cell-margin-3x;
+  margin: $cell-margin-2x 0 0 0;
   text-align: center;
   text-decoration: none;
   display: inline-block;

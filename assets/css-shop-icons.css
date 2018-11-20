@@ -1,4 +1,4 @@
-/* Reference: https://cdn.materialdesignicons.com/3.0.39/@charset "UTF-8"; */
+/* Reference: https://materialdesignicons.com/ */
 @font-face {
   font-family: "materialdesignicons";
   src: url("materialdesignicons-webfont.ttf");
@@ -15,7 +15,8 @@
 .mdi-info::before,
 .mdi-settings::before,
 .mdi-edit::before,
-.mdi-creditcard::before {
+.mdi-creditcard::before,
+.mdi-search::before {
   font-family: "materialdesignicons";
   line-height: inherit;
   font-size: inherit;
@@ -55,5 +56,9 @@
 }
 
 .mdi-creditcard::before {
+  content: "\f19b";
+}
+
+.mdi-search::before {
   content: "\f19b";
 }
