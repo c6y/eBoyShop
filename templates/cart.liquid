@@ -19,11 +19,11 @@
         {% for item in cart.items %}
           <li id="item-{{item.id}}" class="itemline">
             <div class="thumb">
-              <a href="{{item.product.url}}" title="View {{item.title}} Page"><img src="{{item.product.featured_image | product_img_url: 'thumb' }}" alt="{{item.title}}" /></a>
+              <a href="{{item.product.url}}" title="{{item.title}}"><img src="{{item.product.featured_image | product_img_url: 'thumb' }}" alt="{{item.title}}" /></a>
             </div>
             <div class="txtcartrow">
               <span class="producttitle">
-                <a href="{{item.product.url}}" title="View {{item.title}} Page">
+                <a href="{{item.product.url}}" title="{{item.title}}">
                   {{ item.title }}
                   {% if item.variant.title != 'Default' %}
                      ({{item.variant.title}})
