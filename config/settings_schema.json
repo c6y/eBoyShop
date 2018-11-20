@@ -100,7 +100,7 @@
         "type": "text",
         "id": "font-sidebar-big",
         "label": "Big font sidebar",
-        "default": "Roboto, sans-serif"
+        "default": "Georgia, serif"
       },      {
         "type": "text",
         "id": "fontsize-sidebar-big",
