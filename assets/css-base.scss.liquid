@@ -25,20 +25,29 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
+  width: 100%;
 
-  @media only screen
-    and (max-device-width: $breakpoint) {
-    width: 100%;
-  }
+  // @media only screen
+  //   and (max-device-width: $breakpoint) {
+  //   width: 100%;
+  // }
+  //
+  // @media only screen
+  //   and (min-device-width: $breakpoint) {
+  //   // min-width: $content-min-width;
+  //   width: 100%;
+  // }
 
-  @media only screen
-    and (min-device-width: $breakpoint) {
-    min-width: $content-min-width;
-  }
+  // 1 column container
+  // @media only screen
+  //   and (max-width: (2 * $cell + 3 * $cell-margin)) {
+  //   width: 1 * $cell + 2 * $cell-margin;
+  //   // background-color: $color-2c;
+  // }
 
   // 2 column container
   @media only screen
-    and (min-width: (2 * $cell + 3 * $cell-margin))
+    // and (min-width: (2 * $cell + 3 * $cell-margin))
     and (max-width: (3 * $cell + 4 * $cell-margin)) {
     width: 2 * $cell + 3 * $cell-margin;
     // background-color: $color-2c;
