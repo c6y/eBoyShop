@@ -8,6 +8,16 @@ $cell-margin-half: $cell-margin * 0.5;
 $cell-margin-2x: $cell-margin * 2;
 $cell-margin-3x: $cell-margin * 3;
 
+.checkoutbutton,
+.updatebutton,
+.buybutton,
+.soldbutton,
+.soonbutton {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+
 .checkoutbutton {
   font-family: $headline-font;
   background-color: $color-link;
@@ -36,7 +46,6 @@ $cell-margin-3x: $cell-margin * 3;
   cursor: pointer;
   margin: $cell-margin-half;
   padding: $cell-margin-half $cell-margin-2x;
-  font-family: $headline-font;
 
   &:active {
     opacity: 1;
