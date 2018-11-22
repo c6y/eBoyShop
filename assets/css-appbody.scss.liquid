@@ -3,23 +3,6 @@ $cell-margin: {{ settings.cell-margin }};
 $content-min-width: 2 * $cell + 3 * $cell-margin;
 $breakpoint: {{ settings.breakpoint }};
 
-// @media only screen
-//   and (max-device-width: $breakpoint) {
-//   #appbody {
-//     // flex-direction: column;
-//     flex-direction: wrap;
-//   }
-// }
-//
-// @media only screen
-//   and (min-device-width: $breakpoint) {
-//   #appbody {
-//     flex-direction: wrap;
-//   }
-// }
-
-
-
 // Shared properties
 #appbody {
   flex-direction: wrap;
@@ -27,16 +10,7 @@ $breakpoint: {{ settings.breakpoint }};
   margin: 0;
   display: flex;
 
-  // // 1 column container
-  // @media only screen
-  //   and (min-width: (1 * $cell + 2 * $cell-margin))
-  //   and (max-width: (2 * $cell + 3 * $cell-margin)) {
-  //   width: 1 * $cell + 2 * $cell-margin;
-  //   flex-direction: column;
-  // }
-
   @media only screen
-    // and (min-width: (2 * $cell + 3 * $cell-margin))
     and (max-width: (3 * $cell + 4 * $cell-margin)) {
     flex-direction: column;
   }
