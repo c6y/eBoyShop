@@ -141,8 +141,20 @@
       {
         "type": "text",
         "id": "body-font",
-        "label": "Body font ",
+        "label": "Body font",
         "default": "Georgia, serif"
+      },
+      {
+        "type": "text",
+        "id": "body-fontsize",
+        "label": "Body font size",
+        "default": "1rem"
+      },
+      {
+        "type": "text",
+        "id": "body-lineheight",
+        "label": "Body line height",
+        "default": "1.25rem"
       },
       {
         "type": "text",

@@ -12,6 +12,7 @@ $fontweight-producttopinfo: {{ settings.fontweight-bold-big }};
 $fontsize-buttonsmall: {{ settings.fontsize-button-small }};
 $headline-font: {{ settings.headline-font }};
 $body-font: {{ settings.body-font }};
+$body-lineheight: {{ settings.body-lineheight }};
 $cart-font: {{ settings.cart-font }};
 $logo-font: {{ settings.logo-font }};
 
@@ -148,22 +149,28 @@ h1 {
   font-weight: bold;
 }
 
+
+
+
+
 #description {
-  line-height: 1.5rem;
+  // line-height: 1.5rem;
   font-family: $body-font;
-}
+  line-height: $body-lineheight;
 
-#description ul {
-  margin-bottom: 0.5rem;
-}
+  p {
+    margin: $cell-margin 0 $cell-margin 0;
+  }
 
-#description ul li {
-  margin-left: 1em;
-  list-style-type: circle;
-}
+  ul {
+    margin: 0 0 $cell-margin 0;
+    padding: 0 0 0 $cell-margin-2x;
 
-#description #details a:hover {
-  text-decoration: underline;
+    li {
+      margin-left: $cell-margin;
+      list-style-type: circle;
+    }
+  }
 }
 
 #productrelated h2 {

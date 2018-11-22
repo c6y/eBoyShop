@@ -9,6 +9,7 @@ $cell-margin-3x: $cell-margin * 3;
 $cell-margin-4x: $cell-margin * 4;
 
 $color-link: {{ settings.color-link }};
+$color-black: {{ settings.color-black }};
 
 // mobile
 // @media only screen
@@ -41,7 +42,7 @@ $color-link: {{ settings.color-link }};
 #sidebarleft {
   box-sizing: border-box;
   // width: $cell;
-  padding: $cell-margin;
+  padding: $cell-margin 0 $cell-margin $cell-margin;
   overflow: hidden;
   display: flex;
 
@@ -57,7 +58,7 @@ $color-link: {{ settings.color-link }};
   // desktop 3+ column width
   @media only screen
     and (min-width: (3 * $cell + 4 * $cell-margin)) {
-    width: 3 * $cell + 4 * $cell-margin;
+    width:  $cell + $cell-margin;
     min-width: $cell + $cell-margin;
     max-width: $cell + $cell-margin;
     flex-direction: column;
@@ -249,16 +250,20 @@ hr {
   align-items: baseline;
   flex-direction: column;
   z-index: 20;
-  padding: $cell-margin * 0.5 0 $cell-margin * 0.5 $cell-margin * 0.5;
-}
+  padding: 0;
 
-#productbox h1 {
-  padding: 0 6px;
-  margin: 0 0 12px 0;
+  h1 {
+    padding: 0 $cell-margin-half;
+    margin: 0 0 $cell-margin-2x 0;
+    box-sizing: border-box;
+  }
 }
 
 #product-images {
   width: 100%;
+  padding: 0.25rem;
+  // background-color: yellow;
+  box-sizing: border-box;
 }
 
 .bigsquare {
@@ -287,7 +292,7 @@ a.productimage-small:hover {
 }
 
 .pimage {
-  margin: $cell-margin * 0.5 $cell-margin $cell-margin * 0.5 $cell-margin * 0.5;
+  margin: $cell-margin * 0.5;
 }
 
 #pimage-select {
@@ -335,56 +340,60 @@ ul#variants li label {
 
 #sidebarright {
   box-sizing: border-box;
-  width: $cell;
-  padding: $cell-margin $cell-margin-2x $cell-margin $cell-margin;
-  overflow: hidden;
-  min-width: $cell + $cell-margin;
-  max-width: $cell + $cell-margin;
-}
+  padding: $cell-margin;
+  display: flex;
+  // background-color: lightgrey;
 
-#description {
-  display: table;
-  width: 100%;
-  margin: $cell-margin-3x 0 0 0;
-}
-
-#description p {
-  margin: 0 0 $cell-margin 0;
-}
-
-#productlinks {
-  display: table;
-  width: 198px;
-  padding-top: 12px;
-  border-top: 1px lightgrey solid;
-  margin: 12px 0 0 0;
-}
-
-#productcontrols {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-
-  .producttopinfo,
-  .producttopinfosold {
-    width: 100%;
-
-    .productinfo {
-      margin: 0;
-      left: 0;
-      top: 0;
-      width: 100%;
-    }
+  // mobile 2 column width
+  @media only screen
+    and (max-width: (3 * $cell + 4 * $cell-margin)) {
+    width: (2 * $cell + 3 * $cell-margin);
+    min-width: (2 * $cell + 3 * $cell-margin);
+    max-width: (2 * $cell + 3 * $cell-margin);
+    flex-direction: row-reverse;
+    justify-content: space-between;
   }
 
-  form {
-    padding: 0;
-    margin: 0;
+  // desktop 3+ column width
+  @media only screen
+    and (min-width: (3 * $cell + 4 * $cell-margin)) {
+    width: $cell;
+    min-width: $cell + $cell-margin;
+    max-width: $cell + $cell-margin;
+    flex-direction: column;
+  }
 
-    .price {
-      // float: right;
+  #productcontrols,
+  #description {
+    box-sizing: border-box;
+    width: $cell;
+    padding: $cell-margin;
+    margin: 0;
+    border-left: 1px solid $color-black;
+  }
+
+  #productcontrols {
+    .producttopinfo,
+    .producttopinfosold {
+      width: 100%;
+
+      .productinfo {
+        margin: 0;
+        left: 0;
+        top: 0;
+        width: 100%;
+      }
+    }
+
+    form {
+      padding: 0;
       margin: 0;
-      display: block;
+
+      .price {
+        // float: right;
+        margin: 0;
+        display: block;
+      }
     }
   }
 }
