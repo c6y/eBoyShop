@@ -8,6 +8,8 @@ $cell-margin-2x: $cell-margin * 2;
 $cell-margin-3x: $cell-margin * 3;
 $cell-margin-4x: $cell-margin * 4;
 
+$color-link: {{ settings.color-link }};
+
 // mobile
 // @media only screen
 //   and (max-device-width: $breakpoint) {
@@ -26,20 +28,49 @@ $cell-margin-4x: $cell-margin * 4;
   z-index: 20;
 }
 
+#breadcrumb {
+  // mobile 2 column width
+  @media only screen
+    and (max-width: (3 * $cell + 4 * $cell-margin)) {
+    display: none;
+  }
+}
+
+
 /* Left Navigation */
 #sidebarleft {
   box-sizing: border-box;
-  width: $cell;
+  // width: $cell;
   padding: $cell-margin;
   overflow: hidden;
-  min-width: $cell + $cell-margin;
-  max-width: $cell + $cell-margin;
+  display: flex;
 
-  .leftlinks {
-    margin: 0 0 $cell-margin 0;
+  // mobile 2 column width
+  @media only screen
+    and (max-width: (3 * $cell + 4 * $cell-margin)) {
+    min-width: 2 * $cell + 3 * $cell-margin;
+    max-width: 2 * $cell + 3 * $cell-margin;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  // desktop 3+ column width
+  @media only screen
+    and (min-width: (3 * $cell + 4 * $cell-margin)) {
+    width: 3 * $cell + 4 * $cell-margin;
+    min-width: $cell + $cell-margin;
+    max-width: $cell + $cell-margin;
+    flex-direction: column;
+  }
+
+  .leftlinks-collections,
+  .leftlinks-other {
     padding: $cell-margin 0 $cell-margin $cell-margin;
-    width: 210px;
     clear: left;
+    box-sizing: border-box;
+    margin: 0;
+    width: $cell;
+    border-left: 1px solid $color-link;
 
     li {
       list-style: none;
@@ -55,6 +86,11 @@ $cell-margin-4x: $cell-margin * 4;
       }
     }
   }
+
+  // .externlinks {
+  //   background-color: lightgrey;
+  //   // font-size: inherit;
+  // }
 }
 
 hr {

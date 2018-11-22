@@ -1,16 +1,14 @@
 <div id="sidebarleft">
-  <ul class="leftlinks" id="blend-border">
-    <!-- list available collections  -->
+  <ul class="leftlinks-collections">
     {% for link in linklists.main-menu.links %}
       {% if collection.title == link.title %}
-        <!-- current collection without link -->
         <li>{{ link.title }}</li>
       {% else template.name == 'index'%}
-        <!-- other collections with link -->
         <li>{{ link.title | link_to: link.url }}</li>
       {% endif %}
     {% endfor %}
-    <hr>
+  </ul>
+  <ul class="leftlinks-other">
     <li class="exlink">
       <a href="https://db.eboy.com/" target="_blank" class="mdi-database">DB</a>
     </li>

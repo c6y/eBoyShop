@@ -83,9 +83,22 @@ h1 {
 
 #carthead {
   font-family: $headline-font;
-  font-size: 1.5rem;
+  // font-family: 'Roboto Condensed', sans-serif;
   line-height: 1.2em;
   font-weight: 400;
+  font-size: 1.5rem;
+
+  // // mobile 2 column width
+  // @media only screen
+  //   and (max-width: (3 * $cell + 4 * $cell-margin)) {
+  //   font-size: 1.2rem;
+  // }
+  //
+  // // desktop 3+ column width
+  // @media only screen
+  //   and (min-width: (3 * $cell + 4 * $cell-margin)) {
+  //   font-size: 1.5rem;
+  // }
 
   #breadcrumb,
   #cartcount {
@@ -95,21 +108,22 @@ h1 {
   }
 }
 
-
-ul.leftlinks {
+#sidebarleft {
   font-family: $font-leftlinks;
   font-size: $fontsize-leftlinks;
   font-weight: $fontweight-leftlinks;
   line-height: 1.5rem;
-  text-transform: lowercase;
 
-  .exlink {
-    text-transform: none;
+  .leftlinks-collections,
+  .leftlinks-other {
+    li a {
+      text-decoration: none;
+    }
   }
-}
 
-ul.leftlinks li a {
-  text-decoration: none;
+  .leftlinks-collections {
+    text-transform: lowercase;
+  }
 }
 
 /* Product Pages */
