@@ -50,6 +50,7 @@
   {{ 'css-typography.scss.css'| asset_url | stylesheet_tag }}
   {{ 'css-buttons.scss.css'| asset_url | stylesheet_tag }}
   {{ 'css-cart.scss.css'| asset_url | stylesheet_tag }}
+  {{ 'css-modal.scss.css'| asset_url | stylesheet_tag }}
 
   {{ 'css-shop-icons.css' | asset_url | stylesheet_tag }}
   {{ 'lightbox/v2/lightbox.css' | global_asset_url | stylesheet_tag }}
@@ -60,11 +61,6 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Mono" rel="stylesheet">
 
   <meta name="viewport" content="width=536">
-  <!-- <meta name="viewport" content="width=568"> -->
-  <!-- <meta name="viewport" content="width=544"> -->
-  <!-- <meta name="viewport" content="width=800"> -->
-  <!-- <meta name="viewport" content="width=device-width"> -->
-  <!-- <meta name="viewport" content="width=568, initial-scale=1"> -->
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
   <script type="text/javascript">
@@ -100,6 +96,10 @@
             <div id="mainbox">
               {{ content_for_layout }}
             </div>
+          {% when 'page' %}
+            <div id="mainbox">
+              {{ content_for_layout }}
+            </div>
           {% else %}
             {% include 'sidebarleft' %}
             <div id="mainbox">
@@ -111,6 +111,7 @@
       {% case template %}
         {% when 'product' %}
           {% include 'productrelated' %}
+          {% include 'footer' %}
         {% when 'cart' %}
           {% include 'cartrelated' %}
         {% else %}
@@ -118,5 +119,6 @@
       {% endcase %}
     </div>
   </div>
+  <!-- <div class="modal" id="modal">Test</div> -->
 </body>
 </html>

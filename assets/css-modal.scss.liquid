@@ -1,0 +1,22 @@
+$cell: {{ settings.cell }};
+$cell-margin: {{ settings.cell-margin }};
+$content-min-width: 2 * $cell + 3 * $cell-margin;
+$breakpoint: {{ settings.breakpoint }};
+
+$cell-margin-half: $cell-margin * 0.5;
+$cell-margin-2x: $cell-margin * 2;
+$cell-margin-3x: $cell-margin * 3;
+$cell-margin-4x: $cell-margin * 4;
+
+$color-black: {{ settings.color-black }};
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: $cell + $cell + $cell-margin;
+  color: white;
+  background-color: $color-black;
+  z-index: 500;
+}

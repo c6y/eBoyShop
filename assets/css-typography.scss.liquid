@@ -158,25 +158,6 @@ a:hover {
   font-size: 24px;
 }
 
-#footer {
-  font-size: 24px;
-  line-height: 1.4em;
-}
-
-#footer a {
-  text-decoration: none;
-}
-
-#footertxt {
-  font-family: $body-font;
-  font-size: 12px;
-  line-height: 1.4em;
-}
-
-#footertxt a:hover {
-  text-decoration: underline;
-}
-
 /* Collection Pages */
 .product {
   font-family: $body-font;
@@ -259,6 +240,7 @@ a:hover.shipinfo {
       font-size: 1em;
       font-weight: 600;
     }
+    .addressblock,
     p,
     ul,
     h3 {
@@ -297,11 +279,18 @@ a:hover.shipinfo {
 
 /* Footer */
 #footer {
-  line-height: 24px;
-  font-size: 24px;
-}
-
-#footer #searchform #s {
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-family: $body-font;
-  font-size: $fontsize-searchform;
+
+  a,
+  a:hover {
+    text-decoration: none;
+  }
+
+  #searchform #s,
+  #footertxt {
+    font-family: inherit;
+    font-size: inherit;
+  }
 }

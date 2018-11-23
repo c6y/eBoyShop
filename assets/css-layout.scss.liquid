@@ -90,25 +90,6 @@ hr {
   margin-left: -36px;
 }
 
-/* Page */
-#page {
-  margin: 0;
-  width: 100%;
-  padding: $cell-margin-half;
-  box-sizing: border-box;
-
-  h1 {
-    width: 100%;
-    margin: 0 0 $cell-margin-3x 0;
-    padding: $cell-margin-3x;
-    box-sizing: border-box;
-  }
-
-  .textile {
-    padding: $cell-margin-half;
-  }
-}
-
 /* PRODUCTS */
 /* Products on the Front Page */
 #frontarticles {
@@ -204,18 +185,29 @@ hr {
   border-bottom: 1px solid black;
 }
 
-/* Search Pages (mostly identical to the Collection Page) */
-#searchpage {
+/* Pages  */
+/* includes Search Page, which is mostly identical to the Collection Page */
+#page {
   margin: 0;
   width: 100%;
   padding: $cell-margin-half;
   box-sizing: border-box;
+
+  .pagetitlebox {
+    width: 100%;
+    padding: $cell-margin-half;
+    box-sizing: border-box;
+  }
 
   h1 {
     width: 100%;
     margin: 0 0 $cell-margin-3x 0;
     padding: $cell-margin-3x;
     box-sizing: border-box;
+  }
+
+  .textile {
+    padding: $cell-margin-half;
   }
 }
 
@@ -504,30 +496,29 @@ ul#variants li label {
     padding: $cell-margin $cell-margin-3x;
     margin: auto;
     vertical-align: top;
+
+    #s {
+      padding: 0 $cell-margin;
+      margin: 0;
+      display: inline;
+      vertical-align: top;
+      line-height: 2rem;
+      width: $cell - $cell-margin-4x;
+      box-sizing: border-box;
+    }
   }
-}
 
-#footer #searchform #s {
-  padding: 0 $cell-margin;
-  margin: 0;
-  display: inline;
-  vertical-align: top;
-  line-height: 2rem;
-  width: $cell - $cell-margin-4x;
-  box-sizing: border-box;
-}
+  #footertxt {
+    width: auto;
+    float: right;
+    text-align: right;
+    padding: $cell-margin $cell-margin-2x $cell-margin $cell-margin-2x;
+    display: inline-table;
 
-#footer #footertxt {
-  width: auto;
-  float: right;
-  vertical-align: top;
-  height: auto;
-  text-align: right;
-  padding: $cell-margin $cell-margin-2x $cell-margin $cell-margin-2x;
-}
-
-#footer #footertxt div {
-  white-space: nowrap;
+    div {
+      white-space: nowrap;
+    }
+  }
 }
 
 #footer .spacedot {
