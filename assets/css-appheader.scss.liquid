@@ -9,6 +9,7 @@ $cell-margin-half: $cell-margin * 0.5;
 $cell-margin-2x: $cell-margin * 2;
 $cell-margin-3x: $cell-margin * 3;
 $cell-margin-4x: $cell-margin * 4;
+$cell-margin-8x: $cell-margin * 8;
 
 #appheader {
   width: 0 auto;
@@ -20,7 +21,7 @@ $cell-margin-4x: $cell-margin * 4;
 
   #appheadertop {
     position: relative;
-    padding: $cell-margin $cell-margin $cell-margin-3x $cell-margin-2x;
+    padding: $cell-margin $cell-margin $cell-margin $cell-margin-2x;
     margin: 0;
     box-sizing: border-box;
     text-align: left;
@@ -36,11 +37,19 @@ $cell-margin-4x: $cell-margin * 4;
     padding: $cell-margin 0;
     text-align: right;
     display: table;
-    // border-bottom: 1px solid $color-header-border;
 
     #breadcrumb {
       float: left;
       margin: 0 0 0 $cell-margin-3x;
+      #crumbpath {
+        // mobile 2 column width
+        @media only screen
+          and (max-width: (3 * $cell + 4 * $cell-margin)) {
+          display: none;
+        }
+      }
+
+
     }
 
     #cartcount {

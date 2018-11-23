@@ -6,11 +6,16 @@
       Shop
     {% endif %}
     {% case template %}
-      {% when 'collection' %}
-        &gt; {{collection.title}}
-      {% when 'product' %}
-        &gt; {{ product.type | link_to_type }} &gt; {{ product.title }}
-      {% else %}
+        {% when 'collection' %}
+          <span id="crumbpath">
+            &gt; {{collection.title}}
+          </span>
+        {% when 'product' %}
+          <span id="crumbpath">
+          &gt; {{ product.type | link_to_type }} &gt; {{ product.title }}
+          </span>
+        {% else %}
+
     {% endcase %}
   </h3>
   <h3 id="cartcount"><a href="/cart" class="mdi-cart"></a> {{ cart.item_count }}</h3>

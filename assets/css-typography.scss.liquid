@@ -71,9 +71,20 @@ a:hover {
 /* Submenublock */
 #carthead {
   font-family: $headline-font;
-  font-size: 1.5rem;
   line-height: 1.2em;
   font-weight: 400;
+
+  // mobile 2 column width
+  @media only screen
+    and (max-width: (3 * $cell + 4 * $cell-margin)) {
+    font-size: 2rem;
+  }
+
+  // desktop 3+ column width
+  @media only screen
+    and (min-width: (3 * $cell + 4 * $cell-margin)) {
+    font-size: 1.5rem;
+  }
 
   #breadcrumb,
   #cartcount {
