@@ -1,18 +1,38 @@
 [
   {
+    "name": "Settings",
+    "settings": [
+      {
+        "type": "range",
+        "id": "thumbnails-per-page",
+        "min": 4,
+        "max": 50,
+        "step": 1,
+        "label": "Thumbnails per page",
+        "default": 48
+      }
+    ]
+  },
+  {
     "name": "Colors",
     "settings": [
       {
         "type": "color",
+        "id": "color-appbody",
+        "label": "Appbody color",
+        "default": "#fff"
+      },
+      {
+        "type": "color",
         "id": "color-black",
         "label": "Shopwide black",
-        "default": "#383521"
+        "default": "#ef3038"
       },
       {
         "type": "color",
         "id": "color-sidebox-text",
         "label": "Sidebar text color",
-        "default": "#383521"
+        "default": "#ef3038"
       },
       {
         "type": "color",
@@ -37,6 +57,12 @@
         "id": "color-header-cart-text",
         "label": "Cart header text color",
         "default": "#6c6757"
+      },
+      {
+        "type": "color",
+        "id": "color-line",
+        "label": "Line color",
+        "default": "#e6e3de"
       },
       {
         "type": "color",

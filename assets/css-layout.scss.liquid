@@ -11,6 +11,8 @@ $cell-margin-4x: $cell-margin * 4;
 $color-link: {{ settings.color-link }};
 $color-black: {{ settings.color-black }};
 $color-header-cart: {{ settings.color-header-cart }};
+$color-line: {{ settings.color-line }};
+
 
 #mainbox {
   display: flex;
@@ -54,7 +56,7 @@ $color-header-cart: {{ settings.color-header-cart }};
     box-sizing: border-box;
     margin: 0;
     width: $cell;
-    border-left: 1px solid $color-header-cart;
+    border-left: 1px solid $color-line;
 
     li {
       list-style: none;
@@ -71,14 +73,6 @@ $color-header-cart: {{ settings.color-header-cart }};
     }
   }
 
-}
-
-hr {
-  border: 0;
-  padding: 0;
-  margin: 1rem 0 1rem 0;
-  height: 1px;
-  background-image: linear-gradient(to right, #00baf2, rgba(255,255,255,0));
 }
 
 /* Home Page */
@@ -153,36 +147,31 @@ hr {
 
 #pagination {
   display: table;
-  clear: left;
-  margin: 24px 0 0 0;
-}
+  margin: 0;
+  padding: $cell-margin-2x 0;
+  width: 100%;
+  box-sizing: border-box;
 
-#pagination a {
-  margin-right: 4px;
-  padding: 3px 6px;
-  text-align: center;
-  text-decoration: none;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border: 1px solid lightgrey;
-}
+  a,
+  .current {
+    margin-right: $cell-margin;
+    padding: $cell-margin-half $cell-margin;
+    text-align: center;
+  }
 
-#pagination a:hover,
-#pagination a:active {
-  border: 1px solid black;
-}
+  a {
+    text-decoration: none;
+    border: 1px solid $color-link;
 
-#pagination .current {
-  margin-right: 6px;
-  padding: 3px 6px;
-  text-align: center;
-  text-decoration: none;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-top: 1px solid black;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  border-bottom: 1px solid black;
+    &:hover,
+    &:active {
+      border: 1px solid $color-link;
+    }
+  }
+
+  .current {
+    border: 1px solid $color-header-cart;
+  }
 }
 
 /* Pages  */
@@ -204,7 +193,7 @@ hr {
     margin: 0 0 $cell-margin-3x 0;
     padding: $cell-margin-2x $cell-margin $cell-margin-2x $cell-margin-2x;
     box-sizing: border-box;
-    border-bottom: 1px solid $color-header-cart;
+    border-bottom: 1px solid $color-line;
   }
 
   .textile {
@@ -341,7 +330,7 @@ ul#variants li label {
     // padding: 0 $cell-margin-2x 0 $cell-margin-2x;
     // padding: $cell-margin $cell-margin-2x $cell-margin-2x $cell-margin-2x;
     margin: 0;
-    border-left: 1px solid $color-header-cart;
+    border-left: 1px solid $color-line;
   }
 
   #productcontrols {
@@ -462,7 +451,7 @@ ul#variants li label {
   flex-direction: column;
   overflow: hidden;
     #productrelated {
-      margin: $cell-margin * 2 0 0 0;
+      margin: 0;
       padding: $cell-margin * 0.5;
 
       h2 {
@@ -470,6 +459,8 @@ ul#variants li label {
         color: #383521;
         font-weight: 500;
         opacity: 0.4;
+        padding-top: $cell-margin-2x;
+        border-top: 1px solid $color-line;
       }
       img {
         filter: grayscale(100%) opacity(0.75);

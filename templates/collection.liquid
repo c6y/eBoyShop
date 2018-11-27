@@ -1,26 +1,26 @@
 <div id="collectionbox">
-  {% paginate collection.products by 50 %}
+  {% paginate collection.products by settings.thumbnails-per-page %}
 
-  {% for product in collection.products %}
-    {% include 'galleryproduct' %}
-  {% endfor %}
-
-  {% if paginate.pages > 1 %}
-    <div id="pagination">
-    {% if paginate.previous %}
-      {{ "Previous" | link_to: paginate.previous.url }}
-    {% endif %}
-    {% for part in paginate.parts %}
-      {% if part.is_link %}
-        {{ part.title | link_to: part.url }}
-      {% else %}
-        <span class="current">{{ part.title }}</span>
-      {% endif %}
+    {% for product in collection.products %}
+      {% include 'galleryproduct' %}
     {% endfor %}
-    {% if paginate.next %}
-      {{ "Next" | link_to: paginate.next.url }}
+
+    {% if paginate.pages > 1 %}
+      <div id="pagination">
+        {% if paginate.previous %}
+          {{ "Previous" | link_to: paginate.previous.url }}
+        {% endif %}
+        {% for part in paginate.parts %}
+          {% if part.is_link %}
+            {{ part.title | link_to: part.url }}
+          {% else %}
+            <span class="current">{{ part.title }}</span>
+          {% endif %}
+        {% endfor %}
+        {% if paginate.next %}
+          {{ "Next" | link_to: paginate.next.url }}
+        {% endif %}
+      </div>
     {% endif %}
-    </div>
-  {% endif %}
-{% endpaginate %}
+  {% endpaginate %}
 </div>

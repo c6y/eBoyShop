@@ -2,6 +2,7 @@ $cell: {{ settings.cell }};
 $cell-margin: {{ settings.cell-margin }};
 $content-min-width: 2 * $cell + 3 * $cell-margin;
 $breakpoint: {{ settings.breakpoint }};
+$color-productrelated: {{ settings.color-appbody }};
 $color-header-top: {{ settings.color-header-top }};
 $color-header-cart: {{ settings.color-header-cart }};
 $color-header-cart-text: {{ settings.color-header-cart-text }};
@@ -150,27 +151,26 @@ ul.leftlinks li a:hover {
 }
 
 .product {
-  background-color: MintCream;
+  background-color: #effcff;
 }
 
 #collectionbox h2 {
-  color: #333;
+  color: red;
 }
 
-#pagination a {
-  color: lightgrey;
-  background: #fafafa;
-}
+#pagination {
+  a {
+    color: $color-link;
 
-#pagination a:hover,
-#pagination a:active {
-  background: $color-black;
-  color: yellow;
-}
+    &:hover,
+    &:active {
+      color: $color-link;
+    }
+  }
 
-#pagination .current {
-  color: $color-black;
-  background: white;
+  .current {
+    color: $color-header-cart;
+  }
 }
 
 .product .money {
@@ -189,8 +189,13 @@ ul.leftlinks li a:hover {
   color: $color-black;
 }
 
-#productrelated h2 {
-  color: $color-black;
+#productrelated {
+  // background-color: #f3f1ef;
+  background-color: $color-productrelated;
+
+  h2 {
+    color: $color-black;
+  }
 }
 
 #pimage-select a img {
