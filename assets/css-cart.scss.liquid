@@ -8,23 +8,19 @@ $cell-margin-2x: $cell-margin * 2;
 $cell-margin-3x: $cell-margin * 3;
 $cell-margin-4x: $cell-margin * 4;
 
-.cartbanner {
+.cartbanner,
+.emptycart {
   width: calc(100% - 1rem);
   text-align: center;
   box-sizing: border-box;
-  padding: $cell-margin-3x $cell-margin-2x;
-  margin: 0.5rem 0.5rem 0 0.5rem;
+  padding: $cell-margin-4x;
+  margin: $cell-margin $cell-margin 0 $cell-margin;
 }
 
 #cartbox {
   width: 100%;
   padding: $cell-margin;
   box-sizing: border-box;
-
-  #cart .emptycart {
-    text-align: center;
-    padding: 3rem 1rem;
-  }
 }
 
 /* Cart Page: Single Product Line */
@@ -57,7 +53,6 @@ $cell-margin-4x: $cell-margin * 4;
       // crop product title when narrow layout
       // 2 column container
       @media only screen
-        and (min-width: (2 * $cell + 3 * $cell-margin))
         and (max-width: (3 * $cell + 4 * $cell-margin)) {
         white-space: nowrap;
         overflow: hidden;

@@ -50,7 +50,7 @@
         "type": "color",
         "id": "color-header-cart",
         "label": "Cart header color",
-        "default": "#e6e3de"
+        "default": "#edece6"
       },
       {
         "type": "color",

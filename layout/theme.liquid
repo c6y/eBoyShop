@@ -113,7 +113,9 @@
           {% include 'productrelated' %}
           {% include 'footer' %}
         {% when 'cart' %}
-          {% include 'cartrelated' %}
+          {% if cart.item_count != 0 %}
+            {% include 'cartrelated' %}
+          {% endif %}    
         {% else %}
           {% include 'footer' %}
       {% endcase %}

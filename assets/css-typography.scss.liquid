@@ -26,7 +26,7 @@ $cell-margin-4x: $cell-margin * 4;
 // Load local fonts
 @font-face {
   font-family: Moxie;
-  src: url(Moxie-Bold2.otf);
+  src: url(Moxie-Bold.otf);
 }
 
 @font-face {
@@ -184,8 +184,7 @@ a:hover {
   font-family: $cart-font;
 }
 
-.money,
-.moneysoldout {
+.money {
   font-weight: bold;
 }
 
@@ -204,9 +203,14 @@ a:hover {
 .cartbanner {
   // font-family: $headline-font;
   // font-family: $cart-font;
-  font-family: $logo-font;
-  font-size: 2rem;
-  text-transform: uppercase;
+  // font-family: $logo-font;
+  font-size: 1.5rem;
+  // text-transform: uppercase;
+}
+
+.emptycart {
+  font-family: $cart-font;
+  font-size: inherit;
 }
 
 #cart ul li h3 a {

@@ -5,14 +5,14 @@
   }
 </script>
 
-<div class="cartbanner">
-  Save! Same shipping costs for any quantities of posters! <a href="/pages/info">Shipping Info</a>
-</div>
 {% if cart.item_count == 0 %}
   <div class="cartbanner">
-    <div class="emptycart">Your shopping cart is empty &#58;&#40;</div>
+    Your shopping cart is empty.
   </div>
 {% else %}
+  <div class="cartbanner">
+    Save! Same shipping costs for any quantities of posters! <a href="/pages/info">Shipping Info</a>
+  </div>
   <form action="/cart" method="post" id="cartbox">
     <div id="cart">
       <ul id="line-items">

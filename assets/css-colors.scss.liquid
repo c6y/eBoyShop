@@ -66,57 +66,21 @@ ul.leftlinks li a:hover {
 }
 
 /* Cart Page */
+
 #cart {
-  background-color: #edece6;
+  background-color: $color-header-cart;
+  color: $color-header-cart-text;
+
+  #line-items {
+    .producttitle a {
+      color: inherit;
+    }
+  }
+
 }
 
 .cartbanner {
-  // color: $color-black;
-  color: $color-header-top;
-  background-color: #fbf6d7;
-}
-
-.deleterow .remove {
-  background-color: #ddd;
-  color: #888;
-}
-
-.deleterow .remove:hover {
-  color: #ddd;
-  background-color: #888;
-}
-
-.moneysoldout {
-  color: #777;
-}
-
-#cart label {
-  color: #444;
-}
-
-#cart ul li h3 a {
-  color: $color-black;
-}
-
-.itemcost {
-  color: #777;
-}
-
-#line-items li .txtcartrow .producttitle,
-#line-items li .txtcartrow .producttitle a {
-  color: $color-black;
-}
-
-.cartqty {
-  color: #999;
-}
-
-#line-items li#total {
-  color: #666;
-}
-
-#line-items li#total .money {
-  color: #3f3800;
+  color: $color-header-cart-text;
 }
 
 .shipinfo {
