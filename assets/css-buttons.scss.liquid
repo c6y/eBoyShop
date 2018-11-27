@@ -1,7 +1,7 @@
 $fontsize-button-small: {{ settings.fontsize-button-small }};
 $color-link: {{ settings.color-link }};
 $color-black: {{ settings.color-black }};
-$headline-font: {{ settings.headline-font }};
+$button-font: {{ settings.button-font }};
 $cell-margin: {{ settings.cell-margin }};
 
 $cell-margin-half: $cell-margin * 0.5;
@@ -19,7 +19,7 @@ $cell-margin-3x: $cell-margin * 3;
 
 
 .checkoutbutton {
-  font-family: $headline-font;
+  font-family: $button-font;
   background-color: $color-link;
   color: white;
   border: none;
@@ -30,6 +30,7 @@ $cell-margin-3x: $cell-margin * 3;
   font-size: $fontsize-button-small;
   line-height: $fontsize-button-small;
   cursor: pointer;
+  text-transform: uppercase;
 
   &:active {
     background-color: black;
@@ -55,10 +56,10 @@ $cell-margin-3x: $cell-margin * 3;
 .buybutton,
 .soldbutton,
 .soonbutton {
-  font-family: $headline-font;
+  font-family: $button-font;
   color: white;
   border: none;
-  padding: $cell-margin $cell-margin-3x;
+  padding: $cell-margin $cell-margin-half;
   margin: $cell-margin-2x 0 0 0;
   text-align: center;
   text-decoration: none;
@@ -68,6 +69,7 @@ $cell-margin-3x: $cell-margin * 3;
   width: 100%;
   font-weight: 400;
   box-sizing: border-box;
+  text-transform: uppercase;
 }
 
 .buybutton {
