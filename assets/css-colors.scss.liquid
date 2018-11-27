@@ -4,6 +4,7 @@ $content-min-width: 2 * $cell + 3 * $cell-margin;
 $breakpoint: {{ settings.breakpoint }};
 $color-header-top: {{ settings.color-header-top }};
 $color-header-cart: {{ settings.color-header-cart }};
+$color-header-cart-text: {{ settings.color-header-cart-text }};
 $color-header-link: rgba(0, 230, 230, 0.6);
 $color-logo: {{ settings.color-logo }};
 $color-link: {{ settings.color-link }};
@@ -42,16 +43,16 @@ a:hover {
 /* Colors Submenu */
 #carthead {
   background-color: $color-header-cart;
-}
+  color: $color-header-cart-text;
 
-#carthead #breadcrumb {
-  color: $color-black;
-}
+  #breadcrumb,
+  #cartcount {
+    color: inherit;
 
-#breadcrumb a,
-#cartcount,
-#cartcount a {
-  color: inherit;
+    a {
+      color: inherit;
+    }
+  }
 }
 
 ul.leftlinks li a {
@@ -223,8 +224,8 @@ ul#variants label {
 
 /* Footer */
 #footer {
-  color: #999;
-  background-color: #e6e3de;
+  color: $color-header-cart-text;
+  background-color: $color-header-cart;
   border-top-color: #dfdcd7;
 }
 
@@ -238,7 +239,6 @@ ul#variants label {
 
 #footer #searchform #s {
   color: $color-footer;
-  // background-color: #f6f6f6;
   background-color: rgba(255, 255, 255, 0.5);
 }
 

@@ -30,7 +30,13 @@
         "type": "color",
         "id": "color-header-cart",
         "label": "Cart header color",
-        "default": "#f2eed9"
+        "default": "#e6e3de"
+      },
+      {
+        "type": "color",
+        "id": "color-header-cart-text",
+        "label": "Cart header text color",
+        "default": "#6c6757"
       },
       {
         "type": "color",

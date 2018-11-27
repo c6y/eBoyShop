@@ -10,6 +10,7 @@ $cell-margin-4x: $cell-margin * 4;
 
 $color-link: {{ settings.color-link }};
 $color-black: {{ settings.color-black }};
+$color-header-cart: {{ settings.color-header-cart }};
 
 #mainbox {
   display: flex;
@@ -53,7 +54,7 @@ $color-black: {{ settings.color-black }};
     box-sizing: border-box;
     margin: 0;
     width: $cell;
-    border-left: 1px solid $color-link;
+    border-left: 1px solid $color-header-cart;
 
     li {
       list-style: none;
@@ -203,11 +204,12 @@ hr {
     margin: 0 0 $cell-margin-3x 0;
     padding: $cell-margin-2x $cell-margin $cell-margin-2x $cell-margin-2x;
     box-sizing: border-box;
-    border-bottom: 1px solid $color-black;
+    border-bottom: 1px solid $color-header-cart;
   }
 
   .textile {
-    padding: $cell-margin-half;
+    padding: $cell-margin-half $cell-margin-3x $cell-margin-2x $cell-margin-3x;
+    box-sizing: border-box;
   }
 }
 
@@ -335,9 +337,11 @@ ul#variants li label {
   #description {
     box-sizing: border-box;
     width: $cell;
-    padding: $cell-margin;
+    padding: $cell-margin-2x;
+    // padding: 0 $cell-margin-2x 0 $cell-margin-2x;
+    // padding: $cell-margin $cell-margin-2x $cell-margin-2x $cell-margin-2x;
     margin: 0;
-    border-left: 1px solid $color-black;
+    border-left: 1px solid $color-header-cart;
   }
 
   #productcontrols {
@@ -452,7 +456,6 @@ ul#variants li label {
 
 /* Footer */
 #appfooter {
-  background-color: rgba(255,255,255,0.93);
   padding: 0;
   margin: 0;
   display: flex;
@@ -462,11 +465,6 @@ ul#variants li label {
       margin: $cell-margin * 2 0 0 0;
       padding: $cell-margin * 0.5;
 
-      hr {
-        background-image: linear-gradient(to right, #383521, rgba(255,255,255,0));
-        opacity: 0.3;
-        margin: $cell-margin * 2 0 $cell-margin * 0.5 0
-      }
       h2 {
         margin: $cell-margin * 2 $cell-margin * 0.5;
         color: #383521;
@@ -485,7 +483,6 @@ ul#variants li label {
   width: 100%;
   text-align: right;
   display: table;
-  border-top: 1px solid;
 
   #searchform {
     width: auto;
