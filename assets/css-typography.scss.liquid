@@ -233,6 +233,11 @@ a:hover.shipinfo {
 
 /* Page */
 #page {
+  h1 {
+    font-weight: 400;
+    line-height: 1.5rem;
+  }
+
   .textile {
     font-family: $body-font;
 
@@ -240,12 +245,25 @@ a:hover.shipinfo {
       font-size: 1em;
       font-weight: 600;
     }
+
     .addressblock,
     p,
     ul,
     h3 {
-      padding: 0 0 $cell-margin-2x 0;
+      padding-top: 0;
+      padding-right: $cell-margin-4x;
+      padding-left:  $cell-margin-4x;
       margin: 0;
+    }
+
+    .addressblock,
+    p,
+    ul, {
+      padding-bottom: $cell-margin-4x;
+    }
+
+    h3 {
+      padding-bottom: $cell-margin-2x;
     }
   }
 }
