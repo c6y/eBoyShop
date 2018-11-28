@@ -28,7 +28,7 @@
 }
 
 .mdi-database::before {
-  content: "\f1b8";
+  content: "\f03c";
 }
 
 .mdi-twitter::before {
@@ -60,5 +60,5 @@
 }
 
 .mdi-search::before {
-  content: "\f19b";
+  content: "\f21e";
 }
