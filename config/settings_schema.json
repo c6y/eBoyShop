@@ -198,7 +198,7 @@
         "type": "text",
         "id": "logo-font",
         "label": "Logo font ",
-        "default": "Moxie, sans-serif"
+        "default": "ProductSansItalic, sans-serif"
       },
       {
         "type": "text",

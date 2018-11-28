@@ -23,9 +23,6 @@ $cell-margin-3x: $cell-margin * 3;
 $cell-margin-4x: $cell-margin * 4;
 
 /*eBoy SHOP-TYPOGRAPHY CSS*/
-
-@import url('https://fonts.googleapis.com/css?family=Ultra');
-
 // Load local fonts
 @font-face {
   font-family: Moxie;
@@ -33,8 +30,13 @@ $cell-margin-4x: $cell-margin * 4;
 }
 
 @font-face {
-  font-family: Product-Sans-Regular;
+  font-family: 'ProductSansRegular';
   src: url(Product-Sans-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'ProductSansItalic';
+  src: url(Product-Sans-Italic.ttf);
 }
 
 /* Global */
@@ -66,10 +68,9 @@ a:hover {
 
 #logotype {
   font-size: 6rem;
-  font-family: $logo-font;
+  font-family: $logo-font, sans-serif;
+  font-weight: 400;
   text-transform: uppercase;
-  // line-height: 1.2em;
-  // -webkit-text-stroke: 3px;
 }
 
 /* Submenublock */
