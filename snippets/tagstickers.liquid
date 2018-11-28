@@ -1,0 +1,45 @@
+{% if product.available %}
+  {% for mytag in product.tags %}
+    {% if mytag == 'Limited' %}
+      <a href="{{product.url}}">
+        <img class="limitedstar" src="{{ 'starlimited-10k-small-2x.png' | asset_url }}" alt="limitedstar" width="70" height="73" />
+      </a>
+    {% endif %}
+  {% endfor %}
+{% else %}
+  {% assign soon = 'false' %}
+  {% for collection in product.collections %}
+    {% if collection.handle == 'soon' %}
+      {% assign soon = 'true' %}
+    {% endif %}
+  {% endfor %}
+  {% if soon =='true' %}
+    {% for mytag in product.tags %}
+      {% if mytag == 'Limited' %}
+        <a href="{{product.url}}">
+          <img class="limitedstar" src="{{ 'starlimited-10k-small-2x.png' | asset_url }}" alt="limitedstar" width="70" height="73" />
+        </a>
+      {% endif %}
+    {% endfor %}
+  {% else %}
+    <a href="{{product.url}}">
+      <img class="limitedstar" src="{{ 'starsoldout-10k-small-2x.png' | asset_url }}" alt="soldoutstar" width="70" height="73" />
+    </a>
+  {% endif %}
+{% endif %}
+
+{% for mytag in product.tags %}
+  {% if mytag == 'signed' %}
+    <a href="{{product.url}}">
+      <img class="signed" src="{{ 'signed_02k.png' | asset_url }}" alt="signed" />
+    </a>
+  {% endif %}
+{% endfor %}
+
+{% for mytag in product.tags %}
+  {% if mytag == 'Sale' %}
+    <a href="{{product.url}}">
+      <img class="sale" src="{{ 'SALE-03k-2x.png' | asset_url }}" alt="sale" width="62" height="47" />
+    </a>
+  {% endif %}
+{% endfor %}

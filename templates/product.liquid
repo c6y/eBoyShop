@@ -10,58 +10,10 @@
     });
   });
 </script>
-
-{% for collection in product.collections %}
-  {% if collection.handle == "t-shirts" %}
-    {% assign isTee = "true" %}
-  {% endif %}
-{% endfor %}
-
 <div id="product-images">
-  {% for mytag in product.tags %}
-    {% if mytag == 'Signed' %}
-      <img class="signedpro" src="{{ 'signedbig_01k.png' | asset_url }}" alt="signed" />
-    {% endif %}
-  {% endfor %}
-
-  <!-- banderolas -->
-  {% for collection in product.collections %}
-    {% case collection.handle %}
-      {% when 'new' %}
-          <img class="new" src="{{ 'new04s.png' | asset_url }}" alt="new" height="107" width="107"/>
-      {% when 'soon' %}
-          <img class="new" src="{{ 'soon01k.png' | asset_url }}" alt="soon" />
-      {% when 'pre-order' %}
-          <img class="newbig" src="{{ 'PREORDERBANNER-02k-2x.png' | asset_url }}" alt="pre-order" />
-      {% else %}
-    {% endcase %}
-  {% endfor %}
-  <!-- /banderolas -->
-
-  {% if product.available %}
-    {% for mytag in product.tags %}
-      {% if mytag == 'Limited' %}
-            <img class="limitedstarpro" src="{{ 'starlimited-10k-big-2x.png' | asset_url }}" alt="limited" width="160" height="167" />
-      {% endif %}
-    {% endfor %}
-  {% else %}
-    {% if soon =='true' %}
-
-      {% for tag in product.tags %}
-        {% if tag == 'Limited' %}
-          <a href="{{product.url}}">
-            <img class="limitedstarpro" src="{{ 'starlimited-10k-big-2x.png' | asset_url }}" alt="limited" width="160" height="167" />
-          </a>
-        {% endif %}
-      {% endfor %}
-
-    {% else %}
-          <img class="limitedstarpro" src="{{ 'starsoldout-10k-big-2x.png' | asset_url }}" alt="sold out" width="160" height="167" />
-    {% endif %}
-  {% endif %}
-
   {% for image in product.images %}
     <div id="pimage-{{forloop.index}}" class="pimage" {% if forloop.first %} style="display: block;" {% else %} style="display: none;" {% endif %}>
+      {% include 'banderola' %}
       <img class="bigsquare" src="{{ image | product_img_url: 'original'}}" alt="{{product.title}}" />
     </div>
   {% endfor %}
