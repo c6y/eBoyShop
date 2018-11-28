@@ -327,8 +327,6 @@ ul#variants li label {
     box-sizing: border-box;
     width: $cell;
     padding: $cell-margin-2x;
-    // padding: 0 $cell-margin-2x 0 $cell-margin-2x;
-    // padding: $cell-margin $cell-margin-2x $cell-margin-2x $cell-margin-2x;
     margin: 0;
     border-left: 1px solid $color-line;
   }
@@ -343,6 +341,7 @@ ul#variants li label {
         left: 0;
         top: 0;
         width: 100%;
+        margin-top: $cell-margin * -0.75; // raise x-height to match description
       }
     }
 

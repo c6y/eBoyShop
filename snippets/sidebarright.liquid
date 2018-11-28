@@ -13,11 +13,11 @@
     </div>
     {% case product.type %}
       {% when 'linkothershop' %}
-        <a href="{% for variant in product.variants %}{{ variant.sku }}{% endfor %}" target="_blank">
-          <div class="buybutton">
-            {{ product.vendor }}
+          <div class="linkbutton">
+            <a href="{% for variant in product.variants %}{{ variant.sku }}{% endfor %}" target="_blank">
+              {{ product.vendor }}&nearr;
+            </a>
           </div>
-        </a>
       {% else %}
         {% if product.available %}
 
