@@ -10,7 +10,6 @@ $fontweight-leftlinks: {{ settings.fontweight-sidebar-big }};
 $fontsize-producttopinfo: {{ settings.fontsize-sidebar-big }};
 $fontweight-producttopinfo: {{ settings.fontweight-bold-big }};
 $fontsize-buttonsmall: {{ settings.fontsize-button-small }};
-$headline-font: {{ settings.headline-font }};
 $body-font: {{ settings.body-font }};
 $body-lineheight: {{ settings.body-lineheight }};
 $cart-font: {{ settings.cart-font }};
@@ -23,20 +22,13 @@ $cell-margin-3x: $cell-margin * 3;
 $cell-margin-4x: $cell-margin * 4;
 
 /*eBoy SHOP-TYPOGRAPHY CSS*/
+// Load external fonts
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400i|Roboto+Mono');
+
 // Load local fonts
 @font-face {
   font-family: Moxie;
   src: url(Moxie-Bold.otf);
-}
-
-@font-face {
-  font-family: 'ProductSansRegular';
-  src: url(Product-Sans-Regular.ttf);
-}
-
-@font-face {
-  font-family: 'ProductSansItalic';
-  src: url(Product-Sans-Italic.ttf);
 }
 
 /* Global */
@@ -68,14 +60,15 @@ a:hover {
 
 #logotype {
   font-size: 6rem;
-  font-family: $logo-font, sans-serif;
+  line-height: 1em;
+  font-family: $logo-font;
   font-weight: 400;
   text-transform: uppercase;
+  letter-spacing: -5px;
 }
 
 /* Submenublock */
 #carthead {
-  // font-family: $headline-font;
   line-height: 1.2em;
   font-weight: 400;
 
@@ -205,11 +198,7 @@ a:hover {
 }
 
 .cartbanner {
-  // font-family: $headline-font;
-  // font-family: $cart-font;
-  // font-family: $logo-font;
   font-size: 1.5rem;
-  // text-transform: uppercase;
 }
 
 .emptycart {

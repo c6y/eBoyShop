@@ -58,8 +58,6 @@
   {{ 'script-shop.js' | asset_url | script_tag }}
   {{ 'css-debug.scss.css' | asset_url | stylesheet_tag }}
 
-  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Mono" rel="stylesheet">
-
   <meta name="viewport" content="width=536">
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
@@ -115,7 +113,7 @@
         {% when 'cart' %}
           {% if cart.item_count != 0 %}
             {% include 'cartrelated' %}
-          {% endif %}    
+          {% endif %}
         {% else %}
           {% include 'footer' %}
       {% endcase %}
