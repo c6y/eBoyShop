@@ -192,7 +192,7 @@
         "type": "text",
         "id": "logo-font",
         "label": "Logo font ",
-        "default": "Josefin Sans, sans-serif"
+        "default": "Josefin Sans, Roboto, sans-serif"
       },
       {
         "type": "text",
