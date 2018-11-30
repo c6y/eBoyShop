@@ -2,7 +2,7 @@
   <ul class="leftlinks-collections">
     {% for link in linklists.main-menu.links %}
       {% if collection.title == link.title %}
-        <li>{{ link.title }}</li>
+        <li class="active-collection">{{ link.title }}</li>
       {% else template.name == 'index'%}
         <li>{{ link.title | link_to: link.url }}</li>
       {% endif %}
