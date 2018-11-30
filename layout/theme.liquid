@@ -89,7 +89,7 @@
             <div id="productbox">
               {{ content_for_layout }}
             </div>
-            {% include 'sidebarright' %}
+            {% include 'sidebarproduct' %}
           {% when 'cart' %}
             <div id="mainbox">
               {{ content_for_layout }}
@@ -99,7 +99,7 @@
               {{ content_for_layout }}
             </div>
           {% else %}
-            {% include 'sidebarleft' %}
+            {% include 'sidebarmenu' %}
             <div id="mainbox">
               {{ content_for_layout }}
             </div>

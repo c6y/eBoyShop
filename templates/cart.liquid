@@ -18,11 +18,11 @@
       <ul id="line-items">
         {% for item in cart.items %}
           <li id="item-{{item.id}}" class="itemline">
-            <div class="thumb">
+            <div class="cart-product-thumb">
               <a href="{{item.product.url}}" title="{{item.title}}"><img src="{{item.product.featured_image | product_img_url: 'thumb' }}" alt="{{item.title}}" /></a>
             </div>
             <div class="txtcartrow">
-              <span class="producttitle">
+              <span class="cart-product-title">
                 <a href="{{item.product.url}}" title="{{item.title}}">
                   {{ item.title }}
                   {% if item.variant.title != 'Default' %}
