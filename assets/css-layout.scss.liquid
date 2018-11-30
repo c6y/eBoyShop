@@ -46,13 +46,7 @@ $color-related: #6a6858;
     }
     .leftlinks-collections,
     .leftlinks-other {
-      border-top-width: 0;
-      border-right-width: 0;
-      border-bottom-width: 0;
-      border-left-width: 1px;
-      border-style: solid;
-      border-image:
-        linear-gradient(to bottom, $color-line, rgba(255, 255, 255, 0)) 1 1;
+      border-left: 1px dashed $color-line;
     }
   }
 
@@ -65,12 +59,9 @@ $color-related: #6a6858;
     flex-direction: column;
 
     hr {
-      border: 0;
-      padding: 0;
-      margin: 0.5rem;
-      height: 1px;
-      background-image:
-        linear-gradient(to right, $color-line, rgba(255, 255, 255, 0));
+      border: none;
+      border-top: 1px dashed $color-line;
+      margin: $cell-margin;
     }
   }
 
@@ -352,17 +343,10 @@ ul#variants li label {
     width: $cell;
     padding: $cell-margin-2x;
     margin: 0;
+    border-left: 1px dashed $color-line;
   }
 
   #productcontrols {
-    border-top-width: 0;
-    border-right-width: 0;
-    border-bottom-width: 0;
-    border-left-width: 1px;
-    border-style: solid;
-    border-image:
-      linear-gradient(to bottom, $color-line, rgba(255, 255, 255, 0)) 1 1;
-
     .producttopinfo,
     .producttopinfosold {
       width: 100%;
