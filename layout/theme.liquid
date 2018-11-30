@@ -108,7 +108,6 @@
     <div id="appfooter">
       {% case template %}
         {% when 'product' %}
-          {% include 'productrelated' %}
           {% include 'footer' %}
         {% when 'cart' %}
           {% if cart.item_count != 0 %}
