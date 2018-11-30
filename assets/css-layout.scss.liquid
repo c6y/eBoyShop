@@ -52,7 +52,7 @@ $color-related: #6a6858;
       border-left-width: 1px;
       border-style: solid;
       border-image:
-        linear-gradient(to bottom, $color-link, rgba(255, 255, 255, 0)) 1 1;
+        linear-gradient(to bottom, $color-line, rgba(255, 255, 255, 0)) 1 1;
     }
   }
 
@@ -70,7 +70,7 @@ $color-related: #6a6858;
       margin: 0.5rem;
       height: 1px;
       background-image:
-        linear-gradient(to right, $color-link, rgba(255, 255, 255, 0));
+        linear-gradient(to right, $color-line, rgba(255, 255, 255, 0));
     }
   }
 
@@ -344,18 +344,6 @@ ul#variants li label {
     min-width: $cell + $cell-margin;
     max-width: $cell + $cell-margin;
     flex-direction: column;
-
-    #productcontrols {
-      // border-left: 1px solid $color-line;
-
-      // border-top-width: 0;
-      // border-right-width: 0;
-      // border-bottom-width: 0;
-      // border-left-width: 1px;
-      // border-style: solid;
-      // border-image:
-      //   linear-gradient(to bottom, $color-line, rgba(255, 255, 255, 0)) 1 1;
-    }
   }
 
   #productcontrols,
@@ -364,13 +352,6 @@ ul#variants li label {
     width: $cell;
     padding: $cell-margin-2x;
     margin: 0;
-    // border-top-width: 0;
-    // border-right-width: 0;
-    // border-bottom-width: 0;
-    // border-left-width: 1px;
-    // border-style: solid;
-    // border-image:
-    //   linear-gradient(to bottom, $color-line, rgba(255, 255, 255, 0)) 1 1;
   }
 
   #productcontrols {
@@ -380,7 +361,7 @@ ul#variants li label {
     border-left-width: 1px;
     border-style: solid;
     border-image:
-      linear-gradient(to bottom, $color-link, rgba(255, 255, 255, 0)) 1 1;
+      linear-gradient(to bottom, $color-line, rgba(255, 255, 255, 0)) 1 1;
 
     .producttopinfo,
     .producttopinfosold {
@@ -504,20 +485,10 @@ ul#variants li label {
       padding: $cell-margin * 0.5;
 
       h2 {
-        margin: $cell-margin * 2 $cell-margin * 0.5;
+        margin: $cell-margin $cell-margin * 0.5;
         font-weight: 500;
         padding-top: $cell-margin-2x;
-        // padding-bottom: $cell-margin-2x;
-        // border-top: 1px solid $color-line;
-
-        border-top-width: 1px;
-        border-right-width: 0;
-        border-bottom-width: 0;
-        border-left-width: 0;
-        border-style: solid;
-        border-image:
-          linear-gradient(to right, $color-link, rgba(255, 255, 255, 0)) 1 1;
-
+        border-top: 1px dashed #d2d1cd;
       }
       .gallery-image img {
         filter: grayscale(100%) opacity(0.75);
