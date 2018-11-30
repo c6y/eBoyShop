@@ -1,4 +1,4 @@
-<div id="carthead">
+<div id="header-menu">
   <h3 id="breadcrumb">
     {% if template.name != "index" %}
       <a href="/">Shop</a>
@@ -18,5 +18,5 @@
 
     {% endcase %}
   </h3>
-  <h3 id="cartcount"><a href="/cart" class="mdi-cart"></a>{{ cart.item_count }}</h3>
+  <h3 id="cart-count"><a href="/cart" class="mdi-cart"></a>{{ cart.item_count }}</h3>
 </div>

@@ -1,5 +1,5 @@
-<div id="sidebarleft">
-  <ul class="leftlinks-collections">
+<div id="sidebar-menu">
+  <ul class="sidebar-menu-collections">
     {% for link in linklists.main-menu.links %}
       {% if collection.title == link.title %}
         <li class="active-collection">{{ link.title }}</li>
@@ -9,7 +9,7 @@
     {% endfor %}
   </ul>
   <hr/>
-  <ul class="leftlinks-other">
+  <ul class="sidebar-menu-links">
     <li class="exlink">
       <a href="https://db.eboy.com/" target="_blank" class="mdi-database">Portfolio</a>
     </li>

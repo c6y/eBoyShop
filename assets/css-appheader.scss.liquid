@@ -12,7 +12,7 @@ $cell-margin-4x: $cell-margin * 4;
 $cell-margin-5x: $cell-margin * 5;
 $cell-margin-8x: $cell-margin * 8;
 
-#appheader {
+#app-header {
   width: 0 auto;
   box-sizing: border-box;
   display: flex;
@@ -20,7 +20,7 @@ $cell-margin-8x: $cell-margin * 8;
   position: relative;
   flex-direction: column;
 
-  #appheadertop {
+  #header-top {
     position: relative;
     padding: $cell-margin-2x $cell-margin $cell-margin-3x $cell-margin-5x;
     margin: 0;
@@ -32,7 +32,7 @@ $cell-margin-8x: $cell-margin * 8;
     }
   }
 
-  #carthead {
+  #header-menu {
     margin: 0;
     width: 100%;
     padding: $cell-margin 0;
@@ -53,20 +53,20 @@ $cell-margin-8x: $cell-margin * 8;
 
     }
 
-    #cartcount {
+    #cart-count {
       padding: 0;
       margin: 0 $cell-margin-2x 0 0;
       white-space: nowrap;
     }
 
     #breadcrumb a,
-    #cartcount a {
+    #cart-count a {
       padding: 0;
       text-decoration: none;
     }
 
     #breadcrumb a:hover,
-    #cartcount a:hover {
+    #cart-count a:hover {
       margin-left: -6px;
       margin-right: -6px;
       padding: 0 6px;

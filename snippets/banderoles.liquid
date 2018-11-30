@@ -1,7 +1,7 @@
 {% for collection in product.collections %}
   {% case collection.handle %}
     {% when 'new' %}
-      <img class="new" src="{{ 'new5k.svg' | asset_url }}" alt="new" height="107" width="107"/>
+      <img class="banderole-new " src="{{ 'new5k.svg' | asset_url }}" alt="new" height="107" width="107"/>
     {% else %}
   {% endcase %}
 {% endfor %}

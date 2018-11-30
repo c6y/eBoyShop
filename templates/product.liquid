@@ -13,7 +13,7 @@
 <div id="product-images">
   {% for image in product.images %}
     <div id="pimage-{{forloop.index}}" class="pimage" {% if forloop.first %} style="display: block;" {% else %} style="display: none;" {% endif %}>
-      {% include 'banderola' %}
+      {% include 'banderoles' %}
       <img class="bigsquare" src="{{ image | product_img_url: 'original'}}" alt="{{product.title}}" />
     </div>
   {% endfor %}

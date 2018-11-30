@@ -27,7 +27,7 @@ $color-related: #6a6858;
 }
 
 /* Left Navigation */
-#sidebarleft {
+#sidebar-menu {
   box-sizing: border-box;
   padding: $cell-margin;
   overflow: hidden;
@@ -44,8 +44,8 @@ $color-related: #6a6858;
     hr {
       display: none;
     }
-    .leftlinks-collections,
-    .leftlinks-other {
+    .sidebar-menu-collections,
+    .sidebar-menu-links {
       border-left: 1px dashed $color-line;
     }
   }
@@ -65,8 +65,8 @@ $color-related: #6a6858;
     }
   }
 
-  .leftlinks-collections,
-  .leftlinks-other {
+  .sidebar-menu-collections,
+  .sidebar-menu-links {
     padding: $cell-margin;
     box-sizing: border-box;
     margin: 0;
@@ -112,7 +112,7 @@ $color-related: #6a6858;
   font-weight: bold;
 }
 
-.coverproduct {
+.product-featured {
   width: 100%;
   margin: $cell-margin * 0.5
 }
@@ -125,7 +125,7 @@ $color-related: #6a6858;
 /* Collection Pages */
 
 #collectionbox,
-#frontbox {
+#mainbox-frontpage {
   display: flex;
   flex-wrap: wrap;
   padding: $cell-margin * 0.5;
@@ -415,20 +415,12 @@ ul#variants li label {
   opacity: 0.5;
 }
 
-.new {
+.banderole-new {
   position: absolute;
   z-index: 250;
   display: inline;
   margin-top: -5px;
   margin-left: -5px;
-}
-
-.newbig {
-  position: absolute;
-  z-index: 250;
-  display: inline;
-  margin-top: -9px;
-  margin-left: -9px;
 }
 
 .limitedstarpro {
@@ -457,7 +449,7 @@ ul#variants li label {
 }
 
 /* Footer */
-#appfooter {
+#app-footer {
   padding: 0;
   margin: 0;
   display: flex;

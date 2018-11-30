@@ -77,13 +77,13 @@
 
 <body id="page-{{template}}">
   <div id="autocenterbox">
-    <div id="appheader">
-      <div id="appheadertop">
+    <div id="app-header">
+      <div id="header-top">
         <a id="logotype" href="/">eBoy</a>
       </div>
-      {% include 'carthead' %}
+      {% include 'headermenu' %}
     </div>
-    <div id="appbody">
+    <div id="app-body">
         {% case template %}
           {% when 'product' %}
             <div id="productbox">
@@ -105,7 +105,7 @@
             </div>
         {% endcase %}
     </div>
-    <div id="appfooter">
+    <div id="app-footer">
       {% case template %}
         {% when 'product' %}
           {% include 'footer' %}

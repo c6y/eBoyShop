@@ -18,8 +18,8 @@
     "settings": [
       {
         "type": "color",
-        "id": "color-appbody",
-        "label": "Appbody color",
+        "id": "color-app-body",
+        "label": "App body color",
         "default": "#fff"
       },
       {
