@@ -15,7 +15,7 @@
       {% when 'linkothershop' %}
           <div class="linkbutton">
             <a href="{% for variant in product.variants %}{{ variant.sku }}{% endfor %}" target="_blank">
-              {{ product.vendor }}&nearr;
+              {{ product.vendor }}
             </a>
           </div>
       {% else %}

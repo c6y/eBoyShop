@@ -18,6 +18,8 @@ $color-3c: {{ settings.color-3c }};
 $color-4c: {{ settings.color-4c }};
 $color-5c: {{ settings.color-5c }};
 $color-6c: {{ settings.color-6c }};
+$color-related: #6a6858;
+
 
 /* Global */
 body {
@@ -158,11 +160,13 @@ ul.leftlinks li a:hover {
 }
 
 #productrelated {
-  // background-color: #f3f1ef;
   background-color: $color-productrelated;
 
+  .product {
+    background-color: #f5f5f5;
+  }
   h2 {
-    color: $color-black;
+    color: $color-related;
   }
 }
 
