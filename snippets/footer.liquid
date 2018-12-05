@@ -2,7 +2,7 @@
   <form id="searchform" method="get" action="/search">
     <input type="text" value="Search" name="q" id="s" size="24" onfocus="clearMe(this)"/>
   </form>
-  <div id="footertxt" class="mdi-info">
+  <div id="footertxt" class="icon-info">
     {% for link in linklists.footer.links %}
       {{ link.title | link_to: link.url }}
     {% endfor %}

@@ -6,11 +6,11 @@
 </script>
 
 {% if cart.item_count == 0 %}
-  <div class="cartbanner">
+  <div class="cart-banner">
     Your shopping cart is empty.
   </div>
 {% else %}
-  <div class="cartbanner">
+  <div class="cart-banner">
     Save! Same shipping costs for any quantities of posters! <a href="/pages/info">Shipping Info</a>
   </div>
   <form action="/cart" method="post" id="cartbox">
@@ -21,7 +21,7 @@
             <div class="cart-product-thumb">
               <a href="{{item.product.url}}" title="{{item.title}}"><img src="{{item.product.featured_image | product_img_url: 'thumb' }}" alt="{{item.title}}" /></a>
             </div>
-            <div class="txtcartrow">
+            <div class="cart-product-row">
               <span class="cart-product-title">
                 <a href="{{item.product.url}}" title="{{item.title}}">
                   {{ item.title }}
@@ -30,25 +30,25 @@
                   {% endif %}
                 </a>
               </span>
-              <span class="quantities">
+              <span class="cart-product-quantity">
                 <span class="cartqty">qty:</span><input type="text" size="2" name="updates[]" id="updates_{{item.variant.id}}" value="{{item.quantity}}" onfocus="this.select();"/>
                 <label for="updates_{{item.variant.id}}">{{ item.price | money_with_currency }}</label>
               </span>
             </div>
           </li>
         {% endfor %}
-        <li id="total">
-          <input type="submit" id="update-cart" name="update" value="Update Cart" class="updatebutton" />
-          <span id="subtotal">Subtotal:
+        <li id="cart-subtotal-row">
+          <input type="submit" id="update-cart" name="update" value="Update Cart" class="cart-update-button" />
+          <span id="cart-subtotal">Subtotal:
             <span class="money">{{ cart.total_price | money_with_currency }}</span>
           </span>
         </li>
       </ul>
     </div>
 
-    <div class="checkoutrow">
-      <span class="mdi-creditcard"></span>
-      <input type="submit" value="Checkout" name="checkout" class="checkoutbutton"/>
+    <div class="checkout-row">
+      <span class="icon-creditcard"></span>
+      <input type="submit" value="Checkout" name="checkout" class="cart-checkout-button"/>
     </div>
 
     {% if additional_checkout_buttons %}

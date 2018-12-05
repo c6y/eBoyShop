@@ -24,7 +24,14 @@ $cell-margin-4x: $cell-margin * 4;
 /*eBoy SHOP-TYPOGRAPHY CSS*/
 // Load external fonts
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i');
+
+// Load local fonts
+@font-face {
+  font-family: "Obey";
+  src: url("Obey-Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
 
 /* Global */
 body {
@@ -55,12 +62,12 @@ a:hover {
 
 #logotype {
   font-size: 6rem;
-  line-height: 1.2em;
+  line-height: 1em;
   font-family: $logo-font;
-  font-style: italic;
+  font-style: normal;
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: -0.0625em;
+  // letter-spacing: -0.0625em;
 }
 
 /* Submenublock */
@@ -195,7 +202,7 @@ a:hover {
   }
 }
 
-.cartbanner {
+.cart-banner {
   font-size: 1.5rem;
 
   a {
@@ -221,7 +228,7 @@ a:hover {
   text-decoration: none;
 }
 
-.checkoutrow {
+.checkout-row {
   font-size: $fontsize-buttonsmall;
 }
 

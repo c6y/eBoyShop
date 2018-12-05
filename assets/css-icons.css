@@ -7,58 +7,58 @@
 }
 
 /* TEST */
-.mdi-shop::before,
-.mdi-database::before,
-.mdi-twitter::before,
-.mdi-instagram::before,
-.mdi-cart::before,
-.mdi-info::before,
-.mdi-settings::before,
-.mdi-edit::before,
-.mdi-creditcard::before,
-.mdi-search::before {
+.icon-shop::before,
+.icon-database::before,
+.icon-twitter::before,
+.icon-instagram::before,
+.icon-cart::before,
+.icon-info::before,
+.icon-settings::before,
+.icon-edit::before,
+.icon-creditcard::before,
+.icon-search::before {
   font-family: "materialdesignicons";
   line-height: inherit;
   font-size: inherit;
   padding-right: 0.3rem;
 }
 
-.mdi-shop::before {
+.icon-shop::before {
   content: "\f49a";
 }
 
-.mdi-database::before {
+.icon-database::before {
   content: "\f03c";
 }
 
-.mdi-twitter::before {
+.icon-twitter::before {
   content: "\f544";
 }
 
-.mdi-instagram::before {
+.icon-instagram::before {
   content: "\f2fe";
 }
 
-.mdi-cart::before {
+.icon-cart::before {
   content: "\f110";
 }
 
-.mdi-info::before {
+.icon-info::before {
   content: "\f2fc";
 }
 
-.mdi-settings::before {
+.icon-settings::before {
   content: "\f493";
 }
 
-.mdi-edit::before {
+.icon-edit::before {
   content: "\f3eb";
 }
 
-.mdi-creditcard::before {
+.icon-creditcard::before {
   content: "\f19b";
 }
 
-.mdi-search::before {
+.icon-search::before {
   content: "\f21e";
 }
