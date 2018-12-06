@@ -21,6 +21,9 @@ $cell-margin-2x: $cell-margin * 2;
 $cell-margin-3x: $cell-margin * 3;
 $cell-margin-4x: $cell-margin * 4;
 
+$color-black: {{ settings.color-black }};
+$color-product-h3: #f0f;
+
 /*eBoy SHOP-TYPOGRAPHY CSS*/
 // Load external fonts
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
@@ -121,6 +124,27 @@ a:hover {
     font-size: $fontsize-producttopinfo;
     font-weight: $fontweight-producttopinfo;
   };
+}
+
+#product-controls,
+#product-description {
+  h3 {
+    color: $color-product-h3;
+    border-bottom: 1px solid $color-product-h3;
+    padding-bottom: $cell-margin-half;
+    font-weight: 400;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-style: italic;
+  }
+  ul, p {
+    margin: 1em 0;
+  }
+
+  ul {
+    padding: 0 0 0 1em;
+    list-style-type: circle;
+  }
 }
 
 .price {
